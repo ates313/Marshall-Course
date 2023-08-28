@@ -1,0 +1,123 @@
+.a_container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: #00000034;
+    width: 350px;
+    height: 570px;
+    margin: 10px;
+    border-radius: 15px;
+    float: left;
+    box-shadow: 0px 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#cubeLink {
+    height: 305px;
+    margin: 20px 23px;
+    background-color: #05B1F7;   
+    border-radius: 13px;
+}
+
+#cubeLink:hover {
+    opacity: 1;
+}
+
+#cube {
+    height: 100%;
+    border-radius: 10px;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#cube:hover {
+    opacity: 90%;
+
+}
+
+#header {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 5px 25px;
+    text-decoration: none;
+}
+
+#header:hover {
+    color: #05B1F7;
+}
+
+#description {
+    color: #05B1F7;
+    margin: 15px 25px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#ethAndDays {
+    display: flex;
+    justify-content: space-around;
+    gap: 80px;
+    margin: -4px 0;
+}
+
+#ethPlusIcon {
+    margin-left: -5px;
+}
+
+#eth {
+    color: #05B1F7;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 17px;
+}
+
+#clockPlusDays {
+    margin-left: -30px;
+}
+
+#clockPlusDays>svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+#days {
+    display: inline-block;
+    vertical-align: middle;
+    color: #05B1F7;
+}
+
+#line {
+    border-bottom: 1px solid #05B1F7;
+    width: 300px;
+    margin: auto;
+}
+
+#jules {
+    margin: auto 25px;
+    margin-top: -5px;
+}
+
+#avatar {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin-right: 12px;
+}
+
+#avatarName {
+    display: inline-block;
+    vertical-align: middle;
+    color: #05B1F7;
+}
+
+#mainName {
+    color: white;
+    margin-left: 1px;
+    text-decoration: none;
+}
+
+#mainName:hover {
+    color: #05B1F7;
+}
