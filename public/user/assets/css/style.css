@@ -343,11 +343,6 @@ a img.aligncenter {
   transform-origin: center;
 }
 
-#overviews{
-    background: linear-gradient(#05B1F7, #19244a, #19244a);
-    box-shadow: 0px 10px 10px 20px rgba(0, 0, 0, 0.1);
-}
-
 .progress-br .progress__item {
   text-align: center;
   width: 100px;
@@ -925,7 +920,8 @@ a img.aligncenter {
 }
 
 .section.wb {
-    background-color: #7d1515;
+    background: linear-gradient(#05B1F7, #19244a, #19244a);
+    box-shadow: 0px 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .section.lb {
@@ -2911,7 +2907,6 @@ body.host_version .first-section .effect-1.slide-btn::after{
 /**-------------- inner Page css ---------------**/
 
 .all-title-box{
-	background: url(images/banner.jpg)no-repeat;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -3934,4 +3929,33 @@ a.link-style3 {
 }
 .course-meta-bot ul li:hover{
 	color: #05B1F7;
+}
+
+.a_main{
+    width: 350px;
+    min-height: 320px;
+    float: left;
+    margin: 0px 10px;
+    position: relative;
+}
+
+.a_date{
+    background-color: #05B1F7;
+    float: left;
+    border-radius: 7px;
+    position: absolute;
+    top: 255px;
+    color: white;
+    height: 22px;
+    width: 80px;
+}
+
+.a_text{
+    background-color: red;
+    padding: 15px;
+}
+
+.a_imgSize{
+    height: 247px;
+    width: 350px;
 }

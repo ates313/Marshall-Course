@@ -10,6 +10,14 @@ class UserController extends CI_Controller{
         $this->load->view('user/about');
     }
 
+    public function contact(){
+        $this->load->view('user/contact');
+    }
+
+    public function teachers(){
+        $this->load->view('user/teachers');
+    }
+
 
 
 }

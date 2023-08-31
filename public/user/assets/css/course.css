@@ -13,7 +13,7 @@
 #cubeLink {
     height: 305px;
     margin: 20px 23px;
-    background-color: #05B1F7;   
+    background-color: #757575; 
     border-radius: 13px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 #description {
-    color: #05B1F7;
+    color: #757575;
     margin: 15px 25px;
     font-size: 18px;
     line-height: 1.5;
@@ -74,12 +74,6 @@
     margin-left: -30px;
 }
 
-#clockPlusDays>svg {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 3px;
-}
-
 #days {
     display: inline-block;
     vertical-align: middle;
@@ -87,7 +81,7 @@
 }
 
 #line {
-    border-bottom: 1px solid #05B1F7;
+    border-bottom: 1px solid #757575;
     width: 300px;
     margin: auto;
 }
@@ -109,7 +103,7 @@
 #avatarName {
     display: inline-block;
     vertical-align: middle;
-    color: #05B1F7;
+    color: #757575;
 }
 
 #mainName {
@@ -119,5 +113,5 @@
 }
 
 #mainName:hover {
-    color: #05B1F7;
+    color: #757575;
 }
