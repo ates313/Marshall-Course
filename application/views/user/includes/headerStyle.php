@@ -21,19 +21,14 @@
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/course.css">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/bootstrap.min.css">
-<!-- Site CSS -->
-<link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/style.css">
 <!-- ALL VERSION CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/versions.css">
 <!-- Responsive CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/responsive.css">
 <!-- Custom CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/custom.css">
-
-
-<!-- Modernizer for Portfolio -->
-<script src="<?php echo base_url('public/user/assets/') ?>js/modernizer.js"></script>
-
+<!-- Site CSS -->
+<link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/style.css">
 </head>
 
 <body class="host_version">
