@@ -9,6 +9,11 @@ $route['contact'] = 'UserController/contact';
 $route['teachers'] = 'UserController/teachers';
 
 
+// Admin
+$route['dashboard'] = 'AdminController/index';
+$route['login'] = 'AdminController/login';
+
+
 
 
 

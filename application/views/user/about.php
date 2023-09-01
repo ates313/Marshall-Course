@@ -20,10 +20,11 @@
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="message-box">
                     <h4>2023 BEST Marshall education school</h4>
-                    <h2>Awards Winner Support Center</h2>
-                    <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus. Sed a tellus quis mi rhoncus dignissim.</p>
+                    <h2>Marshall Education</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae in voluptatum unde, quia repellendus, numquam dicta eaque adipisci qui est voluptatibus perferendis optio quasi magnam aut laboriosam error dolore?</p>
 
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis montes, nascetur ridiculus mus. Sed vitae rutrum neque. </p>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius modi commodi expedita iure quos qui debitis tempore quam itaque maxime incidunt error magni eos labore, dolorum quaerat hic id! Quae.
+                    Esse quia fuga maxime! Alias consequatur est eius dolores quasi esse odit, quae sequi commodi quidem ut ad nulla ipsa fugiat omnis voluptate fuga? Eaque officia iste neque laboriosam repellendus!</p>
 
                 </div><!-- end messagebox -->
             </div><!-- end col -->
@@ -43,7 +44,7 @@
 
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="message-box">
-                    <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+                    <h2>Marshall Course 2023</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
                     <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
