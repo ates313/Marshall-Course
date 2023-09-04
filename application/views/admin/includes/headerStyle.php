@@ -23,6 +23,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/f250293e3c.js" crossorigin="anonymous"></script>
     <title>Marshall Education || Admin Panel</title>
 </head>
 <body class="antialiased bg-gray-100">

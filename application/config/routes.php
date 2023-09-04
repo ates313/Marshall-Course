@@ -17,6 +17,7 @@ $route['admin'] = 'AdminController/index';
 $route['login'] = 'AdminController/login';
 // Admin Slider
 $route['c_slider'] = 'AdminController/c_slider';
+$route['l_slider'] = 'AdminController/l_slider';
 
 
 

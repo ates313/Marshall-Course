@@ -21,16 +21,16 @@
           <!-- DROPDOWN LINK -->
           <div class="container">
             <div class="menu">
-              <button class="toggle">Home Slider</button>
+              <button class="toggle">Slider</button>
               <ul class="list">
                 <a class="list-item" href="<?php echo base_url('c_slider') ?>">Creat Slider</a>
-                <a class="list-item" href="<?php  ?>">List Slider</a> 
+                <a class="list-item" href="<?php echo base_url('l_slider') ?>">List Slider</a>
               </ul>
             </div>
           </div>
           <!-- AND -->
         </div>
-        
+
       </div>
 
       <!-- PROFILE -->
@@ -52,4 +52,4 @@
     </div>
   </nav>
   <main class="flex-1 h-screen overflow-y-scroll overflow-x-hidden">
-  <!-- END OF NAV -->
+    <!-- END OF NAV -->

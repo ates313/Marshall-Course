@@ -18,7 +18,7 @@
             <textarea name="slider_desc" id="slider_desc" cols="30" rows="5" class="form-control"></textarea>
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
-            <label for="slider_img">Creat link</label>
+            <label for="slider_img">Creat Images</label>
             <input type="file" name="slider_img" class="form-control" id="slider_img" placeholder="Enter slider link">
         </div>
 
