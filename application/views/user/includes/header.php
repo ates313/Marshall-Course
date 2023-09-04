@@ -29,13 +29,13 @@
     </div>
 
     <!-- LOADER -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="loader-container">
             <div class="progress-br float shadow">
                 <div class="progress__item"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- END LOADER -->
 
     <!-- Start header -->
@@ -54,13 +54,13 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbars-host">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url('index') ?>">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="<?php echo base_url('home') ?>">Home</a></li>
                         <li class="nav-item"><a class="nav-link active" href="<?php echo base_url('about'); ?>">About Us</a></li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                                <a class="dropdown-item" href="course-grid-2.html">Course Grid 2 </a>
+                                <a class="dropdown-item" href="<?php echo base_url('course2') ?>">Course Grid 2 </a>
                                 <a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
                                 <a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
                             </div>

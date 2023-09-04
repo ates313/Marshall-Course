@@ -23,6 +23,10 @@ class UserController extends CI_Controller{
         $this->load->view('user/teachers');
     }
 
+    public function courseGrid2(){
+        $this->load->view('user/courseGrid2');
+    }
+
 
 
 }

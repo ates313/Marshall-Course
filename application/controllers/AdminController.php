@@ -15,4 +15,9 @@ class AdminController extends CI_Controller{
         $this->load->view('admin/login');
     }
 
+    // SLIDER START
+    public function c_slider(){
+        $this->load->view('admin/page/slider/c_slider');
+    }
+
 }

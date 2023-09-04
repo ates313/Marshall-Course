@@ -24,6 +24,10 @@
     cursor: pointer;
   }
 
+  a{
+    text-decoration: none !important;
+  }
+
   .toggle::after {
     content: "";
     width: 6px;
@@ -52,7 +56,7 @@
     padding-left: 10px;
     transition: 0.4s;
     border-radius: 8px;
-    transform: translateX(-100%);
+    text-decoration: none;
     user-select: none;
     cursor: pointer;
   }

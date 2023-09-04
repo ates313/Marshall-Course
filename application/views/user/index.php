@@ -1,18 +1,18 @@
 <?php $this->load->view('user/includes/headerStyle'); ?>
 <?php $this->load->view('user/includes/header') ?>
 
-    <!------ Include the above in your  tag ---------->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<!------ Include the above in your  tag ---------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
 
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
-    <ol class="carousel-indicators">
+    <!-- <ol class="carousel-indicators">
         <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleControls" data-slide-to="1"></li>
         <li data-target="#carouselExampleControls" data-slide-to="2"></li>
-    </ol>
+    </ol> -->
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div id="home" class="first-section" style="background-image:url('public/user/assets/images/slider-01.jpg');">
@@ -21,11 +21,13 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 text-right">
                                 <div class="big-tagline">
-                                    <h2><strong>MarshallEDU </strong> education College</h2>
-                                    <p class="lead">With Landigoo responsive landing page template, you can promote
-                                        your all hosting, domain and email services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <h2><strong>MarshallEDU education College</strong></h2>
+                                    <p class="lead">With Landigoo responsive landing page template,
+                                        you can promote Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Ipsam similique cum harum consectetur placeat odit molestias beatae.
+                                        Asperiores nisi, officiis fugit esse error possimus animi ut sequi doloremque placeat culpa.
+                                        your all hosting, domain and email services.
+                                    </p>
                                     <a href="#" class="hover-btn-new"><span>Read More</span></a>
                                 </div>
                             </div>
@@ -34,51 +36,7 @@
                 </div>
             </div><!-- end section -->
         </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('public/user/assets/images/slider-02.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-left">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight">MarshallEDU <strong>education
-                                            school</strong></h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
-                                        landing page template, you can promote your all hosting, domain and email
-                                        services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
-        <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('public/user/assets/images/slider-03.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12 text-center">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight"><strong>VPS Servers</strong> Company
-                                    </h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">1 IP included with each
-                                        server
-                                        Your Choice of any OS (CentOS, Windows, Debian, Fedora)
-                                        FREE Reboots</p>
-                                    <a href="#" class="hover-btn-new"><span>Contact Us</span></a>
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
-                                </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
-        </div>
+
         <!-- Left Control -->
         <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="fa fa-angle-left" aria-hidden="true"></span>
@@ -96,28 +54,85 @@
 
 <!-- Course start -->
 <div id="overviews" class="section wb">
-    <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2">
-            <h3 style="color: white;">Courses we have chosen for you</h3>
-        </div>
-    </div>
-    <div class="a_container">
-        <a id="cubeLink" href="">
-            <img id="cube" src="https://i.ibb.co/YPG35nL/image-equilibrium.jpg" alt="image-equilibrium" border="0">
-        </a>
-        <a href="" id="header">Title</a>
-        <p id="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad rerum quae aperiam iure
-            quam. Molestiae distinctio, </p>
-        <div id="ethAndDays">
-            <div id="ethPlusIcon">
-                <p id="eth">65 AZN</p>
-            </div>
-            <div id="clockPlusDays">
-                <p id="days">27 avqust 2023</p>
-            </div>
-        </div>
-    </div>
-</div>
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
+                </div>
+            </div><!-- end title -->
+
+            <hr class="invis"> 
+
+            <div class="row"> 
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="course-item">
+						<div class="image-blog">
+							<img src="<?php echo base_url('public/user/assets/') ?>images/blog_1.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Engineering</a></h2>
+							</div>
+							<div class="course-desc">
+								<p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
+						</div>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
+						</div>
+					</div>
+                </div><!-- end col -->
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <div class="course-item">
+						<div class="image-blog">
+							<img src="<?php echo base_url('public/user/assets/') ?>images/blog_2.jpg" alt="" class="img-fluid">
+						</div>
+						<div class="course-br">
+							<div class="course-title">
+								<h2><a href="#" title="">Hotel Management</a></h2>
+							</div>
+							<div class="blog-desc">
+								<p style="color: white;">Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+							</div>
+							<div class="course-rating">
+								4.5
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star"></i>	
+								<i class="fa fa-star-half"></i>								
+							</div>
+						</div>
+						<div class="course-meta-bot">
+							<ul>
+								<li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
+								<li><i class="fa fa-users" aria-hidden="true"></i> 56 Student</li>
+								<li><i class="fa fa-book" aria-hidden="true"></i> 7 Books</li>
+							</ul>
+						</div>
+					</div>
+                </div><!-- end col -->	
+            </div><!-- end row -->
+			
+			<hr class="hr3"> 
+			
+			
+        </div><!-- end container -->
+    </div><!-- end section -->
+
 
 <!-- end -->
 
@@ -150,7 +165,7 @@
                         </div>
                         <div class="a_text">
                             <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
                             </span>
                         </div>
                     </div>
