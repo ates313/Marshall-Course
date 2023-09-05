@@ -1,7 +1,8 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('c_slider_act'); ?>" method="POST" enctype="multipart/form-data">
+
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Slider Creat Page!</p>
     <div class="form-group container-fluid row ">
         <div class="col-sm-6 mb-6 mb-sm-0">
@@ -24,6 +25,7 @@
 
     </div>
     <hr>
+
     <button class="form-control bg-primary text-light" type="submit">Submit</button>
 
 </form>
