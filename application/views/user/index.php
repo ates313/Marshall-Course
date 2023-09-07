@@ -32,25 +32,27 @@
             </div><!-- end section -->
         </div>
         <div class="carousel-item">
-            <div id="home" class="first-section" style="background-image:url('public/user/assets/images/slider-02.jpg');">
-                <div class="dtab">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12 col-sm-12">
-                                <div class="big-tagline">
-                                    <h2 data-animation="animated zoomInRight">MarshallEDU <strong>education
-                                            school</strong></h2>
-                                    <p class="lead" data-animation="animated fadeInLeft">With Landigoo responsive
-                                        landing page template, you can promote your all hosting, domain and email
-                                        services. </p>
-                                    <a href="#" class="hover-btn-new"><span>Read More</span></a>
+
+            <?php foreach ($slider_get_list as $slider_get_list_item) { ?>
+                <div id="home" class="first-section" style="background-image:url('<?php echo base_url('upload/' . $slider_get_list_item['s_img']) ?>');">
+                    <div class="dtab">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="big-tagline">
+                                        <h2 data-animation="animated zoomInRight"><?php echo $slider_get_list_item['s_title'] ?></h2>
+                                        <p class="lead" data-animation="animated fadeInLeft"><?php echo $slider_get_list_item['s_desc'] ?> </p>
+                                        <a href="<?php echo $slider_get_list_item['s_link'] ?>" class="hover-btn-new"><span>Read More</span></a>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- end row -->
-                    </div><!-- end container -->
-                </div>
-            </div><!-- end section -->
+                            </div><!-- end row -->
+                        </div><!-- end container -->
+                    </div>
+                </div><!-- end section -->
+
+            <?php } ?>
         </div>
+
         <!-- Left Control -->
         <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="fa fa-angle-left" aria-hidden="true"></span>

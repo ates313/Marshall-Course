@@ -5,10 +5,13 @@ class UserController extends CI_Controller{
     public function __construct()
     {
         parent::__construct();
+        $this->load->model('UserModel');
     }
 
     public function index(){
-        $this->load->view('user/index');
+        // $data['contact_get_list'] = $this->UserModel->get_contact();
+        $data['slider_get_list'] = $this->UserModel->get_slider();
+        $this->load->view('user/index', $data);
     }
 
     public function about(){
