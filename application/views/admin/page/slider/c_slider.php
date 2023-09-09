@@ -1,6 +1,12 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
+<style>
+
+    
+
+</style>
+
 <form action="<?php echo base_url('c_slider_act'); ?>" method="POST" enctype="multipart/form-data">
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Slider Creat Page!</p>
@@ -18,11 +24,17 @@
             <label for="slider_desc">Creat description</label>
             <textarea name="slider_desc" id="slider_desc" cols="30" rows="5" class="form-control"></textarea>
         </div>
-        <div class="col-sm-3 mb-6 mb-sm-0">
+        <div class="col-sm-3 mb-6 mb-sm-0 mt-3">
+            <label for="slider_status">Status:</label>
+            <select class="form-control" name="slider_status" id="slider_status">
+                <option class="form-control" value="Active">Active</option>
+                <option class="form-control" value="Deactive">Deactive</option>
+            </select>
+        </div>
+        <div class="col-sm-3 mb-6 mb-sm-0 mt-3">
             <label for="slider_img">Creat Images</label>
             <input type="file" name="slider_img" class="form-control" id="slider_img" placeholder="Enter slider link">
         </div>
-
     </div>
     <hr>
 

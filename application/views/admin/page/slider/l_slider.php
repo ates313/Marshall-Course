@@ -61,8 +61,9 @@
 
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <input type="checkbox" checked data-toggle="toggle" data-onstyle="success" data-offstyle="danger">
+                            <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $slider_get_list_item['s_status'] ?></span>
                         </td>
+
                         <td class="py-3 px-6 text-center">
                             <!-- <a target="_blank" href="#">
                                 <button>

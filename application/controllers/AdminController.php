@@ -37,6 +37,7 @@ class AdminController extends CI_Controller
         $slider_title = $_POST['slider_title'];
         $slider_link = $_POST['slider_link'];
         $slider_desc = $_POST['slider_desc'];
+        $slider_status = $_POST['slider_status'];
 
 
 
@@ -56,9 +57,10 @@ class AdminController extends CI_Controller
                 's_title' => $slider_title,
                 's_link' => $slider_link,
                 's_desc' => $slider_desc,
+                's_status' => $slider_status,
                 's_img' => $upload_slider_img['file_name'],
                 's_date' => date("Y-m-d H:i:s"),
-                's_id' => ""
+                // 's_id' => ""
             ];
 
             $this->db->insert('slider', $data);
@@ -68,8 +70,9 @@ class AdminController extends CI_Controller
                 's_title' => $slider_title,
                 's_link' => $slider_link,
                 's_desc' => $slider_desc,
+                's_status' => $slider_status,
                 's_date' => date("Y-m-d H:i:s"),
-                's_id' => ""
+                // 's_id' => ""
             ];
 
             $this->AdminModel->slider_insert($data);
@@ -90,6 +93,7 @@ class AdminController extends CI_Controller
         $slider_title = $_POST['slider_title'];
         $slider_link = $_POST['slider_link'];
         $slider_desc = $_POST['slider_desc'];
+        $slider_status = $_POST['slider_status'];
 
         // print_r('<pre>');
         // print_r($slider_desc);
@@ -111,10 +115,11 @@ class AdminController extends CI_Controller
                 's_title' => $slider_title,
                 's_link' => $slider_link,
                 's_desc' => $slider_desc,
+                's_status' => $slider_status,
                 's_img' => $upload_slider_img['file_name'],
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => ""
-            ];  
+            ];
 
             $this->AdminModel->update_slider($s_id, $data);
             redirect(base_url('l_slider'));
@@ -123,6 +128,7 @@ class AdminController extends CI_Controller
                 's_title' => $slider_title,
                 's_link' => $slider_link,
                 's_desc' => $slider_desc,
+                's_status' => $slider_status,
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => "" 
             ];

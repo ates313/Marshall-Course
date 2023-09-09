@@ -18,6 +18,13 @@
             <label for="slider_desc">Creat description</label>
             <textarea name="slider_desc" id="slider_desc" cols="30" rows="5" class="form-control"><?php echo $slider_get_list_rw['s_desc'] ?></textarea>
         </div>
+        <div class="col-sm-3 mb-3 mb-sm-0">
+            <label for="Status"><b>Status</b></label>
+            <select name="slider_status" id="slider_status" class="form-control">
+                <option <?php if($slider_get_list_rw['s_status'] == "active"){ echo "SELECTED"; } ?> value="Active">Active</option>
+                <option <?php if($slider_get_list_rw['s_status'] == "deactive"){ echo "SELECTED"; } ?> value="Deactive">Deactive</option>
+            </select>
+         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="slider_img">Creat Images</label>
             <input type="file" name="slider_img" class="form-control" id="slider_img" placeholder="Enter slider link">
