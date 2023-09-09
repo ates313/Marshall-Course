@@ -42,7 +42,7 @@
                                     <div class="big-tagline">
                                         <h2 data-animation="animated zoomInRight"><?php echo $slider_get_list_item['s_title'] ?></h2>
                                         <p class="lead" data-animation="animated fadeInLeft"><?php echo $slider_get_list_item['s_desc'] ?> </p>
-                                        <a href="<?php echo $slider_get_list_item['s_link'] ?>" class="hover-btn-new"><span>Read More</span></a>
+                                        <a target="_blank" href="<?php echo $slider_get_list_item['s_link'] ?>" class="hover-btn-new"><span>Read More</span></a>
                                     </div>
                                 </div>
                             </div><!-- end row -->
