@@ -61,8 +61,17 @@
 
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $slider_get_list_item['s_status'] ?></span>
+                            <?php if($slider_get_list_item['s_status'] == "Active"){ ?>
+                                <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $slider_get_list_item['s_status'] ?></span>
+                            <?php } ?>
+                            <?php if($slider_get_list_item['s_status'] == "Deactive"){ ?>
+                                <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs"><?php echo $slider_get_list_item['s_status'] ?></span>
+                            <?php } ?>
                         </td>
+
+                        <option <?php //if ($slider_get_list_rw['s_status'] == "active") {
+                           // echo "SELECTED";
+                        // } ?> value="Active"></option>
 
                         <td class="py-3 px-6 text-center">
                             <!-- <a target="_blank" href="#">

@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
-<form action="<?php echo base_url('e_slider_act/'.$slider_get_list_rw['s_id']); ?>" method="post" enctype="multipart/form-data">
+<form action="<?php echo base_url('e_slider_act/' . $slider_get_list_rw['s_id']); ?>" method="post" enctype="multipart/form-data">
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Slider Edit Page!</p>
     <div class="form-group container-fluid row ">
@@ -21,10 +21,14 @@
         <div class="col-sm-3 mb-3 mb-sm-0">
             <label for="Status"><b>Status</b></label>
             <select name="slider_status" id="slider_status" class="form-control">
-                <option <?php if($slider_get_list_rw['s_status'] == "active"){ echo "SELECTED"; } ?> value="Active">Active</option>
-                <option <?php if($slider_get_list_rw['s_status'] == "deactive"){ echo "SELECTED"; } ?> value="Deactive">Deactive</option>
+                <option <?php if ($slider_get_list_rw['s_status'] == "Active") {
+                            echo "SELECTED";
+                        } ?> value="Active">Active</option>
+                <option <?php if ($slider_get_list_rw['s_status'] == "Deactive") {
+                            echo "SELECTED";
+                        } ?> value="Deactive">Deactive</option>
             </select>
-         </div>
+        </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="slider_img">Creat Images</label>
             <input type="file" name="slider_img" class="form-control" id="slider_img" placeholder="Enter slider link">
