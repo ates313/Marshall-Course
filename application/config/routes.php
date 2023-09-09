@@ -22,7 +22,7 @@ $route['c_slider_act'] = 'AdminController/c_slider_act';
 $route['l_slider'] = 'AdminController/l_slider';
 $route['e_slider/(.*)'] = 'AdminController/e_slider/$1';
 $route['d_slider/(.*)'] = 'AdminController/d_slider/$1';
-$route['e_slider_act(.*)'] = 'AdminController/e_slider_act/$1';
+$route['e_slider_act/(.*)'] = 'AdminController/e_slider_act/$1';
 
 
 

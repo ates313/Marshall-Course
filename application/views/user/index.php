@@ -9,8 +9,8 @@
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+        <!-- <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="1"></li> -->
         <!-- <li data-target="#carouselExampleControls" data-slide-to="2"></li> -->
     </ol>
     <div class="carousel-inner" role="listbox">
@@ -31,9 +31,9 @@
                 </div>
             </div><!-- end section -->
         </div>
-        <div class="carousel-item">
 
-            <?php foreach ($slider_get_list as $slider_get_list_item) { ?>
+        <?php foreach ($slider_get_list as $slider_get_list_item) { ?>
+            <div class="carousel-item">
                 <div id="home" class="first-section" style="background-image:url('<?php echo base_url('upload/' . $slider_get_list_item['s_img']) ?>');">
                     <div class="dtab">
                         <div class="container">
@@ -49,9 +49,8 @@
                         </div><!-- end container -->
                     </div>
                 </div><!-- end section -->
-
-            <?php } ?>
-        </div>
+            </div>
+        <?php } ?>
 
         <!-- Left Control -->
         <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
