@@ -19,7 +19,11 @@ class AdminController extends CI_Controller
         $this->load->view('admin/login');
     }
 
+
+
+
     // SLIDER START
+
     public function c_slider()
     {
         $this->load->view('admin/page/slider/c_slider');
@@ -137,13 +141,125 @@ class AdminController extends CI_Controller
         }
     }
 
-
-
-
-
     public function d_slider($s_id)
     {
         $this->AdminModel->delete_slider($s_id);
         redirect(base_url('l_slider'));
+    }
+
+
+
+    // Course start
+
+    public function c_course()
+    {
+        $this->load->view('admin/page/course/c_course');
+        // echo 'Hello';
+    }
+
+    public function l_course()
+    {
+        $data['course_get_list'] = $this->AdminModel->course_get_list();
+        $this->load->view('admin/page/course/l_course', $data);
+    }
+
+    public function c_course_act()
+    {
+
+        $course_status = $_POST['course_status'];
+        $course_month = $_POST['course_month'];
+        $course_title = $_POST['course_title'];
+        // $course_category = $_POST['course_category'];
+        $course_desc = $_POST['course_desc'];
+
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('course_img')) {
+            $upload_course_img = $this->upload->data();
+
+            $data = [
+                'c_title' => $course_title,
+                'c_month' => $course_month,
+                'c_desc' => $course_desc,
+                'c_status' => $course_status,
+                'c_img' => $upload_course_img['file_name'],
+                'c_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->insert('course', $data);
+            redirect(base_url('l_course'));
+        } else {
+            $data = [
+                'c_title' => $course_title,
+                'c_month' => $course_month,
+                'c_desc' => $course_desc,
+                'c_status' => $course_status,
+                'c_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->course_insert($data);
+            redirect(base_url('l_course'));
+        }
+    }
+
+    public function e_course($c_id){
+        $data['course_get_list_rw'] = $this->AdminModel->course_get_list_rw($c_id);
+        $this->load->view('admin/page/course/e_course', $data);
+    }
+
+    public function e_course_act($c_id){
+        $course_status = $_POST['course_status'];
+        $course_month = $_POST['course_month'];
+        $course_title = $_POST['course_title'];
+        // $course_category = $_POST['course_category'];
+        $course_desc = $_POST['course_desc'];
+
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('course_img')) {
+            $upload_course_img = $this->upload->data();
+
+            $data = [
+                'c_title' => $course_title,
+                'c_month' => $course_month,
+                'c_desc' => $course_desc,
+                'c_status' => $course_status,
+                'c_img' => $upload_course_img['file_name'],
+                'c_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_course($c_id, $data);
+            redirect(base_url('l_course'));
+        } else {
+            $data = [
+                'c_title' => $course_title,
+                'c_month' => $course_month,
+                'c_desc' => $course_desc,
+                'c_status' => $course_status,
+                'c_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_course($c_id, $data);
+            redirect(base_url('l_course'));
+        }
+
+    }
+
+    public function d_course($c_id)
+    {
+        $this->AdminModel->delete_course($c_id);
+        redirect(base_url('l_course'));
     }
 }

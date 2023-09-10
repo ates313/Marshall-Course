@@ -10,6 +10,7 @@ class UserModel extends CI_Model
             $this->db
             // ->select('s_title')
             ->where('s_status', 'Active')
+            ->limit(4)
             ->get('slider')->result_array();
     }
 

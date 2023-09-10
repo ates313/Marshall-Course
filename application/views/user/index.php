@@ -9,9 +9,11 @@
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <!-- <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li> -->
-        <!-- <li data-target="#carouselExampleControls" data-slide-to="2"></li> -->
+        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
@@ -76,7 +78,7 @@
             </div>
         </div><!-- end title -->
 
-        <div class="col-lg-6 col-md-6 col-12 m-4">
+        <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1" style="float: left;">
             <div class="course-item">
                 <div class="image-blog">
                     <img src="<?php echo base_url('public/user/assets/') ?>images/blog_1.jpg" alt="" class="img-fluid">

@@ -28,6 +28,15 @@
               </ul>
             </div>
           </div>
+          <div class="container">
+            <div class="menu">
+              <button class="toggle">Course</button>
+              <ul class="list">
+                <a class="list-item" href="<?php echo base_url('c_course') ?>">Creat Course</a>
+                <a class="list-item" href="<?php echo base_url('l_course') ?>">List Course</a>
+              </ul>
+            </div>
+          </div>
           <!-- AND -->
         </div>
 
