@@ -78,27 +78,34 @@
             </div>
         </div><!-- end title -->
 
-        <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1" style="float: left;">
-            <div class="course-item">
-                <div class="image-blog">
-                    <img src="<?php echo base_url('public/user/assets/') ?>images/blog_1.jpg" alt="" class="img-fluid">
-                </div>
-                <div class="course-br">
-                    <div class="course-title">
-                        <h2><a href="#" title="">Engineering</a></h2>
+        <?php foreach ($course_get_list as $course_get_list_item) { ?>
+
+            <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1" style="float: left;">
+                <div class="course-item">
+                    <div class="image-blog">
+                        <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
                     </div>
-                    <div class="course-desc">
-                        <p>Lorem ipsum door sit amet, fugiat deicata avise id cum, no quo maiorum intel ogrets geuiat operts elicata libere avisse id cumlegebat, liber regione eu sit.... </p>
+                    <div class="course-br">
+                        <div class="course-title">
+                            <h2><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h2>
+                        </div>
+                        <div class="course-desc">
+                            <p><?php echo $course_get_list_item['c_desc'] ?></p>
+                        </div>
+                    </div>
+                    <div class="course-meta-bot">
+                        <ul>
+                            <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
+                        </ul>
+                        <ul>
+                            <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
+                            <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?>AZN</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="course-meta-bot">
-                    <ul>
-                        <li><i class="fa fa-calendar" aria-hidden="true"></i> 6 Month</li>
-                        <li><i class="fa fa-money" aria-hidden="true"></i> 56 AZN</li>
-                    </ul>
-                </div>
-            </div>
-        </div><!-- end col -->
+            </div><!-- end col -->
+
+        <?php  } ?>
     </div><!-- end container -->
 
 

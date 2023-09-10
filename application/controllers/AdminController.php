@@ -169,7 +169,7 @@ class AdminController extends CI_Controller
         $course_status = $_POST['course_status'];
         $course_month = $_POST['course_month'];
         $course_title = $_POST['course_title'];
-        // $course_category = $_POST['course_category'];
+        $course_price = $_POST['course_price'];
         $course_desc = $_POST['course_desc'];
 
 
@@ -187,6 +187,7 @@ class AdminController extends CI_Controller
                 'c_title' => $course_title,
                 'c_month' => $course_month,
                 'c_desc' => $course_desc,
+                'c_price' => $course_price,
                 'c_status' => $course_status,
                 'c_img' => $upload_course_img['file_name'],
                 'c_date' => date("Y-m-d H:i:s")
@@ -199,6 +200,7 @@ class AdminController extends CI_Controller
                 'c_title' => $course_title,
                 'c_month' => $course_month,
                 'c_desc' => $course_desc,
+                'c_price' => $course_price,
                 'c_status' => $course_status,
                 'c_date' => date("Y-m-d H:i:s")
             ];
@@ -217,7 +219,7 @@ class AdminController extends CI_Controller
         $course_status = $_POST['course_status'];
         $course_month = $_POST['course_month'];
         $course_title = $_POST['course_title'];
-        // $course_category = $_POST['course_category'];
+        $course_price = $_POST['course_price'];
         $course_desc = $_POST['course_desc'];
 
 
@@ -235,6 +237,7 @@ class AdminController extends CI_Controller
                 'c_title' => $course_title,
                 'c_month' => $course_month,
                 'c_desc' => $course_desc,
+                'c_price' => $course_price,
                 'c_status' => $course_status,
                 'c_img' => $upload_course_img['file_name'],
                 'c_date' => date("Y-m-d H:i:s")
@@ -247,6 +250,7 @@ class AdminController extends CI_Controller
                 'c_title' => $course_title,
                 'c_month' => $course_month,
                 'c_desc' => $course_desc,
+                'c_price' => $course_price, 
                 'c_status' => $course_status,
                 'c_date' => date("Y-m-d H:i:s")
             ];

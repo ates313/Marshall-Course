@@ -15,7 +15,7 @@
                     <th class="py-3 px-6 text-center">Images</th>
                     <th class="py-3 px-6 text-center">Title</th>
                     <th class="py-3 px-6 text-center">Description</th>
-                    <!-- <th class="py-3 px-6 text-center">Category</th> -->
+                    <th class="py-3 px-6 text-center">Price</th>
                     <th class="py-3 px-6 text-center">Status</th>
                     <th class="py-3 px-6 text-center">Date of creation</th>
                     <th class="py-3 px-6 text-center">Month</th>
@@ -46,6 +46,9 @@
                         </td>
                         <td class="py-3 px-6 text-center">
                             <?php echo $course_get_list_item['c_desc'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $course_get_list_item['c_price'] ?>
                         </td>
                         <!-- <td class="py-3 px-6 text-center">
                         Category

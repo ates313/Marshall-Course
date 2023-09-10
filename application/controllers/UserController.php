@@ -11,6 +11,7 @@ class UserController extends CI_Controller{
     public function index(){
         // $data['contact_get_list'] = $this->UserModel->get_contact();
         $data['slider_get_list'] = $this->UserModel->get_slider();
+        $data['course_get_list'] = $this->UserModel->get_course();
         $this->load->view('user/index', $data);
     }
 
@@ -27,6 +28,7 @@ class UserController extends CI_Controller{
     }
 
     public function courseGrid2(){
+        // $data['course_get_list'] = $this->UserModel->get_course();
         $this->load->view('user/courseGrid2');
     }
 

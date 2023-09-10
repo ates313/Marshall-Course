@@ -27,16 +27,20 @@
             </select>
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
-            <label for="course_img">Creat Images</label>
+            <label for="course_img">Edit Images</label>
             <input type="file" name="course_img" class="form-control" id="course_img" placeholder="Enter slider link">
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
-            <label for="course_title">Creat title</label>
+            <label for="course_price">Edit price</label>
+            <input value="<?php echo $course_get_list_rw['c_price'] ?>" type="text" name="course_price" class="form-control" id="course_price" placeholder="Enter course title">
+        </div>
+        <div class="col-sm-3 mb-6 mb-sm-0">
+            <label for="course_title">Edit title</label>
             <input value="<?php echo $course_get_list_rw['c_title'] ?>" type="text" name="course_title" class="form-control" id="course_title" placeholder="Enter course title">
         </div>
         <div class="col-sm-12 mb-6 mb-sm-0">
             <br>
-            <label for="course_desc">Creat description</label>
+            <label for="course_desc">Edit description</label>
             <textarea name="course_desc" id="course_desc" cols="30" rows="5" class="form-control"><?php echo $course_get_list_rw['c_desc'] ?></textarea>
         </div>
         <br>

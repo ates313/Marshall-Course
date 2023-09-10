@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
@@ -31,6 +31,3 @@ $route['c_course_act'] = 'AdminController/c_course_act';
 $route['e_course/(.*)'] = 'AdminController/e_course/$1';
 $route['d_course/(.*)'] = 'AdminController/d_course/$1';
 $route['e_course_act/(.*)'] = 'AdminController/e_course_act/$1';
-
-
-

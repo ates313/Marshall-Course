@@ -31,6 +31,10 @@
             <input type="file" name="course_img" class="form-control" id="course_img" placeholder="Enter slider link">
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
+            <label for="course_price">Creat price</label>
+            <input type="text" name="course_price" class="form-control" id="course_price" placeholder="Enter course title">
+        </div>
+        <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_title">Creat title</label>
             <input type="text" name="course_title" class="form-control" id="course_title" placeholder="Enter course title">
         </div>
