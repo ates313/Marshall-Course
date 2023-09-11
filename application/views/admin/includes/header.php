@@ -23,8 +23,8 @@
             <div class="menu">
               <button class="toggle">Slider</button>
               <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_slider') ?>">Creat Slider</a>
-                <a class="list-item" href="<?php echo base_url('l_slider') ?>">List Slider</a>
+                <a class="list-item" href="<?php echo base_url('c_slider') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+                <a class="list-item" href="<?php echo base_url('l_slider') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
               </ul>
             </div>
           </div>
@@ -32,8 +32,17 @@
             <div class="menu">
               <button class="toggle">Course</button>
               <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_course') ?>">Creat Course</a>
-                <a class="list-item" href="<?php echo base_url('l_course') ?>">List Course</a>
+                <a class="list-item" href="<?php echo base_url('c_course') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+                <a class="list-item" href="<?php echo base_url('l_course') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
+              </ul>
+            </div>
+          </div>
+          <div class="container">
+            <div class="menu">
+              <button class="toggle">News</button>
+              <ul class="list">
+                <a class="list-item" href="<?php echo base_url('c_news') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+                <a class="list-item" href="<?php echo base_url('l_news') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
               </ul>
             </div>
           </div>

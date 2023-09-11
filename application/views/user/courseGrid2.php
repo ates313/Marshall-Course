@@ -34,7 +34,7 @@
 								<p><?php echo $course_get_list_item['c_desc'] ?></p>
 							</div>
 						</div>
-						<div class="course-meta-bot">
+						<div class="course-meta-bot d-flex flex-row justify-content-center align-items-center">
 							<ul>
 								<li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
 							</ul>

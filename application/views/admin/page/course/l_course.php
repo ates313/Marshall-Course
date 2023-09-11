@@ -34,7 +34,7 @@
                             <?php echo $say; ?>
                         </td>
                         <td class="py-3 px-6 text-left">
-                        <?php if ($course_get_list_item['c_img']) { ?>
+                            <?php if ($course_get_list_item['c_img']) { ?>
                                 <img width="60" src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="">
                             <?php } else { ?>
                                 <img width="60px" src="https://t4.ftcdn.net/jpg/04/99/93/31/360_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg" alt="No Image">

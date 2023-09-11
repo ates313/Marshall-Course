@@ -61,4 +61,35 @@ class AdminModel extends CI_Model
     {
         $this->db->where('c_id', $c_id)->update('course', $data);
     }
+
+
+
+
+
+    // NEWS
+    public function news_insert($data)
+    {
+        $this->db->insert('news', $data);
+    }
+
+    public function news_get_list()
+    {
+        return $this->db->order_by('n_id', "DESC")->get('news')->result_array();
+    }
+
+    public function news_get_list_rw($n_id)
+    {
+        return $this->db->where('n_id', $n_id)->get('news')->row_array();
+    }
+
+    public function delete_news($n_id)
+    {
+        $this->db->where('n_id', $n_id)->delete('news');
+        redirect(base_url('l_news')); 
+    }
+
+    public function update_news($n_id, $data)
+    {
+        $this->db->where('n_id', $n_id)->update('news', $data);
+    }
 }

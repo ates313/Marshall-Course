@@ -87,7 +87,7 @@
     </div>
 </div>
 
-<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+<div id="testimonials" class="parallax section db parallax-off" style=" background-image: url('https://w.forfun.com/fetch/4a/4abe953824e3403467d1ad6270fc7cca.jpeg');">
     <div class="container">
         <div class="section-title text-center">
             <h3>Staff</h3>

@@ -130,7 +130,6 @@
         </div><!-- end title -->
         <!-- Slider start -->
         <div class="timeline">
-
             <div class="a_main">
                 <div class="relative w-1/3 overflow-hidden rounded bg-gray-100 my-4">
                     <div class="h-60 overflow-hidden rounded-t">
@@ -141,19 +140,19 @@
                     <div class="relative p-8 h-auto">
                         <div class="absolute rounded -top-4 left-8">
                             <div class="a_date">
-                                <spam>31/08/2023</span>
+                                <span>31/08/2023</span>
                             </div>
                         </div>
                         <div class="a_text">
                             <span>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Lorem ipsum dolor sit amet c Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus iusto eum. Corrupti blanditiis temporibus quae quia deserunt est cum magnam aliquam exercitationem soluta, voluptas eveniet velit harum natus perferendis. onsectetur adipisicing elit.
                             </span>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+        
         <!-- Slider end -->
     </div>
 </section>

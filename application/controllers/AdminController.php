@@ -149,7 +149,7 @@ class AdminController extends CI_Controller
 
 
 
-    // Course start
+    // COURSE CARD START
 
     public function c_course()
     {
@@ -210,12 +210,14 @@ class AdminController extends CI_Controller
         }
     }
 
-    public function e_course($c_id){
+    public function e_course($c_id)
+    {
         $data['course_get_list_rw'] = $this->AdminModel->course_get_list_rw($c_id);
         $this->load->view('admin/page/course/e_course', $data);
     }
 
-    public function e_course_act($c_id){
+    public function e_course_act($c_id)
+    {
         $course_status = $_POST['course_status'];
         $course_month = $_POST['course_month'];
         $course_title = $_POST['course_title'];
@@ -250,7 +252,7 @@ class AdminController extends CI_Controller
                 'c_title' => $course_title,
                 'c_month' => $course_month,
                 'c_desc' => $course_desc,
-                'c_price' => $course_price, 
+                'c_price' => $course_price,
                 'c_status' => $course_status,
                 'c_date' => date("Y-m-d H:i:s")
             ];
@@ -258,12 +260,108 @@ class AdminController extends CI_Controller
             $this->AdminModel->update_course($c_id, $data);
             redirect(base_url('l_course'));
         }
-
     }
 
     public function d_course($c_id)
     {
         $this->AdminModel->delete_course($c_id);
         redirect(base_url('l_course'));
+    }
+
+
+
+    // NEWS START
+
+    public function c_news()
+    {
+        $this->load->view('admin/page/news/c_news');
+    }
+
+    public function l_news()
+    {
+        $data['news_get_list'] = $this->AdminModel->news_get_list();
+        $this->load->view('admin/page/news/l_news', $data);
+    }
+
+    public function c_news_act()
+    {
+        $news_desc = $_POST['news_desc'];
+        $news_status = $_POST['news_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('news_img')) {
+            $upload_news_img = $this->upload->data();
+            $data = [
+                'n_desc' => $news_desc,
+                'n_status' => $news_status,
+                'n_img' => $upload_news_img['file_name'],
+                'n_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->insert('news', $data);
+            redirect(base_url('l_news'));
+        } else {
+            $data = [
+                'n_desc' => $news_desc,
+                'n_status' => $news_status,
+                'n_date' => date("Y--d H:i:s")
+            ];
+
+            $this->AdminModel->news_insert($data);
+            redirect(base_url('l_news'));
+        }
+    }
+
+    public function e_news($n_id)
+    {
+        $data['news_get_list_rw'] = $this->AdminModel->news_get_list_rw($n_id);
+        $this->load->view('admin/page/news/e_news', $data);
+    }
+
+    public function e_news_act($n_id)
+    {
+        $news_desc = $_POST['news_desc'];
+        $news_status = $_POST['news_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('news_img')) {
+            $upload_news_img = $this->upload->data();
+            $data = [
+                'n_desc' => $news_desc,
+                'n_status' => $news_status,
+                'n_img' => $upload_news_img['file_name'],
+                'n_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_news($n_id, $data);
+            redirect(base_url('l_news'));
+        } else {
+            $data = [
+                'n_desc' => $news_desc,
+                'n_status' => $news_status,
+                'n_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_news($n_id, $data);
+            redirect(base_url('l_news'));
+        }
+    }
+
+    public function d_news($n_id)
+    {
+        $this->AdminModel->delete_news($n_id);
+        redirect(base_url('l_news'));
     }
 }
