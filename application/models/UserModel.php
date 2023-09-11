@@ -18,7 +18,7 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('c_status', 'Active')
-            ->limit(9)  
+            ->limit(6)  
             ->get('course')->result_array();
     }
 }

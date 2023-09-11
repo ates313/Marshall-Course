@@ -3,7 +3,7 @@
 
 <form action="<?php echo base_url('e_course_act/' . $course_get_list_rw['c_id']); ?>" method="POST" enctype="multipart/form-data">
 
-    <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Course Creat Page!</p>
+    <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Course Edit Page!</p>
     <div class="form-group container-fluid row ">
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_status">Status:</label>

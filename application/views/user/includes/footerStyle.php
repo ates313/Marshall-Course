@@ -5,6 +5,7 @@
 <script src="<?php echo base_url('public/user/assets/') ?>js/custom.js"></script>
 <script src="<?php echo base_url('public/user/assets/') ?>js/timeline.min.js"></script>
 <script src="<?php echo base_url('public/user/assets/') ?>js/modernizer.js"></script>
+<script src="<?php echo base_url('public/user/assets/') ?>js/scroll.js"></script>
 
 </body>
 

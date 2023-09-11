@@ -24,11 +24,34 @@
     SKELETON
 -------------------------------------------------------------------*/
 
+
+
+::-webkit-scrollbar {
+    width: auto;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: var(--scrlbar);
+    border-radius: 6px;
+}
+
+
+::-webkit-scrollbar-corner {
+    background-color: #6F6F6F;
+}
+
+
+
 body {
     color: #333333;
     font-size: 14px;
     font-family: 'Rubik', sans-serif;
     line-height: 1.80857;
+    --scrlbar: linear-gradient(0deg, #06ABF0, #ffffff);
 }
 
 body.demos .section {
@@ -163,7 +186,7 @@ a,
 .lead {
     font-size: 18px;
     line-height: 30px;
-    color: #767676;
+    color: white;
     margin: 0;
     padding: 0;
 }
@@ -1051,7 +1074,7 @@ a img.aligncenter {
 }
 
 .section-title p {
-    color: white;
+    /* color: white; */
     font-weight: 400;
     font-size: 18px;
     line-height: 33px;
@@ -2981,13 +3004,15 @@ body.host_version .first-section .effect-1.slide-btn::after {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+    background-image: url('https://usopm.org/wp-content/uploads/2021/08/shutterstock_559448341-scaled.jpg');
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     min-height: 300px;
 }
 
 .all-title-box h1 {
-    /* color: #fff; */
+    /* color: #4C5A7D; */
     font-weight: 600;
     text-transform: capitalize;
     padding-top: 11%;
@@ -4083,9 +4108,8 @@ a.link-style3 {
 
 .course-item {
     background: #ffffff;
+    height: 600px;
 }
-
-.course-item {}
 
 .course-title>h2 {
     margin: 15px 0;
@@ -4104,13 +4128,18 @@ a.link-style3 {
     color: #05B1F7;
 }
 
+.course-desc{
+    height: 180px;
+    overflow-y: scroll;
+}
+
 .course-br {
-    border: 1px solid #4babb1;
+    /* border: 1px solid #4babb1; */
     padding: 15px;
 }
 
 .course-meta-bot {
-    border: 1px solid #4babb1;
+    /* border: 1px solid #4babb1; */
     border-top: 0px;
     padding: 15px;
 }
@@ -4134,7 +4163,10 @@ a.link-style3 {
     color: #05B1F7;
 }
 
-/* Card Desing */
+
+
+
+/* Event card Desing */
 
 .a_main {
     width: 350px;
@@ -4166,6 +4198,8 @@ a.link-style3 {
 }
 
 /* Card Desing and*/
+
+
 
 /* Staff Start */
 

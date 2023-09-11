@@ -1,7 +1,7 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
-<p class="text-center text-dark py-2 rounded" style="font-size: 25px;">Welcome Slider List!</p>
+<p class="text-center text-dark py-2 rounded" style="font-size: 25px;">Welcome Course List!</p>
 
 <div class="form-group container-fluid">
     <a href="<?php echo base_url('c_course') ?>">

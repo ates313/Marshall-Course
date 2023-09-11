@@ -80,7 +80,7 @@
 
         <?php foreach ($course_get_list as $course_get_list_item) { ?>
 
-            <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1" style="float: left;">
+            <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1 height" style="float: left;">
                 <div class="course-item">
                     <div class="image-blog">
                         <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
@@ -93,11 +93,10 @@
                             <p><?php echo $course_get_list_item['c_desc'] ?></p>
                         </div>
                     </div>
-                    <div class="course-meta-bot">
+                    <div class="course-meta-bot d-flex flex-row justify-content-center align-items-center">
+                       
                         <ul>
-                            <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
-                        </ul>
-                        <ul>
+                        <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
                             <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
                             <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?>AZN</li>
                         </ul>
@@ -106,11 +105,12 @@
             </div><!-- end col -->
 
         <?php  } ?>
+
+        <button style="cursor: pointer;" class="form-control bg-primary">
+            <a href="<?php echo base_url('course2'); ?>">Read More</a>
+        </button>
+
     </div><!-- end container -->
-
-
-
-    <hr class="hr3">
 
 </div><!-- end section -->
 

@@ -28,8 +28,8 @@ class UserController extends CI_Controller{
     }
 
     public function courseGrid2(){
-        // $data['course_get_list'] = $this->UserModel->get_course();
-        $this->load->view('user/courseGrid2');
+        $data['course_get_list'] = $this->UserModel->get_course();
+        $this->load->view('user/courseGrid2', $data);
     }
 
 
