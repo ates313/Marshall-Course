@@ -1,4 +1,4 @@
-<div class="a_contactBar">
+<!-- <div class="a_contactBar">
         <div class="a_contact">
             <div class="a_gmail">
                 <i class="fa-solid fa-envelope"></i>
@@ -26,7 +26,7 @@
                 <i style="padding: 5px;" class="fa-brands fa-twitter"></i>
             </a>
         </div>
-    </div>
+    </div> -->
 
     <!-- LOADER -->
     <!-- <div id="preloader">

@@ -74,7 +74,7 @@
     <div class="container">
         <div class="section-title row text-center">
             <div class="col-md-8 offset-md-2">
-                <p style="font-size: 35px;" class="lead">Marshall Education Course</p>
+                <p style="font-size: 35px; color: #000;" class="lead">Marshall Education Course</p>
             </div>
         </div><!-- end title -->
 
