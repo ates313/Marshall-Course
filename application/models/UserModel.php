@@ -21,4 +21,13 @@ class UserModel extends CI_Model
             ->limit(6)  
             ->get('course')->result_array();
     }
+
+    public function news_course()
+    {
+        return
+            $this->db
+            ->where('n_status', 'Active')
+            ->limit(6)  
+            ->get('news')->result_array();
+    }
 }

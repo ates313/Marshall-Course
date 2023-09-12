@@ -94,9 +94,9 @@
                         </div>
                     </div>
                     <div class="course-meta-bot d-flex flex-row justify-content-center align-items-center">
-                       
+
                         <ul>
-                        <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
+                            <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
                             <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
                             <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?>AZN</li>
                         </ul>
@@ -129,30 +129,34 @@
             </div>
         </div><!-- end title -->
         <!-- Slider start -->
-        <div class="timeline">
-            <div class="a_main">
-                <div class="relative w-1/3 overflow-hidden rounded bg-gray-100 my-4">
-                    <div class="h-60 overflow-hidden rounded-t">
-                        <div class="a_imgSize">
-                            <img class="a_imgSize" src="https://d1ymz67w5raq8g.cloudfront.net/Pictures/1024x536/P/web/n/z/b/onlinecourses_shutterstock_490891228_2000px_728945.jpg" alt="" class="h-full w-full object-cover">
-                        </div>
-                    </div>
-                    <div class="relative p-8 h-auto">
-                        <div class="absolute rounded -top-4 left-8">
-                            <div class="a_date">
-                                <span>31/08/2023</span>
+
+        <?php foreach ($news_get_list as $news_get_list_item) { ?>
+
+            <div class="timeline">
+                <div class="a_main">
+                    <div class="relative w-1/3 overflow-hidden rounded bg-gray-100 my-4">
+                        <div class="h-60 overflow-hidden rounded-t">
+                            <div class="a_imgSize">
+                                <img class="a_imgSize" src="<?php echo base_url('upload/'. $news_get_list_item['n_img']) ?>" alt="" class="h-full w-full object-cover">
                             </div>
                         </div>
-                        <div class="a_text">
-                            <span>
-                                Lorem ipsum dolor sit amet c Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatibus iusto eum. Corrupti blanditiis temporibus quae quia deserunt est cum magnam aliquam exercitationem soluta, voluptas eveniet velit harum natus perferendis. onsectetur adipisicing elit.
-                            </span>
+                        <div class="relative p-8 h-auto">
+                            <div class="absolute rounded -top-4 left-8">
+                                <div class="a_date">
+                                    <span><?php echo $news_get_list_item['n_date'] ?></span>
+                                </div>
+                            </div>
+                            <div class="a_text">
+                                <span>
+                                    <?php echo $news_get_list_item['n_desc'] ?>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        
+        <?php } ?>
+
         <!-- Slider end -->
     </div>
 </section>
