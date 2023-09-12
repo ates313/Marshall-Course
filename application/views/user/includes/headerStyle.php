@@ -14,9 +14,6 @@
 <!-- Site Icons -->
 <link rel="shortcut icon" href="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="<?php echo base_url('public/user/assets/') ?>images/apple-touch-icon.png">
-<!-- Card CSS -->
-<link rel="stylesheet" href="<?php echo base_url('public/user/assets') ?>css/card.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 <!-- slide css -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/course.css">
 <!-- Bootstrap CSS -->

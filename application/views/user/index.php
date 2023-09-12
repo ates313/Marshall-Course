@@ -80,29 +80,25 @@
 
         <?php foreach ($course_get_list as $course_get_list_item) { ?>
 
-            <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1 height" style="float: left;">
-                <div class="course-item">
-                    <div class="image-blog">
-                        <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
-                    </div>
-                    <div class="course-br">
-                        <div class="course-title">
-                            <h2><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h2>
-                        </div>
-                        <div class="course-desc">
-                            <p><?php echo $course_get_list_item['c_desc'] ?></p>
-                        </div>
-                    </div>
-                    <div class="course-meta-bot d-flex flex-row justify-content-center align-items-center">
-
+            <div class="card text-center  col-sm-4">
+                <div class="card-header">
+                    <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
+                    <p class="card-text"><?php echo $course_get_list_item['c_desc'] ?></p>
+                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                </div>
+                <div class="card-footer text-muted">
+                    <div class="course-meta-bot">
                         <ul>
                             <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
                             <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
-                            <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?>AZN</li>
+                            <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
                         </ul>
                     </div>
                 </div>
-            </div><!-- end col -->
+            </div>
 
         <?php  } ?>
 
@@ -123,36 +119,23 @@
         <div class="section-title row text-center">
             <div class="col-md-8 offset-md-2">
                 <h3>News and events</h3>
-                <!-- <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                    lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!
-                </p> -->
             </div>
         </div><!-- end title -->
         <!-- Slider start -->
 
         <?php foreach ($news_get_list as $news_get_list_item) { ?>
-
-            <div class="timeline">
-                <div class="a_main">
-                    <div class="relative w-1/3 overflow-hidden rounded bg-gray-100 my-4">
-                        <div class="h-60 overflow-hidden rounded-t">
-                            <div class="a_imgSize">
-                                <img class="a_imgSize" src="<?php echo base_url('upload/'. $news_get_list_item['n_img']) ?>" alt="" class="h-full w-full object-cover">
-                            </div>
-                        </div>
-                        <div class="relative p-8 h-auto">
-                            <div class="absolute rounded -top-4 left-8">
-                                <div class="a_date">
-                                    <span><?php echo $news_get_list_item['n_date'] ?></span>
-                                </div>
-                            </div>
-                            <div class="a_text">
-                                <span>
-                                    <?php echo $news_get_list_item['n_desc'] ?>
-                                </span>
-                            </div>
+            <div class="card col-sm-4" style="height: 270px;">
+                <img class="a_imgSize" src="<?php echo base_url('upload/' . $news_get_list_item['n_img']) ?>" alt="">
+                <div class="card-body">
+                    <div class="absolute rounded -top-4 left-8">
+                        <div class="a_date">
+                            <span><?php echo $news_get_list_item['n_date'] ?></span>
                         </div>
                     </div>
+                    <span class="card-title">
+                        <?php echo $news_get_list_item['n_desc'] ?>
+                    </span>
+                    <!-- <p class="card-text">2034/23/32</p> -->
                 </div>
             </div>
         <?php } ?>
@@ -161,15 +144,15 @@
     </div>
 </section>
 
-<div id="testimonials" class="parallax section db parallax-off" style="background-image:url('public/user/assets/images/parallax_04.jpg');">
+<!-- <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('public/user/assets/images/parallax_04.jpg');">
     <div class="container">
         <div class="section-title text-center">
             <h3>Testimonials</h3>
             <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. </p>
-        </div><!-- end title -->
-    </div><!-- end container -->
-</div><!-- end section -->
+        </div>
+    </div>
+</div>
 <div class="parallax section dbcolor">
     <div class="container">
         <div class="row logos">
@@ -188,9 +171,8 @@
             <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
                 <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_06.png" alt="" class="img-repsonsive"></a>
             </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
-
-<?php $this->load->view('user/includes/footer') ?>
-<?php $this->load->view('user/includes/footerStyle') ?>
+        </div>
+    </div>
+</div> -->
+    <?php $this->load->view('user/includes/footer') ?>
+    <?php $this->load->view('user/includes/footerStyle') ?>

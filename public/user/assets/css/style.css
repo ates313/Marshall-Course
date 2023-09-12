@@ -8,14 +8,14 @@
     IMPORT FILES
 -------------------------------------------------------------------*/
 
-@import url(css/animate.css);
-@import url(css/animate.min.css);
-@import url(css/bootstrap-touch-slider.css);
-@import url(css/flaticon.css);
-@import url(css/timeline.min.css);
-@import url(css/prettyPhoto.css);
-@import url(css/owl.carousel.css);
-@import url(css/font-awesome.min.css);
+@import url(animate.css);
+@import url(animate.min.css);
+@import url(bootstrap-touch-slider.css);
+@import url(flaticon.css);
+@import url(timeline.min.css);
+@import url(prettyPhoto.css);
+@import url(owl.carousel.css);
+@import url(font-awesome.min.css);
 
 
 /* color: #05B1F7; */
@@ -55,7 +55,7 @@ body {
 }
 
 body.demos .section {
-    background: url(images/bg.png) repeat top center #f2f3f5;
+    background: url(../images/bg.png) repeat top center #f2f3f5;
 }
 
 body.demos .section-title img {
@@ -551,14 +551,15 @@ a img.aligncenter {
 /*------------------------------------------------------------------
     HEADER
 -------------------------------------------------------------------*/
-.top-navbar{
+.top-navbar {
     position: sticky;
     top: 0;
     z-index: 1000000;
 }
 
 .top-navbar .bg-light {
-    background: #4c5a7d !important;
+    background: rgba(76, 90, 125, 0.64) !important;
+    backdrop-filter: blur(3px);
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link {
@@ -627,7 +628,7 @@ a img.aligncenter {
 
 .a_logo {
     font-size: 25px;
-    color: #05B1F7;
+    color: #4C5A7D;
 }
 
 .a_logo_yellow {
@@ -666,7 +667,7 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: #05B1F7;
+    color: #4C5A7D;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link::after {
@@ -684,7 +685,7 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
-    color: #05B1F7;
+    color: #4C5A7D;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover::after {
@@ -2532,7 +2533,7 @@ select.mobile-device {
 }
 
 
-/*# sourceMappingURL=bootstrap-select.css.map */
+/* sourceMappingURL=bootstrap-select.css.map */
 
 .bootstrap-select>.btn {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -2588,7 +2589,7 @@ select.mobile-device {
 }
 
 #contact {
-    background: url(images/bg.png) no-repeat center center #fff;
+    background: url(../images/bg.png) no-repeat center center #fff;
 }
 
 .map-box {
@@ -2622,13 +2623,12 @@ select.mobile-device {
     font-weight: 400;
     font-size: 20px;
     text-transform: capitalize;
-    line-height: !important;
 }
 
 .footer {
     padding: 90px 0 80px !important;
     color: #cccccc;
-    background: #4c5a7d url('images/world-map.png') no-repeat center;
+    background: #4c5a7d url('../images/world-map.png') no-repeat center;
 }
 
 .footer .widget-title {
@@ -2916,7 +2916,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {
@@ -3619,6 +3619,7 @@ span.m_1 {
 
 .image-blog img:hover {
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: opacity(0.8);
     -moz-opacity: 0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8;
@@ -3713,7 +3714,7 @@ span.m_1 {
 
 .post-content .post-date {
     display: inline-block;
-    float: right;
+    /* float: right; */
 }
 
 .post-content .post-date span {
@@ -3933,8 +3934,6 @@ a.link-style3 {
     border-bottom: 1px solid #efefef;
 }
 
-.post-btn {}
-
 .post-btn button.hover-btn-new::before,
 .post-btn button.hover-btn-new::after {
     background: #05B1F7;
@@ -4123,7 +4122,7 @@ a.link-style3 {
     color: #05B1F7;
 }
 
-.course-desc{
+.course-desc {
     height: 180px;
     overflow-y: scroll;
 }
@@ -4174,9 +4173,10 @@ a.link-style3 {
 .a_date {
     background-color: #05B1F7;
     float: left;
-    border-radius: 7px;
+    border-radius: 4px;
     position: absolute;
-    top: 255px;
+    top: 128px;
+    left: 15px;
     color: white;
     height: 22px;
     width: 80px;
@@ -4187,12 +4187,12 @@ a.link-style3 {
     padding: 15px;
     height: 150px;
     overflow-y: scroll;
-    
+
 }
 
 .a_imgSize {
-    height: 247px;
-    width: 350px;
+    height: 150px;
+    width: 100%;
 }
 
 /* Card Desing and*/
@@ -4203,18 +4203,12 @@ a.link-style3 {
 
 
 .card {
-    background-color: #032e3e;
-    border: 4px solid #024e4e;
-    border-left-color: #024e4e;
-    border-top-color: #024e4e;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+    height: 540px;
     float: left;
-    position: relative;
-    height: 180px;
-    margin: auto;
-    padding: 10px;
-    width: 380px;
+}
+
+.card-body {
+    overflow-y: scroll;
 }
 
 .avatar {
@@ -4252,9 +4246,10 @@ a.link-style3 {
     text-decoration: underline;
 }
 
-.avatar img{
+.avatar img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
 }
+
 /* Staff End */
