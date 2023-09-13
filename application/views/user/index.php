@@ -144,35 +144,5 @@
     </div>
 </section>
 
-<!-- <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('public/user/assets/images/parallax_04.jpg');">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Testimonials</h3>
-            <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. </p>
-        </div>
-    </div>
-</div>
-<div class="parallax section dbcolor">
-    <div class="container">
-        <div class="row logos">
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_01.png" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_03.png" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_04.png" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_05.png" alt="" class="img-repsonsive"></a>
-            </div>
-            <div class="col-md-2 col-sm-2 col-xs-6 wow fadeInUp">
-                <a href="#"><img src="<?php echo base_url('public/user/assets/') ?>images/logo_06.png" alt="" class="img-repsonsive"></a>
-            </div>
-        </div>
-    </div>
-</div> -->
-    <?php $this->load->view('user/includes/footer') ?>
-    <?php $this->load->view('user/includes/footerStyle') ?>
+<?php $this->load->view('user/includes/footer') ?>
+<?php $this->load->view('user/includes/footerStyle') ?>
