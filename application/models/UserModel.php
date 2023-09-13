@@ -27,7 +27,7 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('n_status', 'Active')
-            ->limit(6)  
+            ->limit(6) 
             ->get('news')->result_array();
     }
 }

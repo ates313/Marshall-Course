@@ -328,7 +328,7 @@ a img.aligncenter {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 8888;
+    z-index: 8888888;
 }
 
 .loader-container:before {
@@ -511,38 +511,7 @@ a img.aligncenter {
 
 /* contact bar start */
 
-.a_contactBar {
-    width: 100%;
-    min-height: 40px;
-    float: left;
-    display: flex;
-    justify-content: space-around;
-}
-
-.a_contact {
-    width: 35%;
-    min-height: 40px;
-    float: left;
-    font-size: 17px;
-    color: #05B1F7;
-    position: relative;
-}
-
-.a_sosial {
-    width: 40%;
-    min-height: 40px;
-    float: left;
-    font-size: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.a_location {
-    position: absolute;
-    top: 0px;
-    right: 130px;
-}
+/*  */
 
 /* contact bar end */
 
@@ -629,6 +598,7 @@ a img.aligncenter {
 .a_logo {
     font-size: 25px;
     color: #4C5A7D;
+    z-index: 99999999999999;
 }
 
 .a_logo_yellow {
@@ -1504,7 +1474,7 @@ a img.aligncenter {
 }
 
 .testimonial img {
-    max-width: 55px;
+    /* max-width: 55px; */
 }
 
 .testimonial small {
@@ -3960,7 +3930,6 @@ a.link-style3 {
 .post-btn button.hover-btn-new span {
     position: relative;
     z-index: 2;
-    color: #fff;
 }
 
 .post-btn button.hover-btn-new::before {
@@ -3975,10 +3944,6 @@ a.link-style3 {
     left: 50%;
     top: 50%;
     width: 0;
-}
-
-.post-btn button.hover-btn-new:hover span {
-    color: #333333;
 }
 
 .post-btn button.hover-btn-new::after {
@@ -4160,7 +4125,7 @@ a.link-style3 {
 
 
 
-/* Event card Desing */
+/* NEWS card Desing */
 
 .a_main {
     width: 350px;
@@ -4175,11 +4140,12 @@ a.link-style3 {
     float: left;
     border-radius: 4px;
     position: absolute;
-    top: 128px;
-    left: 15px;
+    top: 0px;
+    left: 0px;
+    font-size: 10px;
     color: white;
-    height: 22px;
-    width: 80px;
+    height: 17px;
+    width: 60px;
 }
 
 .a_text {
@@ -4195,7 +4161,7 @@ a.link-style3 {
     width: 100%;
 }
 
-/* Card Desing and*/
+/* NEWS Desing and*/
 
 
 

@@ -77,31 +77,33 @@
                 <p style="font-size: 35px; color: #000;" class="lead">Marshall Education Course</p>
             </div>
         </div><!-- end title -->
-
-        <?php foreach ($course_get_list as $course_get_list_item) { ?>
-
-            <div class="card text-center  col-sm-4">
-                <div class="card-header">
-                    <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
-                </div>
-                <div class="card-body">
-                    <h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
-                    <p class="card-text"><?php echo $course_get_list_item['c_desc'] ?></p>
-                    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="course-meta-bot">
-                        <ul>
-                            <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
-                            <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
-                            <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
-                        </ul>
+        <div class="carousel-wrap">
+            <div class="owl-carousel owl-loaded owl-drag">
+                <?php foreach ($course_get_list as $course_get_list_item) { ?>
+                    <div class="item">
+                        <div class="card text-center  col-sm-12">
+                            <div class="card-header">
+                                <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
+                                <p class="card-text"><?php echo $course_get_list_item['c_desc'] ?></p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                <div class="course-meta-bot">
+                                    <ul>
+                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
+                                        <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
+                                        <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+
+                <?php  } ?>
             </div>
-
-        <?php  } ?>
-
+        </div>
         <button style="cursor: pointer;" class="form-control bg-primary">
             <a href="<?php echo base_url('course2'); ?>">Read More</a>
         </button>
@@ -122,24 +124,28 @@
             </div>
         </div><!-- end title -->
         <!-- Slider start -->
-
-        <?php foreach ($news_get_list as $news_get_list_item) { ?>
-            <div class="card col-sm-4" style="height: 270px;">
-                <img class="a_imgSize" src="<?php echo base_url('upload/' . $news_get_list_item['n_img']) ?>" alt="">
-                <div class="card-body">
-                    <div class="absolute rounded -top-4 left-8">
-                        <div class="a_date">
-                            <span><?php echo $news_get_list_item['n_date'] ?></span>
+        <div class="carousel-wrap">
+            <div class="owl-carousel owl-loaded owl-drag">
+                <?php foreach ($news_get_list as $news_get_list_item) { ?>
+                    <div class="item">
+                        <div class="card col-12" style="height: 270px;">
+                            <img class="a_imgSize" src="<?php echo base_url('upload/' . $news_get_list_item['n_img']) ?>" alt="">
+                            <div class="card-body">
+                                <div class="a_date">
+                                    <span><?php echo $news_get_list_item['n_date'] ?></span>
+                                </div>
+                                <span class="card-title">
+                                    <?php echo $news_get_list_item['n_desc'] ?>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <span class="card-title">
-                        <?php echo $news_get_list_item['n_desc'] ?>
-                    </span>
-                    <!-- <p class="card-text">2034/23/32</p> -->
-                </div>
+                <?php } ?>
             </div>
-        <?php } ?>
-
+        </div>
+        <button style="cursor: pointer;" class="form-control bg-primary light">
+            <a href="<?php echo base_url('course2'); ?>">Read More</a>
+        </button>
         <!-- Slider end -->
     </div>
 </section>
