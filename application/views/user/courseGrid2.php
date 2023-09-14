@@ -8,53 +8,33 @@
 </div>
 
 <div id="overviews" class="section wb">
-	<div class="container">
-		<div class="section-title row text-center">
-			<div class="col-md-8 offset-md-2">
-				<p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-			</div>
-		</div><!-- end title -->
-
-		<hr class="invis">
+	<div class="container" style="background-image: url('public/user/assets/images/world-map.png);">
 
 		<div class="row">
-
 			<?php foreach ($course_get_list as $course_get_list_item) { ?>
 
-				<div class="col-lg-4 col-md-6 col-12 mb-2 mt-1" style="float: left;">
-					<div class="course-item">
-						<div class="image-blog">
+				<div class="col-lg-4 col-md-6 col-12 mb-2 mt-1">
+					<div class="card text-center  col-sm-12">
+						<div class="card-header">
 							<img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
 						</div>
-						<div class="course-br">
-							<div class="course-title">
-								<h2><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h2>
-							</div>
-							<div class="course-desc">
-								<p><?php echo $course_get_list_item['c_desc'] ?></p>
-							</div>
+						<div class="card-body">
+							<h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
+							<p class="card-text"><?php echo $course_get_list_item['c_desc'] ?></p>
 						</div>
-						<div class="course-meta-bot d-flex flex-row justify-content-center align-items-center">
-							<ul>
-								<li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
-							</ul>
-							<ul>
-								<li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
-								<li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?>AZN</li>
-							</ul>
+						<div class="card-footer text-muted">
+							<div class="course-meta-bot">
+								<ul>
+									<li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
+									<li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
+									<li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div><!-- end col -->
-
 			<?php  } ?>
 		</div><!-- end row -->
-
-
-
-			<!-- HR -->
-		<!-- <hr class="hr3"> -->
-
-
 	</div><!-- end container -->
 </div><!-- end section -->
 

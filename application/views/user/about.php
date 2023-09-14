@@ -9,17 +9,17 @@
 
 <div class="section lb">
     <div class="container">
-        <div class="section-title row text-center">
+        <!-- <div class="section-title row text-center">
             <div class="col-md-8 offset-md-2">
                 <h3>About</h3>
                 <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
             </div>
-        </div><!-- end title -->
+        </div> -->
 
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="message-box">
-                    <h4>2023 BEST Marshall education school</h4>
+                    <h4>2023 BEST Marshall education course</h4>
                     <h2>Marshall Education</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae in voluptatum unde, quia repellendus, numquam dicta eaque adipisci qui est voluptatibus perferendis optio quasi magnam aut laboriosam error dolore?</p>
 

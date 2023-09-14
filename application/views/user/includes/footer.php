@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
                     <div class="widget-title">
@@ -17,19 +17,6 @@
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         </ul><!-- end links -->
                     </div>
-                </div><!-- end clearfix -->
-            </div><!-- end col -->
-
-            <div class="col-lg-4 col-md-4 col-xs-12">
-                <div class="widget clearfix">
-                    <div class="widget-title">
-                        <h3>Information Link</h3>
-                    </div>
-                    <ul class="footer-links">
-                        <li><a href="<?php echo base_url('index'); ?>">Home</a></li>
-                        <li><a href="<?php echo base_url('about'); ?>">About</a></li>
-                        <li><a href="<?php echo base_url('contact'); ?>">Contact</a></li>
-                    </ul><!-- end links -->
                 </div><!-- end clearfix -->
             </div><!-- end col -->
 

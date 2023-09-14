@@ -39,3 +39,7 @@ $route['c_news_act']         = 'AdminController/c_news_act';
 $route['e_news/(.*)']        = 'AdminController/e_news/$1';
 $route['d_news/(.*)']        = 'AdminController/d_news/$1';
 $route['e_news_act/(.*)']    = 'AdminController/e_news_act/$1';
+
+// Footer About
+$route['c_footer'] = 'AdminController/c_footer';
+$route['l_footer'] = 'AdminController/l_footer';

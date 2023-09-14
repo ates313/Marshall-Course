@@ -364,4 +364,13 @@ class AdminController extends CI_Controller
         $this->AdminModel->delete_news($n_id);
         redirect(base_url('l_news'));
     }
+
+    // Footer About start
+    public function c_footer(){
+        $this->load->view('admin/page/footerAbout/c_footer');
+    }
+
+    public function l_footer(){
+        $this->load->view('admin/page/footerAbout/l_footer');
+    }
 }
