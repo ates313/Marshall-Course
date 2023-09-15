@@ -1,14 +1,14 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
-<form action="<?php echo base_url('#') ?>" method="POST" enctype="multipart/form-data">
+<form action="<?php echo base_url('c_footer_act') ?>" method="POST" enctype="multipart/form-data">
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Footer About Creat Page</p>
     <div class="form-group container-fluid row ">
         <div class="col-sm-4 mb-6 mb-sm-0">
-            <label for="footer_inst">Enter Instagram Link</label>
+            <label for="footer_instagram">Enter Instagram Link</label>
             <br>
-            <input class="form-control" type="text" name="footer_inst" id="footer_inst">
+            <input class="form-control" type="text" name="footer_instagram" id="footer_instagram">
         </div>
         <div class="col-sm-4 mb-6 mb-sm-0">
             <label for="footer_facebook">Enter Facebook Link</label>
@@ -16,9 +16,9 @@
             <input class="form-control" type="text" name="footer_facebook" id="footer_facebook">
         </div>
         <div class="col-sm-4 mb-6 mb-sm-0">
-            <label for="footer_twtr">Enter Tweeter Link</label>
+            <label for="footer_tweet">Enter Tweeter Link</label>
             <br>
-            <input class="form-control" type="text" name="footer_twtr" id="footer_twtr">
+            <input class="form-control" type="text" name="footer_tweet" id="footer_tweet">
         </div>
         <div class="col-sm-12 mb-6 mb-sm-0">
             <label for="footer_desc">Description</label>

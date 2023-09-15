@@ -22,41 +22,51 @@
                 </tr>
             </thead>
             <tbody class="text-gray-600 text-sm">
-                <tr class="border-b border-gray-200 hover:bg-gray-100">
-                    <td class="py-3 px-6 text-center">
-                        ID
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        DESC
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        Status
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        INST
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        FACE
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        TWEEETER
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        DATE
-                    </td>
-                    <td class="py-3 px-6 text-center">
-                        <a href="">
-                            <button>
-                                <i class="fa-solid fa-pen-to-square"></i>
-                            </button>
-                        </a>
-                        <a href="">
-                            <button>
-                                <i class="fa-solid fa-trash-can"></i>
-                            </button>
-                        </a>
-                    </td>
-                </tr>
+                <?php $say = 0;
+                foreach ($footer_get_list as $footer_get_list_item) {
+
+
+                    $say++; ?>
+                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $say; ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $footer_get_list_item['f_desc'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php //echo $footer_get_list_item['f_satatus'] 
+                            ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $footer_get_list_item['f_instagram'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $footer_get_list_item['f_facebook'] ?>
+
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $footer_get_list_item['f_tweet'] ?>
+
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $footer_get_list_item['f_date'] ?>
+
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <a href="">
+                                <button>
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </button>
+                            </a>
+                            <a href="">
+                                <button>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
     </div>

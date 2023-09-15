@@ -366,11 +366,34 @@ class AdminController extends CI_Controller
     }
 
     // Footer About start
-    public function c_footer(){
+    public function c_footer()
+    {
         $this->load->view('admin/page/footerAbout/c_footer');
     }
 
-    public function l_footer(){
-        $this->load->view('admin/page/footerAbout/l_footer');
+    public function l_footer()
+    {
+        $data['footer_get_list'] = $this->AdminModel->footer_get_list();
+        $this->load->view('admin/page/footerAbout/l_footer', $data);
+    }
+
+    public function c_footer_act()
+    {
+        $footer_instagram = $_POST['footer_instagram'];
+        $footer_facebook = $_POST['footer_facebook'];
+        $footer_tweet = $_POST['footer_tweet'];
+        $footer_desc = $_POST['footer_desc'];
+
+
+        $data = [
+            'f_instagram' => $footer_instagram,
+            'f_facebook' => $footer_facebook,
+            'f_tweet' => $footer_tweet,
+            'f_desc' => $footer_desc,
+            'f_date' => date('Y-m-d H:i:s')
+        ];
+
+        $this->AdminModel->footer_insert($data);
+        redirect(base_url('l_footer'));
     }
 }

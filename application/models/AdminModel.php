@@ -92,4 +92,30 @@ class AdminModel extends CI_Model
     {
         $this->db->where('n_id', $n_id)->update('news', $data);
     }
+
+
+
+
+
+    // Footer About
+    public function footer_insert($data){
+        $this->db->insert('footer_about', $data);
+    }
+
+    public function footer_get_list(){
+        return $this->db->order_by('f_id', "DESC")->get('footer_about')->result_array();
+    }
+
+    public function footer_get_list_rw($f_id){
+        return $this->db->where('f_id', $f_id)->get('footer_about')->row_array();
+    }
+
+    public function delete_footer($f_id){
+        $this->db->where('f_id', $f_id)->delete('footet_about');
+        redirect(base_url('l_footer'));
+    }
+
+    public function update_footer($f_id, $data){
+        $this->db->where('f_id', $f_id)->update('footer_about', $data);
+    }
 }
