@@ -6,17 +6,22 @@
                     <div class="widget-title">
                         <h3>About US</h3>
                     </div>
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, 
-                        veniam laudantium! Quo tempore illo aspernatur ullam, odio officiis, 
-                        cupiditate amet sed fugit recusandae vitae. Fuga deserunt facere velit 
-                        nesciunt earum..</p>
-                    <div class="footer-right">
-                        <ul class="footer-links-soi">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        </ul><!-- end links -->
-                    </div>
+                    <?php foreach ($footer_get_list as $footer_get_list_item) { ?>
+                        <p> <?php echo $footer_get_list_item['f_desc'] ?></p>
+                        <div class="footer-right">
+                            <ul class="footer-links-soi">
+                                <?php if ($footer_get_list_item['f_facebook']) { ?>
+                                    <li><a href="<?php echo $footer_get_list_item['f_facebook'] ?>"><i class="fa fa-facebook"></i></a></li>
+                                <?php } ?>
+                                <?php if ($footer_get_list_item['f_instagram']) { ?>
+                                    <li><a href="<?php echo $footer_get_list_item['f_instagram'] ?>"><i class="fa fa-instagram"></i></a></li>
+                                <?php } ?>
+                                <?php if($footer_get_list_item['f_tweet']){ ?>
+                                    <li><a href="<?php echo $footer_get_list_item['f_tweet'] ?>"><i class="fa fa-twitter"></i></a></li>
+                                <?php } ?>
+                            </ul><!-- end links -->
+                        </div>
+                    <?php } ?>
                 </div><!-- end clearfix -->
             </div><!-- end col -->
 

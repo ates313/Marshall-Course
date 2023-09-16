@@ -111,7 +111,7 @@ class AdminModel extends CI_Model
     }
 
     public function delete_footer($f_id){
-        $this->db->where('f_id', $f_id)->delete('footet_about');
+        $this->db->where('f_id', $f_id)->delete('footer_about');
         redirect(base_url('l_footer'));
     }
 

@@ -18,7 +18,7 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('c_status', 'Active')
-            ->limit(6)  
+            ->limit(6)
             ->get('course')->result_array();
     }
 
@@ -27,7 +27,16 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('n_status', 'Active')
-            ->limit(6) 
+            ->limit(6)
             ->get('news')->result_array();
+    }
+
+    public function get_footer()
+    {
+        return
+            $this->db
+            ->where('f_status', 'Active')
+            ->limit(1)
+            ->get('footer_about')->result_array();
     }
 }

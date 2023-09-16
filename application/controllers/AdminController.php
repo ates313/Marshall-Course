@@ -383,6 +383,7 @@ class AdminController extends CI_Controller
         $footer_facebook = $_POST['footer_facebook'];
         $footer_tweet = $_POST['footer_tweet'];
         $footer_desc = $_POST['footer_desc'];
+        $footer_status = $_POST['footer_status'];
 
 
         $data = [
@@ -390,10 +391,42 @@ class AdminController extends CI_Controller
             'f_facebook' => $footer_facebook,
             'f_tweet' => $footer_tweet,
             'f_desc' => $footer_desc,
+            'f_status' => $footer_status,
             'f_date' => date('Y-m-d H:i:s')
         ];
 
         $this->AdminModel->footer_insert($data);
+        redirect(base_url('l_footer'));
+    }
+
+    public function e_footer($f_id){
+        $data['footer_get_list_rw'] = $this->AdminModel->footer_get_list_rw($f_id);
+        $this->load->view('admin/page/footerAbout/e_footer', $data);
+    }
+
+    public function e_footer_act($f_id){
+        $footer_instagram = $_POST['footer_instagram'];
+        $footer_facebook = $_POST['footer_facebook'];
+        $footer_tweet = $_POST['footer_tweet'];
+        $footer_desc = $_POST['footer_desc'];
+        $footer_status = $_POST['footer_status'];
+
+
+        $data = [
+            'f_instagram' => $footer_instagram,
+            'f_facebook' => $footer_facebook,
+            'f_tweet' => $footer_tweet,
+            'f_desc' => $footer_desc,
+            'f_status' => $footer_status,
+            'f_date' => date('Y-m-d H:i:s')
+        ];
+
+        $this->AdminModel->update_footer($f_id, $data);
+        redirect(base_url('l_footer'));
+    }
+
+    public function d_footer($f_id){
+        $this->AdminModel->delete_footer($f_id);
         redirect(base_url('l_footer'));
     }
 }

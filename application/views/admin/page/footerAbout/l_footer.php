@@ -35,18 +35,39 @@
                             <?php echo $footer_get_list_item['f_desc'] ?>
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <?php //echo $footer_get_list_item['f_satatus'] 
-                            ?>
+                            <?php if ($footer_get_list_item['f_status'] == 'Active') { ?>
+                                <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $footer_get_list_item['f_status'] ?></span>
+                            <?php } ?>
+                            <?php if ($footer_get_list_item['f_status'] == 'Deactive') { ?>
+                                <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs"><?php echo $footer_get_list_item['f_status'] ?></span>
+                            <?php } ?>
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <?php echo $footer_get_list_item['f_instagram'] ?>
+                            <?php if ($footer_get_list_item['f_instagram']) { ?>
+                                <a target="_blank" href="<?php echo $footer_get_list_item['f_instagram'] ?>">
+                                    <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $footer_get_list_item['f_instagram'] ?></span>
+                                </a>
+                            <?php } else { ?>
+                                <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">None</span>
+                            <?php } ?>
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <?php echo $footer_get_list_item['f_facebook'] ?>
-
+                            <?php if ($footer_get_list_item['f_facebook']) { ?>
+                                <a target="_blank" href="<?php echo $footer_get_list_item['f_facebook'] ?>">
+                                    <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $footer_get_list_item['f_facebook'] ?></span>
+                                </a>
+                            <?php } else { ?>
+                                <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">None</span>
+                            <?php } ?>
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <?php echo $footer_get_list_item['f_tweet'] ?>
+                            <?php if ($footer_get_list_item['f_tweet']) { ?>
+                                <a target="_blank" href="<?php echo $footer_get_list_item['f_tweet'] ?>">
+                                    <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $footer_get_list_item['f_tweet'] ?></span>
+                                </a>
+                            <?php } else { ?>
+                                <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs">None</span>
+                            <?php } ?>
 
                         </td>
                         <td class="py-3 px-6 text-center">
@@ -54,12 +75,12 @@
 
                         </td>
                         <td class="py-3 px-6 text-center">
-                            <a href="">
+                            <a href="<?php echo base_url('e_footer/') . $footer_get_list_item['f_id'] ?>">
                                 <button>
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </button>
                             </a>
-                            <a href="">
+                            <a href="<?php echo base_url('d_footer/') . $footer_get_list_item['f_id'] ?>">
                                 <button>
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>

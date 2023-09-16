@@ -5,6 +5,13 @@
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Footer About Creat Page</p>
     <div class="form-group container-fluid row ">
+        <div class="col-sm-12 mb-6 mb-sm-0">
+            <label for="footer_status">Status:</label>
+            <select class="form-control" name="footer_status" id="footer_status">
+                <option class="form-control" value="Active">Active</option>
+                <option class="form-control" value="Deactive">Deactive</option>
+            </select>
+        </div>
         <div class="col-sm-4 mb-6 mb-sm-0">
             <label for="footer_instagram">Enter Instagram Link</label>
             <br>
