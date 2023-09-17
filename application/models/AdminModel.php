@@ -85,7 +85,7 @@ class AdminModel extends CI_Model
     public function delete_news($n_id)
     {
         $this->db->where('n_id', $n_id)->delete('news');
-        redirect(base_url('l_news')); 
+        redirect(base_url('l_news'));
     }
 
     public function update_news($n_id, $data)
@@ -98,24 +98,58 @@ class AdminModel extends CI_Model
 
 
     // Footer About
-    public function footer_insert($data){
+    public function footer_insert($data)
+    {
         $this->db->insert('footer_about', $data);
     }
 
-    public function footer_get_list(){
+    public function footer_get_list()
+    {
         return $this->db->order_by('f_id', "DESC")->get('footer_about')->result_array();
     }
 
-    public function footer_get_list_rw($f_id){
+    public function footer_get_list_rw($f_id)
+    {
         return $this->db->where('f_id', $f_id)->get('footer_about')->row_array();
     }
 
-    public function delete_footer($f_id){
+    public function delete_footer($f_id)
+    {
         $this->db->where('f_id', $f_id)->delete('footer_about');
         redirect(base_url('l_footer'));
     }
 
-    public function update_footer($f_id, $data){
+    public function update_footer($f_id, $data)
+    {
         $this->db->where('f_id', $f_id)->update('footer_about', $data);
+    }
+
+
+
+    // Partners
+    public function partners_insert($data)
+    {
+        $this->db->insert('partners', $data);
+    }
+
+    public function partners_get_list()
+    {
+        return $this->db->order_by('p_id', "DESC")->get('partners')->result_array();
+    }
+
+    public function partners_get_list_rw($p_id)
+    {
+        return $this->db->where('p_id', $p_id)->get('partners')->row_array();
+    }
+
+    public function delete_partners($p_id)
+    {
+        $this->db->where('p_id', $p_id)->delete('partners');
+        redirect(base_url('l_partners'));
+    }
+
+    public function update_partners($p_id, $data)
+    {
+        $this->db->where('p_id', $p_id)->update('partners', $data);
     }
 }

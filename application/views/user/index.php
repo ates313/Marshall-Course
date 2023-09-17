@@ -149,6 +149,32 @@
         <!-- Slider end -->
     </div>
 </section>
+<div class="container">
+    <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+            <h3>Partners</h3>
+        </div>
+    </div><!-- end title -->
+    <!-- Slider start -->
+    <div class="carousel-wrap">
+        <div class="owl-carousel owl-loaded owl-drag">
+            <!-- ITEMDEN BASLA (FOREACH)A -->
+            <div class="item">
+                <div class="card col-12" style="height: 270px;">
+                    <a href="https://stimul.edu.az/">
+                        <img class="a_imgSize2" src="https://catherineasquithgallery.com/uploads/posts/2021-02/1613212086_25-p-cherno-sinii-fon-na-telefon-26.jpg" alt="">
+                    </a>
+                    <!-- <div class="card-body">
+                        <span class="card-title">
+                            
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slider end -->
+</div>
 
 <?php $this->load->view('user/includes/footer') ?>
 <?php $this->load->view('user/includes/footerStyle') ?>

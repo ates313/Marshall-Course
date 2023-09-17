@@ -429,4 +429,100 @@ class AdminController extends CI_Controller
         $this->AdminModel->delete_footer($f_id);
         redirect(base_url('l_footer'));
     }
+
+    
+
+    // Partners Start
+    public function c_partners(){
+        $this->load->view('admin/page/partners/c_partners');
+    }
+
+    public function l_partners(){
+        $data['partners_get_list'] = $this->AdminModel->partners_get_list();
+        $this->load->view('admin/page/partners/l_partners', $data);
+    }
+
+    public function c_partners_act(){
+        $partners_title = $_POST['partners_title'];
+        $partners_link = $_POST['partners_link'];
+        $partners_status = $_POST['partners_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('partners_img')) {
+            $upload_partners_img = $this->upload->data();
+            $data = [
+                'p_title' => $partners_title,
+                'p_link' => $partners_link,
+                'p_status' => $partners_status,
+                'p_img' => $upload_partners_img['file_name'],
+                'p_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->insert('partners', $data);
+            redirect(base_url('l_partners'));
+        } else {
+            $data = [
+                'p_title' => $partners_title,
+                'p_link' => $partners_link,
+                'p_status' => $partners_status,
+                'p_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->partners_insert($data);
+            redirect(base_url('l_partners'));
+        }
+    }
+
+    public function e_partners($p_id){
+        $data['partners_get_list_rw'] = $this->AdminModel->partners_get_list_rw($p_id);
+        $this->load->view('admin/page/partners/e_partners', $data);
+    }
+
+    public function e_partners_act($p_id){
+        $partners_title = $_POST['partners_title'];
+        $partners_link = $_POST['partners_link'];
+        $partners_status = $_POST['partners_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('partners_img')) {
+            $upload_partners_img = $this->upload->data();
+            $data = [
+                'p_title' => $partners_title,
+                'p_link' => $partners_link,
+                'p_status' => $partners_status,
+                'p_img' => $upload_partners_img['file_name'],
+                'p_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->update_partners($p_id, $data);
+            redirect(base_url('l_partners'));
+        } else {
+            $data = [
+                'p_title' => $partners_title,
+                'p_link' => $partners_link,
+                'p_status' => $partners_status,
+                'p_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_partners($p_id, $data);
+            redirect(base_url('l_partners'));
+        }
+    }
+
+    public function d_partners($p_id){
+        $this->AdminModel->delete_partners($p_id);
+        redirect(base_url('l_partners'));
+    }
 }

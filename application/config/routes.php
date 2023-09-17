@@ -10,7 +10,6 @@ $route['about']              = 'UserController/about';
 $route['contact']            = 'UserController/contact';
 $route['teachers']           = 'UserController/teachers';
 $route['course2']            = 'UserController/courseGrid2';
-// $route['d709jIONDOIH9890']   = 'UserController/footer';
 
 
 // Admin
@@ -48,3 +47,11 @@ $route['c_footer_act'] = 'AdminController/c_footer_act';
 $route['e_footer/(.*)'] = 'AdminController/e_footer/$1';
 $route['d_footer/(.*)'] = 'AdminController/d_footer/$1';
 $route['e_footer_act/(.*)'] = 'AdminController/e_footer_act/$1';
+
+// Partners
+$route['c_partners'] = 'AdminController/c_partners';
+$route['l_partners'] = 'AdminController/l_partners';
+$route['c_partners_act'] = 'AdminController/c_partners_act';
+$route['e_partners/(.*)'] = 'AdminController/e_partners/$1';
+$route['d_partners/(.*)'] = 'AdminController/d_partners/$1';
+$route['e_partners_act/(.*)'] = 'AdminController/e_partners_act/$1';
