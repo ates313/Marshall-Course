@@ -159,18 +159,20 @@
     <div class="carousel-wrap">
         <div class="owl-carousel owl-loaded owl-drag">
             <!-- ITEMDEN BASLA (FOREACH)A -->
-            <div class="item">
-                <div class="card col-12" style="height: 270px;">
-                    <a href="https://stimul.edu.az/">
-                        <img class="a_imgSize2" src="https://catherineasquithgallery.com/uploads/posts/2021-02/1613212086_25-p-cherno-sinii-fon-na-telefon-26.jpg" alt="">
-                    </a>
-                    <!-- <div class="card-body">
-                        <span class="card-title">
-                            
-                        </span>
-                    </div> -->
+            <?php foreach ($partners_get_list as $partners_get_list_item) { ?>
+                <div class="item">
+                    <div class="card col-12" style="height: 270px;">
+                        <a target="_blank" href="<?php echo $partners_get_list_item['p_link'] ?>">
+                            <img class="a_imgSize2" src="<?php echo base_url('upload/' . $partners_get_list_item['p_img']) ?>" alt="">
+                        </a>
+                        <div class="card-body">
+                            <span class="card-title">
+                                <?php  echo $partners_get_list_item['p_title'] ?>
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <?php } ?>
         </div>
     </div>
     <!-- Slider end -->

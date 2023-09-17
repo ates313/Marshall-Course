@@ -39,4 +39,13 @@ class UserModel extends CI_Model
             ->limit(1)
             ->get('footer_about')->result_array();
     }
+
+    public function get_partners()
+    {
+        return
+            $this->db
+            ->where('p_status', 'Active')
+            ->get('partners')->result_array();
+    }
+    
 }

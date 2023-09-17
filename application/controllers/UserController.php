@@ -16,6 +16,7 @@ class UserController extends CI_Controller
         $data['course_get_list'] = $this->UserModel->get_course();
         $data['news_get_list'] = $this->UserModel->news_course();
         $data['footer_get_list'] = $this->UserModel->get_footer();
+        $data['partners_get_list'] = $this->UserModel->get_partners();
         $this->load->view('user/index', $data);
     }
 

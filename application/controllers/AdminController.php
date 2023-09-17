@@ -506,7 +506,7 @@ class AdminController extends CI_Controller
                 'p_date' => date("Y-m-d H:i:s")
             ];
 
-            $this->db->update_partners($p_id, $data);
+            $this->AdminModel->update_partners($p_id, $data);
             redirect(base_url('l_partners'));
         } else {
             $data = [
