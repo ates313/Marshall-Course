@@ -64,6 +64,15 @@
               </ul>
             </div>
           </div>
+          <div class="container">
+            <div class="menu">
+              <button class="toggle">Partners</button>
+              <ul class="list">
+                <a class="list-item" href="<?php echo base_url('c_about') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+                <a class="list-item" href="<?php echo base_url('l_about') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
+              </ul>
+            </div>
+          </div>
           <!-- AND -->
         </div>
 

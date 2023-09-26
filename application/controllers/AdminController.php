@@ -525,4 +525,53 @@ class AdminController extends CI_Controller
         $this->AdminModel->delete_partners($p_id);
         redirect(base_url('l_partners'));
     }
+
+
+    // About Start
+    public function c_about(){
+        $this->load->view('admin/page/about/c_about');
+    }
+
+    public function l_about(){
+        $data['about_get_list'] = $this->AdminModel->about_get_list();
+        $this->load->view('admin/page/about/l_about', $data);
+    }
+
+    public function c_about_act(){
+        $about_title = $_POST['about_title'];
+        $about_desc = $_POST['about_desc'];
+        $about_status = $_POST['about_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('about_img')) {
+            $upload_about_img = $this->upload->data();
+            $data = [
+                'a_title' => $about_title,
+                'a_desc' => $about_desc,
+                'a_status' => $about_status,
+                'a_img' => $upload_about_img['file_name'],
+                'a_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->insert('about', $data);
+            redirect(base_url('l_about'));
+        } else {
+            $data = [
+                'a_title' => $about_title,
+                'a_desc' => $about_desc,
+                'a_status' => $about_status,
+                'a_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->about_insert($data);
+            redirect(base_url('l_about'));
+        }
+    }
+
 }

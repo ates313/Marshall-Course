@@ -9,32 +9,8 @@
 
 <div class="section lb">
     <div class="container">
-        <!-- <div class="section-title row text-center">
-            <div class="col-md-8 offset-md-2">
-                <h3>About</h3>
-                <p class="lead">Lorem Ipsum dolroin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem!</p>
-            </div>
-        </div> -->
 
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="message-box">
-                    <h4>2023 BEST Marshall education course</h4>
-                    <h2>Marshall Education</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae in voluptatum unde, quia repellendus, numquam dicta eaque adipisci qui est voluptatibus perferendis optio quasi magnam aut laboriosam error dolore?</p>
 
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius modi commodi expedita iure quos qui debitis tempore quam itaque maxime incidunt error magni eos labore, dolorum quaerat hic id! Quae.
-                    Esse quia fuga maxime! Alias consequatur est eius dolores quasi esse odit, quae sequi commodi quidem ut ad nulla ipsa fugiat omnis voluptate fuga? Eaque officia iste neque laboriosam repellendus!</p>
-
-                </div><!-- end messagebox -->
-            </div><!-- end col -->
-
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="post-media wow fadeIn">
-                    <img src="<?php echo base_url('public/user/assets/') ?>images/about_02.jpg" alt="" class="img-fluid img-rounded">
-                </div><!-- end media -->
-            </div><!-- end col -->
-        </div>
         <div class="row align-items-center">
             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
                 <div class="post-media wow fadeIn">
@@ -51,8 +27,9 @@
 
                 </div><!-- end messagebox -->
             </div><!-- end col -->
-
         </div><!-- end row -->
+
+
     </div><!-- end container -->
 </div><!-- end section -->
 
@@ -86,42 +63,6 @@
         </div>
     </div>
 </div>
-
-<div id="testimonials" class="parallax section db parallax-off" style=" background-image: url('https://w.forfun.com/fetch/4a/4abe953824e3403467d1ad6270fc7cca.jpeg');">
-    <div class="container">
-        <div class="section-title text-center">
-            <h3>Staff</h3>
-            <!-- <p>Lorem ipsum dolor sit aet, consectetur adipisicing lit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p> -->
-        </div><!-- end title -->
-
-        <div class="row">
-            <div class="col-md-4 col-sm-12 a_margin">
-                <div class="card">
-                    <div class="avatar">
-                        <img src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW4lMjBmYWNlfGVufDB8fDB8fHww&w=1000&q=80" alt="">
-                    </div>
-                    <div class="details">
-                        <!-- <dl> -->
-                        <span><i class="fa fa-instagram"></i></span>
-                        <span><a href="#">null_null</a></span>
-                        <br>
-                        <span><i class="fa fa-twitter"></i></span>
-                        <span><a href="#">null_n</a></span>
-                        <br>
-                        <span><i class="fa fa-whatsapp"></i></span>
-                        <span><a href="#">+004506667788</a></span>
-                        <br>
-                        <span><i class="fa fa-phone"></i></span>
-                        <span><a href="#">+994505556677</a></span>
-                        <br>
-                        <span><i class="fa fa-envelope"></i></span>
-                        <span><a href="#">null@gmail.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
 
 
 

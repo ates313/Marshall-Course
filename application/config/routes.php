@@ -9,6 +9,7 @@ $route['home']               = 'UserController/index';
 $route['about']              = 'UserController/about';
 $route['contact']            = 'UserController/contact';
 $route['teachers']           = 'UserController/teachers';
+$route['partners']           = 'UserController/partners';
 $route['course2']            = 'UserController/courseGrid2';
 
 
@@ -55,3 +56,11 @@ $route['c_partners_act'] = 'AdminController/c_partners_act';
 $route['e_partners/(.*)'] = 'AdminController/e_partners/$1';
 $route['d_partners/(.*)'] = 'AdminController/d_partners/$1';
 $route['e_partners_act/(.*)'] = 'AdminController/e_partners_act/$1';
+
+// About
+$route['c_about'] = 'AdminController/c_about';
+$route['l_about'] = 'AdminController/l_about';
+$route['c_about_act'] = 'AdminController/c_about_act';
+$route['e_about/(.*)'] = 'AdminController/e_about/$1';
+$route['d_about/(.*)'] = 'AdminController/d_about/$1';
+$route['e_about_act/(.*)'] = 'AdminController/e_about_act/$1';

@@ -25,8 +25,16 @@
                     <?php $segment = $this->uri->segment(1); ?>
                     <li class="nav-item <?php if ($segment == 'home') : echo 'active';
                                         endif; ?>"><a class="nav-link" href="<?php echo base_url('home') ?>">Home</a></li>
-                    <li class="nav-item <?php if ($segment == 'about') : echo 'active';
-                                        endif; ?>"><a class="nav-link" href="<?php echo base_url('about') ?>">About Us</a></li>
+
+                    <li class="nav-item dropdown <?php if ($segment == 'about') : echo 'active';
+                                        endif; ?>">
+                                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">About Us</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-b">
+                            <a class="dropdown-item" href="<?php echo base_url('about') ?>">About Us</a>
+                            <a class="dropdown-item" href="<?php echo base_url('partners') ?>">Partners</a>
+                            <a class="dropdown-item" href="<?php echo base_url('staff') ?>">Staff</a>
+                        </div>
+                    </li>
                     <li class="nav-item dropdown  <?php if ($segment == 'course2' || $segment == 'course3' || $segment == 'course4') : echo 'active';
                                                     endif; ?>">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course

@@ -38,6 +38,12 @@ class UserController extends CI_Controller
         $this->load->view('user/teachers', $data);
     }
 
+    public function partners(){
+        $data['partners_get_list'] = $this->UserModel->get_partners();
+        $data['footer_get_list'] = $this->UserModel->get_footer();
+        $this->load->view('user/partners', $data);
+    }
+
     public function courseGrid2()
     {
         $data['course_get_list'] = $this->UserModel->get_course();

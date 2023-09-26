@@ -14,7 +14,7 @@
             <input type="text" name="partners_link" class="form-control" id="partners_link" placeholder="Partners link">
         </div>
         <div class="col-sm-6 mb-6 mb-sm-0">
-            <label for="partners_img">Creat link</label>
+            <label for="partners_img">Select Images</label>
             <input type="file" name="partners_img" class="form-control" id="partners_img" placeholder="Partners Images">
         </div>
         <div class="col-sm-2 mb-6 mb-sm-0">
