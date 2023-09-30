@@ -11,23 +11,23 @@
     <div class="container">
 
 
-        <div class="row align-items-center">
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="post-media wow fadeIn">
-                    <img src="<?php echo base_url('public/user/assets/') ?>images/about_03.jpg" alt="" class="img-fluid img-rounded">
-                </div><!-- end media -->
-            </div><!-- end col -->
+        <?php foreach ($about_get_list as $about_get_list_item) { ?>
+            <div class="row align-items-center">
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="post-media wow fadeIn">
+                        <img height="370" src="<?php echo base_url('upload/' . $about_get_list_item['a_img']) ?>" alt="" class="img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
 
-            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                <div class="message-box">
-                    <h2>Marshall Course 2023</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                    <div class="message-box">
+                        <h2><?php echo $about_get_list_item['a_title'] ?></h2>
+                        <p><?php echo $about_get_list_item['a_desc'] ?></p>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        <?php } ?>
 
-                    <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum.</p>
-
-                </div><!-- end messagebox -->
-            </div><!-- end col -->
-        </div><!-- end row -->
 
 
     </div><!-- end container -->

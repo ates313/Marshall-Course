@@ -47,5 +47,12 @@ class UserModel extends CI_Model
             ->where('p_status', 'Active')
             ->get('partners')->result_array();
     }
-    
+
+    public function get_about()
+    {
+        return
+            $this->db
+            ->where('a_status', 'Active')
+            ->get('about')->result_array();
+    }
 }

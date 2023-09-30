@@ -574,4 +574,52 @@ class AdminController extends CI_Controller
         }
     }
 
+    public function e_about($a_id){
+        $data['about_get_list_rw'] = $this->AdminModel->about_get_list_rw($a_id);
+        $this->load->view('admin/page/about/e_about', $data);
+    }
+
+    public function e_about_act($id){
+        $about_title = $_POST['about_title'];
+        $about_desc = $_POST['about_desc'];
+        $about_status = $_POST['about_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('about_img')) {
+            $upload_about_img = $this->upload->data();
+            $data = [
+                'a_title' => $about_title,
+                'a_desc' => $about_desc,
+                'a_status' => $about_status,
+                'a_img' => $upload_about_img['file_name'],
+                'a_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->update_about($id, $data);
+            redirect(base_url('l_about'));
+        } else {
+            $data = [
+                'a_title' => $about_title,
+                'a_desc' => $about_desc,
+                'a_status' => $about_status,
+                'a_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_about($id, $data);
+            redirect(base_url('l_about'));
+        }
+    }
+
+    public function d_about($a_id)
+    {
+        $this->AdminModel->delete_about($a_id);
+        redirect(base_url('l_about'));
+    }
+
 }

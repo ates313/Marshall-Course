@@ -22,6 +22,7 @@ class UserController extends CI_Controller
 
     public function about()
     {
+        $data['about_get_list'] = $this->UserModel->get_about();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/about', $data);
     }
