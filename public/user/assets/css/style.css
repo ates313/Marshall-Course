@@ -4224,3 +4224,14 @@ a.link-style3 {
 }
 
 /* Staff End */
+
+.hv-blue:hover{
+    color: #05B1F7;
+    transition: 0.7s;
+}
+
+.hv-br:hover{
+    border: #1287b5;
+    scale: 1.1;
+    transition: 0.5s;
+}

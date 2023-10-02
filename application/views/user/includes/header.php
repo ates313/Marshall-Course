@@ -32,7 +32,7 @@
                         <div class="dropdown-menu" aria-labelledby="dropdown-b">
                             <a class="dropdown-item" href="<?php echo base_url('about') ?>">About Us</a>
                             <a class="dropdown-item" href="<?php echo base_url('partners') ?>">Partners</a>
-                            <a class="dropdown-item" href="<?php echo base_url('staff') ?>">Staff</a>
+                            <a class="dropdown-item" href="<?php echo base_url('directoria') ?>">Directorate</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown  <?php if ($segment == 'course2' || $segment == 'course3' || $segment == 'course4') : echo 'active';

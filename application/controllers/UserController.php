@@ -39,7 +39,8 @@ class UserController extends CI_Controller
         $this->load->view('user/teachers', $data);
     }
 
-    public function partners(){
+    public function partners()
+    {
         $data['partners_get_list'] = $this->UserModel->get_partners();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/partners', $data);
@@ -50,5 +51,11 @@ class UserController extends CI_Controller
         $data['course_get_list'] = $this->UserModel->get_course();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/courseGrid2', $data);
+    }
+
+    public function directoria()
+    {
+        $data['footer_get_list'] = $this->UserModel->get_footer();
+        $this->load->view('user/directoria', $data);
     }
 }

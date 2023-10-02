@@ -10,6 +10,7 @@ $route['about']              = 'UserController/about';
 $route['contact']            = 'UserController/contact';
 $route['teachers']           = 'UserController/teachers';
 $route['partners']           = 'UserController/partners';
+$route['directoria']           = 'UserController/directoria';
 $route['course2']            = 'UserController/courseGrid2';
 
 
