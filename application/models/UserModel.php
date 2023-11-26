@@ -55,4 +55,12 @@ class UserModel extends CI_Model
             ->where('a_status', 'Active')
             ->get('about')->result_array();
     }
+
+    public function get_drectoria()
+    {
+        return
+            $this->db
+            ->where('d_status', 'Active')
+            ->get('directoria')->result_array();
+    }
 }

@@ -16,7 +16,10 @@ $route['course2']            = 'UserController/courseGrid2';
 
 // Admin
 $route['admin']              = 'AdminController/index';
+$route['a_logOut']           = "AdminController/logOut";
+// $route['c_admin']            =  'AdminController/c_admin';
 $route['login']              = 'AdminController/login';
+$route['login_action']     = 'AdminController/login_action';
 
 // Admin Slider
 $route['c_slider']           = 'AdminController/c_slider';
@@ -65,3 +68,11 @@ $route['c_about_act'] = 'AdminController/c_about_act';
 $route['e_about/(.*)'] = 'AdminController/e_about/$1';
 $route['d_about/(.*)'] = 'AdminController/d_about/$1';
 $route['e_about_act/(.*)'] = 'AdminController/e_about_act/$1';
+
+// Drectoria
+$route['c_drectoria'] = 'AdminController/c_drectoria';
+$route['l_drectoria'] = 'AdminController/l_drectoria';
+$route['c_drectoria_act'] = 'AdminController/c_drectoria_act';
+$route['e_drectoria/(.*)'] = 'AdminController/e_drectoria/$1';
+$route['d_drectoria/(.*)'] = 'AdminController/d_drectoria/$1';
+$route['e_drectoria_act/(.*)'] = 'AdminController/e_drectoria_act/$1';

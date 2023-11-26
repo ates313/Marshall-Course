@@ -2,21 +2,48 @@
 <?php $this->load->view('user/includes/header') ?>
 
 <div class="all-title-box" style="background-image: url('public/user/assets/images/banner.jpg');">
-    <div class="container text-center">
-        <h1>Directoria Page<span class="m_1"></span></h1>
-    </div>
+	<div class="container text-center">
+		<h1>Directoria Page<span class="m_1"></span></h1>
+	</div>
 </div>
 <div class="container">
 
-    <div class="row">
-        <div class="card col-3 mt-2 hv-br" style="height: 350px;">
-            <img class="card-img-top" src="https://catherineasquithgallery.com/uploads/posts/2021-02/1614511031_164-p-na-belom-fone-chelovek-185.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h3 class="card-titile hv-blue">Kurbanov Atash</h3>
-            </div>
-        </div>
-        
-    </div>
+	<div class="row">
+	<?php foreach ($drectoria_get_list as $drectoria_get_list_item) { ?>
+
+		<div class="col-md-4 col-12">
+
+			<div class="our-team">
+
+					<div class="team-img">
+						<?php if ($drectoria_get_list_item['d_img']) { ?>
+							<img src="<?php echo base_url('upload/' . $drectoria_get_list_item['d_img']) ?>" alt="">
+						<?php } else { ?>
+							<img src="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" alt="No Image">
+						<?php } ?>
+						<div class="social">
+							<ul>
+								<li><a target="_blank" href="<?php echo $drectoria_get_list_item['d_facebook'] ?>" class="fa fa-facebook"></a></li>
+								<li><a target="_blank" href="<?php echo $drectoria_get_list_item['d_twitter'] ?>" class="fa fa-twitter"></a></li>
+								<li><a target="_blank" href="<?php echo $drectoria_get_list_item['d_gmail'] ?>" class="fa fa-envelope"></a></li>
+								<li><a target="_blank" href="<?php echo $drectoria_get_list_item['d_instagram'] ?>" class="fa fa-instagram"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="team-content">
+						<a href="#">
+							<h3 class="title"> <?php echo $drectoria_get_list_item['d_name'] ?> <?php echo $drectoria_get_list_item['d_surname'] ?></h3>
+						</a>
+						<span class="post"><?php echo $drectoria_get_list_item['d_position'] ?></span>
+					</div>
+			</div>
+
+		</div>
+		<?php } ?>
+
+
+
+	</div>
 
 </div>
 

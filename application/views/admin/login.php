@@ -1,40 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page || A</title>
+    <title>Login Page || Marshall</title>
     <link rel="stylesheet" href="<?php echo base_url('public/admin/assets/') ?>css/login.css">
 </head>
 
 <body>
+<section>
 
-    <section>
-        <div class="form-box">
-            <div class="form-value">
-                <form>
-                    <h2>Login</h2>
-                    <div class="inputbox">
-                    <ion-icon name="person-outline"></ion-icon>
-                        <input type="user" required>
-                        <label>User Name</label>
-                    </div>
-                    <div class="inputbox">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
-                        <label>Password</label>
-                    </div>
-                    <button>Log In</button>
-                </form>
+    <form action="<?php echo base_url('login_action'); ?>" method="post">
+            <div class="form-box">
+                <div class="form-value">
+                    <form>
+                        <h2>Login</h2>
+                        <div class="inputbox">
+                            <input name="username" type="text" placeholder="Username">
+                        </div>
+                        <div class="inputbox">
+                            <!-- <label>Password</label> -->
+                            <input name="password" type="password" placeholder="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                    </form>
+                </div>
             </div>
-        </div>
+    </form>
     </section>
 
-    
-
 </body>
+
 </html>
 
 

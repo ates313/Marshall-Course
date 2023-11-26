@@ -19,7 +19,35 @@ class AdminController extends CI_Controller
         $this->load->view('admin/login');
     }
 
+    public function login_action()
+    {
 
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        // print_r($password);
+        // die();
+
+        if (!empty($username) && !empty($password)) {
+            $data = [
+                'admin_name' => $username,
+                'admin_password' => md5($password),
+            ];
+
+            $checkUser = $this->db->select('admin_id')->where($data)->get("admin_login")->row_array();
+
+            $_SESSION['admin_id'] =  $checkUser['admin_id'];
+
+            redirect(base_url('admin'));
+        }
+    }
+
+    public function logOut()
+    {
+        unset($_SESSION['admin_id']);
+        $this->session->set_flashdata('success', 'Sizi bir daha gozleyeceyik!');
+        redirect(base_url("login"));
+    }
 
 
     // SLIDER START
@@ -41,7 +69,9 @@ class AdminController extends CI_Controller
         $slider_title = $_POST['slider_title'];
         $slider_link = $_POST['slider_link'];
         $slider_desc = $_POST['slider_desc'];
-        $slider_status = $_POST['slider_status'];
+        $slider_status = $_POST['slider_statu s'];
+
+        $slider_desc = $this->input->post('',);
 
 
 
@@ -399,12 +429,14 @@ class AdminController extends CI_Controller
         redirect(base_url('l_footer'));
     }
 
-    public function e_footer($f_id){
+    public function e_footer($f_id)
+    {
         $data['footer_get_list_rw'] = $this->AdminModel->footer_get_list_rw($f_id);
         $this->load->view('admin/page/footerAbout/e_footer', $data);
     }
 
-    public function e_footer_act($f_id){
+    public function e_footer_act($f_id)
+    {
         $footer_instagram = $_POST['footer_instagram'];
         $footer_facebook = $_POST['footer_facebook'];
         $footer_tweet = $_POST['footer_tweet'];
@@ -425,24 +457,27 @@ class AdminController extends CI_Controller
         redirect(base_url('l_footer'));
     }
 
-    public function d_footer($f_id){
+    public function d_footer($f_id)
+    {
         $this->AdminModel->delete_footer($f_id);
         redirect(base_url('l_footer'));
     }
 
-    
 
     // Partners Start
-    public function c_partners(){
+    public function c_partners()
+    {
         $this->load->view('admin/page/partners/c_partners');
     }
 
-    public function l_partners(){
+    public function l_partners()
+    {
         $data['partners_get_list'] = $this->AdminModel->partners_get_list();
         $this->load->view('admin/page/partners/l_partners', $data);
     }
 
-    public function c_partners_act(){
+    public function c_partners_act()
+    {
         $partners_title = $_POST['partners_title'];
         $partners_link = $_POST['partners_link'];
         $partners_status = $_POST['partners_status'];
@@ -479,12 +514,14 @@ class AdminController extends CI_Controller
         }
     }
 
-    public function e_partners($p_id){
+    public function e_partners($p_id)
+    {
         $data['partners_get_list_rw'] = $this->AdminModel->partners_get_list_rw($p_id);
         $this->load->view('admin/page/partners/e_partners', $data);
     }
 
-    public function e_partners_act($p_id){
+    public function e_partners_act($p_id)
+    {
         $partners_title = $_POST['partners_title'];
         $partners_link = $_POST['partners_link'];
         $partners_status = $_POST['partners_status'];
@@ -521,23 +558,27 @@ class AdminController extends CI_Controller
         }
     }
 
-    public function d_partners($p_id){
+    public function d_partners($p_id)
+    {
         $this->AdminModel->delete_partners($p_id);
         redirect(base_url('l_partners'));
     }
 
 
     // About Start
-    public function c_about(){
+    public function c_about()
+    {
         $this->load->view('admin/page/about/c_about');
     }
 
-    public function l_about(){
+    public function l_about()
+    {
         $data['about_get_list'] = $this->AdminModel->about_get_list();
         $this->load->view('admin/page/about/l_about', $data);
     }
 
-    public function c_about_act(){
+    public function c_about_act()
+    {
         $about_title = $_POST['about_title'];
         $about_desc = $_POST['about_desc'];
         $about_status = $_POST['about_status'];
@@ -574,12 +615,14 @@ class AdminController extends CI_Controller
         }
     }
 
-    public function e_about($a_id){
+    public function e_about($a_id)
+    {
         $data['about_get_list_rw'] = $this->AdminModel->about_get_list_rw($a_id);
         $this->load->view('admin/page/about/e_about', $data);
     }
 
-    public function e_about_act($id){
+    public function e_about_act($id)
+    {
         $about_title = $_POST['about_title'];
         $about_desc = $_POST['about_desc'];
         $about_status = $_POST['about_status'];
@@ -622,4 +665,150 @@ class AdminController extends CI_Controller
         redirect(base_url('l_about'));
     }
 
+
+
+    // Drectoria Start
+    public function c_drectoria()
+    {
+        $this->load->view('admin/page/drectoria/c_drectoria');
+    }
+    // $data['about_get_list'] = $this->AdminModel->about_get_list();
+
+    public function l_drectoria()
+    {
+        $data['drectoria_get_list'] = $this->AdminModel->drectoria_get_list();
+        $this->load->view('admin/page/drectoria/l_drectoria', $data);
+    }
+
+    public function c_drectoria_act()
+    {
+        $drectoria_name = $_POST['drectoria_name'];
+        $drectoria_surname = $_POST['drectoria_surname'];
+        $drectoria_position = $_POST['drectoria_position'];
+        $drectoria_desc = $_POST['drectoria_desc'];
+        $drectoria_status = $_POST['drectoria_status'];
+        $drectoria_birthday = $_POST['drectoria_birthday'];
+        // sosial
+        $drectoria_instagram = $_POST['drectoria_instagram'];
+        $drectoria_facebook = $_POST['drectoria_facebook'];
+        $drectoria_twitter = $_POST['drectoria_twitter'];
+        $drectoria_gmail = $_POST['drectoria_gmail'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('drectoria_img')) {
+            $upload_drectoria_img = $this->upload->data();
+            $data = [
+                'd_name' => $drectoria_name,
+                'd_surname' => $drectoria_surname,
+                'd_position' => $drectoria_position,
+                'd_desc' => $drectoria_desc,
+                'd_status' => $drectoria_status,
+                'd_instagram' => $drectoria_instagram,
+                'd_facebook' => $drectoria_facebook,
+                'd_twitter' => $drectoria_twitter,
+                'd_gmail' => $drectoria_gmail,
+                'd_birhtday' => $drectoria_birthday,
+                'd_img' => $upload_drectoria_img['file_name'],
+                'd_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->insert('directoria', $data);
+            redirect(base_url('l_drectoria'));
+        } else {
+            $data = [
+                'd_name' => $drectoria_name,
+                'd_surname' => $drectoria_surname,
+                'd_position' => $drectoria_position,
+                'd_desc' => $drectoria_desc,
+                'd_status' => $drectoria_status,
+                'd_instagram' => $drectoria_instagram,
+                'd_facebook' => $drectoria_facebook,
+                'd_twitter' => $drectoria_twitter,
+                'd_gmail' => $drectoria_gmail,
+                'd_birhtday' => $drectoria_birthday,
+                'd_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->drectoria_insert($data);
+            redirect(base_url('l_drectoria'));
+        }
+    }
+
+    public function e_drectoria($d_id)
+    {
+        $data['drectoria_get_list_rw'] = $this->AdminModel->drectoria_get_list_rw($d_id);
+        $this->load->view('admin/page/drectoria/e_drectoria', $data);
+    }
+
+    public function e_drectoria_act($id)
+    {
+        $drectoria_name = $_POST['drectoria_name'];
+        $drectoria_surname = $_POST['drectoria_surname'];
+        $drectoria_position = $_POST['drectoria_position'];
+        $drectoria_desc = $_POST['drectoria_desc'];
+        $drectoria_status = $_POST['drectoria_status'];
+        $drectoria_birthday = $_POST['drectoria_birthday'];
+        // sosial
+        $drectoria_instagram = $_POST['drectoria_instagram'];
+        $drectoria_facebook = $_POST['drectoria_facebook'];
+        $drectoria_twitter = $_POST['drectoria_twitter'];
+        $drectoria_gmail = $_POST['drectoria_gmail'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('drectoria_img')) {
+            $upload_drectoria_img = $this->upload->data();
+            $data = [
+                'd_name' => $drectoria_name,
+                'd_surname' => $drectoria_surname,
+                'd_position' => $drectoria_position,
+                'd_desc' => $drectoria_desc,
+                'd_status' => $drectoria_status,
+                'd_instagram' => $drectoria_instagram,
+                'd_facebook' => $drectoria_facebook,
+                'd_twitter' => $drectoria_twitter,
+                'd_gmail' => $drectoria_gmail,
+                'd_birhtday' => $drectoria_birthday,
+                'd_img' => $upload_drectoria_img['file_name'],
+                'd_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->db->update_drectoria($id, $data);
+            redirect(base_url('l_drectoria'));
+        } else {
+            $data = [
+                'd_name' => $drectoria_name,
+                'd_surname' => $drectoria_surname,
+                'd_position' => $drectoria_position,
+                'd_desc' => $drectoria_desc,
+                'd_status' => $drectoria_status,
+                'd_instagram' => $drectoria_instagram,
+                'd_facebook' => $drectoria_facebook,
+                'd_twitter' => $drectoria_twitter,
+                'd_gmail' => $drectoria_gmail,
+                'd_birhtday' => $drectoria_birthday,
+                'd_date' => date("Y-m-d H:i:s")
+            ];
+
+            $this->AdminModel->update_drectoria($id, $data);
+            redirect(base_url('l_drectoria'));
+        }
+    }
+
+    public function d_drectoria($d_id)
+    {
+        $this->AdminModel->delete_drectoria($d_id);
+        redirect(base_url('l_drectoria'));
+    }
 }

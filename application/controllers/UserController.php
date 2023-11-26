@@ -55,6 +55,7 @@ class UserController extends CI_Controller
 
     public function directoria()
     {
+        $data['drectoria_get_list'] = $this->UserModel->get_drectoria();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/directoria', $data);
     }

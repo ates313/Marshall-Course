@@ -16,7 +16,7 @@
     </div>
     <div class="row">
         <?php foreach ($partners_get_list as $partners_get_list_item) { ?>
-            <div class="card col-4" style="height: 270px;">
+            <div class="card col-md-4 col-12" style="height: 270px;">
                 <a target="_blank" href="<?php echo $partners_get_list_item['p_link'] ?>">
                     <img class="a_imgSize2" src="<?php echo base_url('upload/' . $partners_get_list_item['p_img']) ?>" alt="">
                 </a>

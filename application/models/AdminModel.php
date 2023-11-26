@@ -180,4 +180,27 @@ class AdminModel extends CI_Model
      {
          $this->db->where('a_id', $a_id)->update('about', $data);
      }
+
+
+    //  Drectoria
+     public function drectoria_insert($data){
+        $this->db->insert('directoria', $data);
+     }
+
+     public function drectoria_get_list(){
+        return $this->db->order_by('d_id', "DESC")->get('directoria')->result_array();
+     }
+
+     public function drectoria_get_list_rw($d_id){
+        return $this->db->where('d_id', $d_id)->get('directoria')->row_array();
+     }
+
+     public function delete_drectoria($d_id){
+        $this->db->where('d_id', $d_id)->delete('directoria');
+        redirect(base_url('l_drectoria'));
+     }
+
+     public function update_drectoria($d_id, $data){
+        $this->db->where('d_id', $d_id)->update('directoria', $data);
+     }
 }

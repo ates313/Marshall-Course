@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/versions.css">
 <!-- Responsive CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/responsive.css">
+
 <!-- Custom CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/custom.css">
 <!-- Custom carusel CSS -->

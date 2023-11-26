@@ -1,3 +1,13 @@
+<?php 
+
+if(!isset($_SESSION['admin_id'])){
+    redirect(base_url('login'));
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

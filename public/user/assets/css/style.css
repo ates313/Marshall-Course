@@ -3461,7 +3461,7 @@ span.m_1 {
 
 .our-team {
     text-align: center;
-    margin-bottom: 30px;
+    margin: 15px;
 }
 
 .our-team .team-img {
@@ -3470,14 +3470,14 @@ span.m_1 {
 }
 
 .our-team .team-img img {
-    width: 100%;
-    height: auto;
+    width: 320px;
+    height: 400px;
 }
 
 .our-team .social {
     width: 100%;
     height: 30%;
-    background: rgba(238, 164, 18, 0.9);
+    background: rgba(5, 177, 247, 0.6);
     position: absolute;
     top: 50%;
     left: 0;
@@ -3523,7 +3523,7 @@ span.m_1 {
 
 .our-team .social ul li a:hover {
     background: #fff;
-    color: #f3904d;
+    color: #05B1F7;
 }
 
 .our-team .team-content {
@@ -4224,14 +4224,3 @@ a.link-style3 {
 }
 
 /* Staff End */
-
-.hv-blue:hover{
-    color: #05B1F7;
-    transition: 0.7s;
-}
-
-.hv-br:hover{
-    border: #1287b5;
-    scale: 1.1;
-    transition: 0.5s;
-}

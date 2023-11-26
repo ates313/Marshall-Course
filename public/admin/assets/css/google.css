@@ -1,0 +1,106 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-image: url(https://www.bing.com/th?id=OHR.NorthSeaStairs_EN-IN3347217370_1920x1080.webp&qlt=50);
+    background-position: center;
+    background-size: cover;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.card_icon {
+    background: #ffffff1f;
+    border-radius: 1rem;
+}
+
+.blur {
+    backdrop-filter: blur(6px);
+}
+
+.glass {
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    min-width: 180px;
+    position: relative;
+    transition: transform 250ms;
+    margin: auto;
+}
+
+.item {
+    background: rgba(255, 255, 255, 0.05);
+    color: #111;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+    border: 1px solid #cecece80;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: white;
+}
+
+
+
+/* Styles for the snackbar container */
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+/* Show the snackbar */
+.show {
+    visibility: visible;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+/* Animation for showing and hiding the snackbar */
+@keyframes fadeIn {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+input[type="search"] {
+    background: #ffffff36;
+    color: #111;
+}

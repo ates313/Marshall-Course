@@ -19,60 +19,140 @@
             <span>Dashboard</span>
           </a>
           <!-- DROPDOWN LINK -->
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">Slider</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_slider') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_slider') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Slider</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_slider') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_slider') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">Course</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_course') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_course') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          <!-- === -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-brands fa-discourse"></i>
+                <span>Course</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_course') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_course') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">News</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_news') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_news') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-regular fa-newspaper"></i>
+                <span>News</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_news') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_news') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">Footer About</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_footer') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_footer') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-regular fa-address-card"></i>
+                <span>Footer About</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_footer') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_footer') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">Partners</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_partners') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_partners') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Partners</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_partners') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_partners') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
-          <div class="container">
-            <div class="menu">
-              <button class="toggle">About US</button>
-              <ul class="list">
-                <a class="list-item" href="<?php echo base_url('c_about') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
-                <a class="list-item" href="<?php echo base_url('l_about') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
-              </ul>
+          <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-address-card"></i>
+                <span>About Us</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_about') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_about') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
             </div>
           </div>
+          <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-address-book"></i>
+                <span>Drectoria</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_drectoria') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_drectoria') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
+            </div>
+          </div>
+          <!-- == -->
           <!-- AND -->
         </div>
 
@@ -80,19 +160,7 @@
 
       <!-- PROFILE -->
       <div class="text-gray-200 border-gray-800 rounded flex items-center justify-between p-2">
-        <div class="flex items-center space-x-2">
-          <!-- AVATAR IMAGE BY FIRST LETTER OF NAME -->
-          <img src="https://ui-avatars.com/api/?name=Habib+Mhamadi&size=128&background=ff4433&color=fff" class="w-7 w-7 rounded-full" alt="Profile">
-          <h1>Null Null</h1>
-        </div>
-        <a onclick="event.preventDefault(); document.getElementById('logoutForm').submit()" href="#" class="hover:bg-gray-800 hover:text-white p-2 rounded">
-          <form id="logoutForm" action="" method="POST"></form>
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
-          </svg>
-          </form>
-        </a>
-      </div>
+        <a class="btn btn-primary form-control" href="<?php echo base_url('a_logOut'); ?>">Logout</a>
 
     </div>
   </nav>
