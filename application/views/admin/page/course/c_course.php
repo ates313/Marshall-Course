@@ -21,10 +21,7 @@
         </div> -->
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_month">Course month:</label>
-            <select class="form-control" name="course_month" id="course_month">
-                <option class="form-control" value="9 Month">9 Month</option>
-                <option class="form-control" value="6 Month">6 Month</option>
-            </select>
+            <input type="text" name="course_month" class="form-control" id="course_month" placeholder="Enter course month">
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_img">Creat Images</label>

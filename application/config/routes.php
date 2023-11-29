@@ -17,7 +17,6 @@ $route['course2']            = 'UserController/courseGrid2';
 // Admin
 $route['admin']              = 'AdminController/index';
 $route['a_logOut']           = "AdminController/logOut";
-// $route['c_admin']            =  'AdminController/c_admin';
 $route['login']              = 'AdminController/login';
 $route['login_action']     = 'AdminController/login_action';
 

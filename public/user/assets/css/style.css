@@ -4176,6 +4176,7 @@ a.link-style3 {
 .card {
     height: 540px;
     float: left;
+    border: none;
 }
 
 .card-body {

@@ -24,8 +24,9 @@
                             <div class="col-md-12 col-sm-12">
                                 <div class="big-tagline">
                                     <h2>Welcome<strong> MarshallEDU!</strong></h2>
-                                    <p class="lead">With Landigoo responsive landing page template, you can promote
-                                        your all hosting, domain and email services. </p>
+                                    <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                                 </div>
                             </div>
                         </div><!-- end row -->
@@ -93,7 +94,7 @@
                                 <div class="course-meta-bot">
                                     <ul>
                                         <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
-                                        <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
+                                        <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?> Month</li>
                                         <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
                                     </ul>
                                 </div>
@@ -134,9 +135,9 @@
                                 <div class="a_date">
                                     <span><?php echo $news_get_list_item['n_date'] ?></span>
                                 </div>
-                                <span class="card-title">
+                                <h3 class="card-title">
                                     <?php echo $news_get_list_item['n_desc'] ?>
-                                </span>
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -167,7 +168,7 @@
                         </a>
                         <div class="card-body">
                             <span class="card-title">
-                                <?php  echo $partners_get_list_item['p_title'] ?>
+                                <?php echo $partners_get_list_item['p_title'] ?>
                             </span>
                         </div>
                     </div>

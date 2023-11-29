@@ -21,10 +21,7 @@
         </div> -->
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_month">Course month:</label>
-            <select class="form-control" name="course_month" id="course_month">
-                <option <?php if($course_get_list_rw['c_month'] == "9 Month"){echo "SELECTED";} ?> class="form-control" value="9 Month">9 Month</option>
-                <option <?php if($course_get_list_rw['c_month'] == "6 Month"){echo "SELECTED";} ?> qclass="form-control" value="6 Month">6 Month</option>
-            </select>
+            <input value="<?php echo $course_get_list_rw['c_month'] ?>" type="text" name="course_month" class="form-control" id="course_month" placeholder="Enter slider">
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_img">Edit Images</label>

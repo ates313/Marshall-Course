@@ -69,9 +69,13 @@ class AdminController extends CI_Controller
         $slider_title = $_POST['slider_title'];
         $slider_link = $_POST['slider_link'];
         $slider_desc = $_POST['slider_desc'];
-        $slider_status = $_POST['slider_statu s'];
+        $slider_status = $_POST['slider_status'];
 
-        $slider_desc = $this->input->post('',);
+
+        // print_r('<pre>');
+        // print_r($slider_desc);
+        // die();
+        // $slider_desc = $this->input->post('',);
 
 
 
