@@ -9,11 +9,11 @@
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+        <!-- <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li> -->
+        <!-- <li data-target="#carouselExampleControls" data-slide-to="1"></li>
         <li data-target="#carouselExampleControls" data-slide-to="2"></li>
         <li data-target="#carouselExampleControls" data-slide-to="3"></li>
-        <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="4"></li> -->
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">

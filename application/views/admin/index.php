@@ -10,7 +10,7 @@
 <!-- PAGE CONTENT -->
 
 <!-- Google CSS -->
-<!-- <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/google.css"> -->
+<link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/google.css">
 
 <div class="md:hidden justify-between items-center bg-black text-white flex">
     <button @click="navOpen = !navOpen" class="btn p-4 focus:outline-none hover:bg-gray-800">
@@ -39,22 +39,14 @@
 
         <!--  widget    -->
         <div class="flex flex-col h-full p-4 gap-2 justify-center">
-            <div class="glass p-2 text-xl">
-                <div class="p-2 note"></div>
-                <button class="glass p-2 savenote hidden">Save</button>
-            </div>
             <div class="time glass p-2 text-3xl text-center">
-                <i class="fa-regular fa-clock"></i>
-                            23:50
+            <i class="fa-solid fa-clock"></i>
+                23:50
             </div>
             <div class="day glass p-2 text-2xl text-center">Fri</div>
         </div>
 
         <div class="glass flex flex-col p-4 gap-2 justify-center">
-            <!-- search bar -->
-            <div class="glass w-full flex justify-center p-2">
-                <input autocomplete="on" type="search" placeholder="Search using Bing..." class="search w-1/2 p-2 rounded-full">
-            </div>
             <!-- links -->
             <div class="flex flex-wrap items glass p-4  gap-2 justify-center">
             </div>
@@ -74,12 +66,12 @@
 
 
 
-<script>
+<!-- <script>
     setInterval(() =>
         document.getElementById('clock')
         .textContent = new Date()
         .toLocaleTimeString("az"), 1000)
-</script>
+</script> -->
 
 
 
@@ -130,13 +122,6 @@
             },
 
             {
-                "icon": "fa-brands fa-microsoft",
-                "text": "Bing",
-                "link": "https://bing.com",
-                "accent": "#8dc63f"
-            },
-
-            {
                 "icon": "fa-brands fa-codepen",
                 "text": "Codepen",
                 "link": "https://codepen.io",
@@ -144,24 +129,10 @@
             },
 
             {
-                "icon": "fa-brands fa-stack-overflow",
-                "text": "Stack",
-                "link": "https://stackoverflow.com/",
-                "accent": "#f2740e"
-            },
-
-            {
                 "icon": "fa-brands fa-pinterest",
                 "text": "Pinterest",
                 "link": "https://pinterest.com/",
                 "accent": "#ff5247"
-            },
-
-            {
-                "icon": "fa-brands fa-figma",
-                "text": "Figma",
-                "link": "https://figma.com/",
-                "accent": "#9747ff"
             },
 
             {
