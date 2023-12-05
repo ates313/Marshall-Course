@@ -153,6 +153,25 @@
             </div>
           </div>
           <!-- == -->
+          <div class="block" x-data="{open: false}">
+            <div @click="open = !open" class="flex items-center justify-between hover:bg-gray-800 hover:text-white cursor-pointer py-2.5 px-4 rounded">
+              <div class="flex items-center space-x-2">
+              <i class="fa-solid fa-chalkboard-user"></i>
+                <span>Teachers</span>
+              </div>
+              <svg x-show="open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+              </svg>
+              <svg x-show="!open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </div>
+            <div x-show="open" class="text-sm border-l-2 border-gray-800 mx-6 my-2.5 px-2.5 flex flex-col gap-y-1">
+              <a class="list-item" href="<?php echo base_url('c_teachers') ?>"><i class="fa-solid fa-plus p-1"></i>Creat</a>
+              <a class="list-item" href="<?php echo base_url('l_teachers') ?>"><i class="fa-solid fa-list p-1"></i>List</a>
+            </div>
+          </div>
+          <!-- == -->
           <!-- AND -->
         </div>
 

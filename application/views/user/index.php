@@ -105,9 +105,11 @@
                 <?php  } ?>
             </div>
         </div>
-        <button style="cursor: pointer;" class="form-control bg-primary">
-            <a href="<?php echo base_url('course2'); ?>">Read More</a>
-        </button>
+
+        <a href="<?php echo base_url('course2'); ?>">
+            <button style="cursor: pointer;" class="form-control bg-primary">Read More</button>
+        </a>
+
 
     </div><!-- end container -->
 
@@ -144,9 +146,6 @@
                 <?php } ?>
             </div>
         </div>
-        <button style="cursor: pointer;" class="form-control bg-primary light">
-            <a href="<?php echo base_url('course2'); ?>">Read More</a>
-        </button>
         <!-- Slider end -->
     </div>
 </section>

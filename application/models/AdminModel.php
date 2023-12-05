@@ -203,4 +203,27 @@ class AdminModel extends CI_Model
      public function update_drectoria($d_id, $data){
         $this->db->where('d_id', $d_id)->update('directoria', $data);
      }
+
+
+     //  Teachers
+     public function teachers_insert($data){
+        $this->db->insert('teachers', $data);
+     }
+
+     public function teachers_get_list(){
+        return $this->db->order_by('t_id', "DESC")->get('teachers')->result_array();
+     }
+
+     public function teachers_get_list_rw($t_id){
+        return $this->db->where('t_id', $t_id)->get('teachers')->row_array();
+     }
+
+     public function delete_teachers($t_id){
+        $this->db->where('t_id', $t_id)->delete('teachers');
+        redirect(base_url('l_teachers'));
+     }
+
+     public function update_teachers($t_id, $data){
+        $this->db->where('t_id', $t_id)->update('teachers', $data);
+     }
 }

@@ -11,7 +11,7 @@
 <header class="top-navbar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="<?php echo base_url('home') ?>">
                 <img style="width: 35px;" src="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" alt="">
                 <span class="a_logo">Marshall <span class="a_logo_yellow">Education</span></span>
             </a>
@@ -41,8 +41,8 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-a">
                             <a class="dropdown-item" href="<?php echo base_url('course2') ?>">All Course</a>
-                            <a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
-                            <a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a>
+                            <!-- <a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
+                            <a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a> -->
                         </div>
                     </li>
                     <li class="nav-item <?php if ($segment == 'teachers') : echo 'active';

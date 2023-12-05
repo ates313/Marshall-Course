@@ -34,6 +34,8 @@ class AdminController extends CI_Controller
                 'admin_password' => md5($password),
             ];
 
+            $data = $this->security->xss_clean($data);
+
             $checkUser = $this->db->select('admin_id')->where($data)->get("admin_login")->row_array();
 
             $_SESSION['admin_id'] =  $checkUser['admin_id'];
@@ -100,7 +102,7 @@ class AdminController extends CI_Controller
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => ""
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('slider', $data);
             redirect(base_url('l_slider'));
         } else {
@@ -112,7 +114,7 @@ class AdminController extends CI_Controller
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => ""
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->slider_insert($data);
             redirect(base_url('l_slider'));
         }
@@ -158,7 +160,7 @@ class AdminController extends CI_Controller
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => ""
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_slider($s_id, $data);
             redirect(base_url('l_slider'));
         } else {
@@ -170,6 +172,7 @@ class AdminController extends CI_Controller
                 's_date' => date("Y-m-d H:i:s"),
                 // 's_id' => "" 
             ];
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_slider($s_id, $data);
             redirect(base_url('l_slider'));
         }
@@ -226,7 +229,7 @@ class AdminController extends CI_Controller
                 'c_img' => $upload_course_img['file_name'],
                 'c_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('course', $data);
             redirect(base_url('l_course'));
         } else {
@@ -238,7 +241,7 @@ class AdminController extends CI_Controller
                 'c_status' => $course_status,
                 'c_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->course_insert($data);
             redirect(base_url('l_course'));
         }
@@ -278,7 +281,7 @@ class AdminController extends CI_Controller
                 'c_img' => $upload_course_img['file_name'],
                 'c_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_course($c_id, $data);
             redirect(base_url('l_course'));
         } else {
@@ -290,7 +293,7 @@ class AdminController extends CI_Controller
                 'c_status' => $course_status,
                 'c_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_course($c_id, $data);
             redirect(base_url('l_course'));
         }
@@ -337,7 +340,7 @@ class AdminController extends CI_Controller
                 'n_img' => $upload_news_img['file_name'],
                 'n_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('news', $data);
             redirect(base_url('l_news'));
         } else {
@@ -346,7 +349,7 @@ class AdminController extends CI_Controller
                 'n_status' => $news_status,
                 'n_date' => date("Y--d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->news_insert($data);
             redirect(base_url('l_news'));
         }
@@ -378,7 +381,7 @@ class AdminController extends CI_Controller
                 'n_img' => $upload_news_img['file_name'],
                 'n_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_news($n_id, $data);
             redirect(base_url('l_news'));
         } else {
@@ -387,7 +390,7 @@ class AdminController extends CI_Controller
                 'n_status' => $news_status,
                 'n_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_news($n_id, $data);
             redirect(base_url('l_news'));
         }
@@ -428,7 +431,7 @@ class AdminController extends CI_Controller
             'f_status' => $footer_status,
             'f_date' => date('Y-m-d H:i:s')
         ];
-
+        $data = $this->security->xss_clean($data);
         $this->AdminModel->footer_insert($data);
         redirect(base_url('l_footer'));
     }
@@ -456,7 +459,7 @@ class AdminController extends CI_Controller
             'f_status' => $footer_status,
             'f_date' => date('Y-m-d H:i:s')
         ];
-
+        $data = $this->security->xss_clean($data);
         $this->AdminModel->update_footer($f_id, $data);
         redirect(base_url('l_footer'));
     }
@@ -502,7 +505,7 @@ class AdminController extends CI_Controller
                 'p_img' => $upload_partners_img['file_name'],
                 'p_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('partners', $data);
             redirect(base_url('l_partners'));
         } else {
@@ -512,7 +515,7 @@ class AdminController extends CI_Controller
                 'p_status' => $partners_status,
                 'p_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->partners_insert($data);
             redirect(base_url('l_partners'));
         }
@@ -546,7 +549,7 @@ class AdminController extends CI_Controller
                 'p_img' => $upload_partners_img['file_name'],
                 'p_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_partners($p_id, $data);
             redirect(base_url('l_partners'));
         } else {
@@ -556,7 +559,7 @@ class AdminController extends CI_Controller
                 'p_status' => $partners_status,
                 'p_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_partners($p_id, $data);
             redirect(base_url('l_partners'));
         }
@@ -603,7 +606,7 @@ class AdminController extends CI_Controller
                 'a_img' => $upload_about_img['file_name'],
                 'a_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('about', $data);
             redirect(base_url('l_about'));
         } else {
@@ -613,7 +616,7 @@ class AdminController extends CI_Controller
                 'a_status' => $about_status,
                 'a_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->about_insert($data);
             redirect(base_url('l_about'));
         }
@@ -647,7 +650,7 @@ class AdminController extends CI_Controller
                 'a_img' => $upload_about_img['file_name'],
                 'a_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->update_about($id, $data);
             redirect(base_url('l_about'));
         } else {
@@ -657,7 +660,7 @@ class AdminController extends CI_Controller
                 'a_status' => $about_status,
                 'a_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_about($id, $data);
             redirect(base_url('l_about'));
         }
@@ -721,7 +724,7 @@ class AdminController extends CI_Controller
                 'd_img' => $upload_drectoria_img['file_name'],
                 'd_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->insert('directoria', $data);
             redirect(base_url('l_drectoria'));
         } else {
@@ -738,7 +741,7 @@ class AdminController extends CI_Controller
                 'd_birhtday' => $drectoria_birthday,
                 'd_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->drectoria_insert($data);
             redirect(base_url('l_drectoria'));
         }
@@ -787,7 +790,7 @@ class AdminController extends CI_Controller
                 'd_img' => $upload_drectoria_img['file_name'],
                 'd_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->db->update_drectoria($id, $data);
             redirect(base_url('l_drectoria'));
         } else {
@@ -804,7 +807,7 @@ class AdminController extends CI_Controller
                 'd_birhtday' => $drectoria_birthday,
                 'd_date' => date("Y-m-d H:i:s")
             ];
-
+            $data = $this->security->xss_clean($data);
             $this->AdminModel->update_drectoria($id, $data);
             redirect(base_url('l_drectoria'));
         }
@@ -814,5 +817,109 @@ class AdminController extends CI_Controller
     {
         $this->AdminModel->delete_drectoria($d_id);
         redirect(base_url('l_drectoria'));
+    }
+
+
+    // Teachers Start
+    public function c_teachers()
+    {
+        $this->load->view('admin/page/teachers/c_teachers');
+    }
+
+    public function l_teachers()
+    {
+        $data['teachers_get_list'] = $this->AdminModel->teachers_get_list();
+        $this->load->view('admin/page/teachers/l_teachers', $data);
+    }
+
+    public function c_teachers_act()
+    {
+
+        $teachers_name = $_POST['teachers_name'];
+        $teachers_surname = $_POST['teachers_surname'];
+        $teachers_work = $_POST['teachers_work'];
+        $teachers_status = $_POST['teachers_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('teachers_img')) {
+            $upload_teachers_img = $this->upload->data();
+            $data = [
+                't_name' => $teachers_name,
+                't_surname' => $teachers_surname,
+                't_work' => $teachers_work,
+                't_status' => $teachers_status,
+                't_img' => $upload_teachers_img['file_name'],
+            ];
+            $data = $this->security->xss_clean($data);
+            $this->db->insert('teachers', $data);
+            redirect(base_url('l_teachers'));
+        } else {
+            $data = [
+                't_name' => $teachers_name,
+                't_surname' => $teachers_surname,
+                't_work' => $teachers_work,
+                't_status' => $teachers_status,
+            ];
+            $data = $this->security->xss_clean($data);
+            $this->AdminModel->teachers_insert($data);
+            redirect(base_url('l_teachers'));
+        }
+    }
+
+    public function e_teachers($t_id)
+    {
+        $data['teachers_get_list_rw'] = $this->AdminModel->teachers_get_list_rw($t_id);
+        $this->load->view('admin/page/teachers/e_teachers', $data);
+    }
+
+    public function e_teachers_act($id)
+    {
+        $teachers_name = $_POST['teachers_name'];
+        $teachers_surname = $_POST['teachers_surname'];
+        $teachers_work = $_POST['teachers_work'];
+        $teachers_status = $_POST['teachers_status'];
+
+        $config['upload_path']          = './upload';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
+        $config['remove_spaces']        = TRUE;
+        $config['encrypt_name']         = TRUE;
+
+        $this->load->library('upload', $config);
+
+        if ($this->upload->do_upload('teachers_img')) {
+            $upload_teachers_img = $this->upload->data();
+            $data = [
+                't_name' => $teachers_name,
+                't_surname' => $teachers_surname,
+                't_work' => $teachers_work,
+                't_status' => $teachers_status,
+                't_img' => $upload_teachers_img['file_name'],
+            ];
+            $data = $this->security->xss_clean($data);
+            $this->db->update_teachers($id, $data);
+            redirect(base_url('l_teachers'));
+        } else {
+            $data = [
+                't_name' => $teachers_name,
+                't_surname' => $teachers_surname,
+                't_work' => $teachers_work,
+                't_status' => $teachers_status,
+            ];
+            $data = $this->security->xss_clean($data);
+            $this->AdminModel->update_teachers($id, $data);
+            redirect(base_url('l_teachers'));
+        }
+    }
+
+    public function d_teachers($t_id)
+    {
+        $this->AdminModel->delete_teachers($t_id);
+        redirect(base_url('l_teachers'));
     }
 }

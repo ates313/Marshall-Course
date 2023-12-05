@@ -75,3 +75,11 @@ $route['c_drectoria_act'] = 'AdminController/c_drectoria_act';
 $route['e_drectoria/(.*)'] = 'AdminController/e_drectoria/$1';
 $route['d_drectoria/(.*)'] = 'AdminController/d_drectoria/$1';
 $route['e_drectoria_act/(.*)'] = 'AdminController/e_drectoria_act/$1';
+
+// Teachers
+$route['c_teachers'] = 'AdminController/c_teachers';
+$route['l_teachers'] = 'AdminController/l_teachers';
+$route['c_teachers_act'] = 'AdminController/c_teachers_act';
+$route['e_teachers/(.*)'] = 'AdminController/e_teachers/$1';
+$route['d_teachers/(.*)'] = 'AdminController/d_teachers/$1';
+$route['e_teachers_act/(.*)'] = 'AdminController/e_teachers_act/$1';

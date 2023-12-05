@@ -3,7 +3,7 @@
 
 <div class="all-title-box" style="background-image: url('public/user/assets/images/banner.jpg');">
 	<div class="container text-center">
-		<h1>Directoria Page<span class="m_1"></span></h1>
+		<h1 style="color: lightcyan;">Directoria Page</h1>
 	</div>
 </div>
 <div class="container">

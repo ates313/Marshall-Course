@@ -4,11 +4,11 @@
 
 <div class="all-title-box" style="background-image: url('public/user/assets/images/banner.jpg');">
 	<div class="container text-center">
-		<h1>Partners Page<span class="m_1"></span></h1>
+		<h1 style="color: lightcyan;">Partners Page</h1>
 	</div>
 </div>
 
-<div class="container">
+<div class="container mt-4">
     <div class="section-title row text-center">
         <div class="col-md-8 offset-md-2">
             <h3>Partners</h3>

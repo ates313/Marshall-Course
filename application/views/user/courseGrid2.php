@@ -2,8 +2,8 @@
 <?php $this->load->view('user/includes/header') ?>
 
 <div class="all-title-box">
-	<div class="container text-center">
-		<h1>Course Grid 2<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+	<div class="container text-center text text-danger">
+		<h1 style="color: darkgray;">All Courses</h1>
 	</div>
 </div>
 
@@ -40,4 +40,3 @@
 
 <?php $this->load->view('user/includes/footer') ?>
 <?php $this->load->view('user/includes/footerStyle') ?>
-

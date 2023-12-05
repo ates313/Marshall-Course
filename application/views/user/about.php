@@ -3,7 +3,7 @@
 
 <div style="background-image: url(public/user/assets/images/banner.jpg);" class="all-title-box">
     <div class="container text-center">
-        <h1>About Us<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+        <h1 style="color: lightcyan;">About Us</h1>
     </div>
 </div>
 
