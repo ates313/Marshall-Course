@@ -35,6 +35,7 @@ class UserController extends CI_Controller
 
     public function teachers()
     {
+        $data['teachers_get_list'] = $this->UserModel->get_teachers();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/teachers', $data);
     }

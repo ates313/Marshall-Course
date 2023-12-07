@@ -63,4 +63,12 @@ class UserModel extends CI_Model
             ->where('d_status', 'Active')
             ->get('directoria')->result_array();
     }
+
+    public function get_teachers()
+    {
+        return
+            $this->db
+            ->where('t_status', 'Active')
+            ->get('teachers')->result_array();
+    }
 }

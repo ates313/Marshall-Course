@@ -10,17 +10,22 @@
 <div id="teachers" class="">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<img src="<?php echo base_url('public/user/assets/') ?>images/team-01.png">
-					</div>
-					<div class="team-content">
-						<h3 class="title">Williamson</h3>
-						<span class="post">Web Developer</span>
+
+			<?php foreach ($teachers_get_list as $teachers_get_list_item) { ?>
+
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="our-team">
+						<div class="team-img">
+							<img src="<?php echo base_url('upload/' . $teachers_get_list_item['t_img']) ?>">
+						</div>
+						<div class="team-content">
+							<h3 class="title"><?php echo $teachers_get_list_item['t_name'] ?> <?php echo $teachers_get_list_item['t_surname'] ?></h3>
+							<span class="post"><?php echo $teachers_get_list_item['t_work'] ?></span>
+						</div>
 					</div>
 				</div>
-			</div>
+
+			<?php } ?>
 
 		</div><!-- end row -->
 	</div><!-- end container -->
