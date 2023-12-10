@@ -29,7 +29,7 @@
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_price">Creat price</label>
-            <input type="text" name="course_price" class="form-control" id="course_price" placeholder="Enter course title">
+            <input type="text" name="course_price" class="form-control" id="course_price" placeholder="Enter course prices">
         </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="course_title">Creat title</label>
