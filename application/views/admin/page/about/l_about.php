@@ -4,7 +4,7 @@
 <p class="text-center text-dark py-2 rounded" style="font-size: 25px;">Welcome About List!</p>
 
 <div class="form-group container-fluid">
-    <a href="<?php echo base_url('c_course') ?>">
+    <a href="<?php echo base_url('c_about') ?>">
         <button class="col-sm-1 form-control bg-dark text-light">Creat</button>
     </a>
     <div class="bg-white shadow rounded-sm my-2.5">

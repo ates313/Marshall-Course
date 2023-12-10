@@ -1877,6 +1877,7 @@ a img.aligncenter {
 
 .post-media img {
     width: 100%;
+    border-radius: 20px;
 }
 
 .playbutton {

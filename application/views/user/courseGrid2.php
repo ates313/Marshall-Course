@@ -16,7 +16,7 @@
 				<div class="col-lg-4 col-md-6 col-12 mb-2 mt-1">
 					<div class="card text-center  col-sm-12">
 						<div class="card-header">
-							<img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
+							<img style="border-radius:10px;" src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
 						</div>
 						<div class="card-body">
 							<h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
@@ -26,7 +26,7 @@
 							<div class="course-meta-bot">
 								<ul>
 									<li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
-									<li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?></li>
+									<li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?> Month</li>
 									<li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
 								</ul>
 							</div>

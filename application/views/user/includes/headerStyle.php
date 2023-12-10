@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Site Metas -->
-<title>Marshall Course || Education</title>
+<title>Marshall Education || Course</title>
 
 <!-- Site Icons -->
 <link rel="shortcut icon" href="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" type="image/x-icon">
@@ -35,7 +35,7 @@
 
 <body class="host_version">
 
-<!-- <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
 			<div class="modal-header tit-up">
@@ -107,4 +107,4 @@
 			</div>
 		</div>
 	  </div>
-	</div> -->
+	</div>

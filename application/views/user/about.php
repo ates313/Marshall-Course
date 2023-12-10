@@ -38,10 +38,9 @@
         <div class="row">
             <div class="col-lg-4 col-md-6 col-12">
                 <div class="inner-hmv">
-                    <h3>Mission</h3>
-                    <div class="tr-pa">M</div>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam eligendi expedita, provident cupiditate in excepturi.</p>
+                    <h3>Branch</h3>
+                    <div class="tr-pa">B</div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, ratione autem? A impedit saepe sed sint veritatis quas nulla molestias, aliquid dolore optio, dolorem doloribus natus repellendus sit ut et. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptatibus voluptate praesentium suscipit dolores</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-12">

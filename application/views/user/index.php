@@ -84,7 +84,7 @@
                     <div class="item">
                         <div class="card text-center  col-sm-12">
                             <div class="card-header">
-                                <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
+                                <img style="border-radius:10px;" src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
                             </div>
                             <div class="card-body">
                                 <h3 class="card-title"><a href="#" title=""><?php echo $course_get_list_item['c_title'] ?></a></h3>
