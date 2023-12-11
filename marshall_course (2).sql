@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Dec 07, 2023 at 06:24 PM
+-- Generation Time: Dec 11, 2023 at 05:12 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.0.22
 
@@ -41,7 +41,8 @@ CREATE TABLE `about` (
 --
 
 INSERT INTO `about` (`a_id`, `a_title`, `a_desc`, `a_img`, `a_status`, `a_date`) VALUES
-(1, 'Lorem Ipsum', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen', 'a20569a6e06e56256b0a399c04d1c096.jpg', 'Active', '2023-11-28');
+(1, 'Lorem Ipsum', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen', 'a20569a6e06e56256b0a399c04d1c096.jpg', 'Active', '2023-11-28'),
+(2, 'Branches', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop', '62ccff9e85e735d59a3c92b8b15525c9.jpg', 'Active', '2023-12-10');
 
 -- --------------------------------------------------------
 
@@ -158,7 +159,7 @@ CREATE TABLE `footer_about` (
 --
 
 INSERT INTO `footer_about` (`f_id`, `f_instagram`, `f_facebook`, `f_tweet`, `f_desc`, `f_status`, `f_date`) VALUES
-(3, 'https://www.instagram.com/', 'https://www.youtube.com/', '', 'Salam Menim Adim Ateshdir QWERTYUIO', 'Active', '2023-09-16');
+(3, 'https://www.instagram.com/', 'https://www.youtube.com/', 'https://twitter.com/', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book', 'Active', '2023-12-10');
 
 -- --------------------------------------------------------
 
@@ -332,7 +333,7 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `about`
 --
 ALTER TABLE `about`
-  MODIFY `a_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `a_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `admin_login`
