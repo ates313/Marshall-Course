@@ -28,7 +28,7 @@
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
                     <div class="widget-title">
-                        <h3>Contact Details</h3>
+                        <a href="<?php echo base_url('contact') ?>"><h3>Contact Details</h3></a>
                     </div>
 
                     <ul class="footer-links">

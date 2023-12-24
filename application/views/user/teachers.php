@@ -3,7 +3,7 @@
 
 <div class="all-title-box">
 	<div class="container text-center">
-		<h1>Teachers<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+		<h1 style="color: #0088fd;">Teachers</h1>
 	</div>
 </div>
 

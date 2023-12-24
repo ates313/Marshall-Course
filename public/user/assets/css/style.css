@@ -597,7 +597,7 @@ a img.aligncenter {
 
 .a_logo {
     font-size: 25px;
-    color: #4C5A7D;
+    color: #0c8dc0;
     z-index: 99999999999999;
 }
 
@@ -637,7 +637,7 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: #4C5A7D;
+    color: #87cce7;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link::after {
@@ -655,7 +655,7 @@ a img.aligncenter {
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
-    color: #4C5A7D;
+    color: #87cce7;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover::after {
@@ -2970,7 +2970,7 @@ body.host_version .first-section .effect-1.slide-btn::after {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-image: url('https://usopm.org/wp-content/uploads/2021/08/shutterstock_559448341-scaled.jpg');
+    background-image: url('https://wallpaper-house.com/data/out/8/wallpaper2you_245357.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
