@@ -1,6 +1,16 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
+
+
+
+
+<?php if ($this->session->flashdata("err")) { ?>
+    <div class="alert alert-danger alert-dismissible">
+        <?php echo $this->session->flashdata("err"); ?>
+    </div>
+<?php } ?>
+
 <form action="<?php echo base_url('c_drectoria_act'); ?>" method="POST" enctype="multipart/form-data">
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome Drectoria Creat Page!</p>
@@ -33,7 +43,7 @@
             <br>
             <label for="drectoria_desc">Description</label>
             <textarea name="drectoria_desc" id="drectoria_desc" cols="30" rows="5" class="form-control"></textarea>
-        </div>  
+        </div>
         <div class="col-sm-3 mb-6 mb-sm-0">
             <label for="drectoria_instagram">Instagram</label>
             <input type="text" name="drectoria_instagram" class="form-control" id="drectoria_instagram" placeholder="Enter link">

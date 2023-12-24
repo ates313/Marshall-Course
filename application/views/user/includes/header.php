@@ -27,23 +27,16 @@
                                         endif; ?>"><a class="nav-link" href="<?php echo base_url('home') ?>">Home</a></li>
 
                     <li class="nav-item dropdown <?php if ($segment == 'about') : echo 'active';
-                                        endif; ?>">
-                                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">About Us</a>
+                                                    endif; ?>">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">About Us</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-b">
                             <a class="dropdown-item" href="<?php echo base_url('about') ?>">About Us</a>
                             <a class="dropdown-item" href="<?php echo base_url('partners') ?>">Partners</a>
                             <a class="dropdown-item" href="<?php echo base_url('directoria') ?>">Directorate</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown  <?php if ($segment == 'course2' || $segment == 'course3' || $segment == 'course4') : echo 'active';
-                                                    endif; ?>">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Course
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown-a">
-                            <a class="dropdown-item" href="<?php echo base_url('course2') ?>">All Course</a>
-                            <!-- <a class="dropdown-item" href="course-grid-3.html">Course Grid 3 </a>
-                            <a class="dropdown-item" href="course-grid-4.html">Course Grid 4 </a> -->
-                        </div>
+                    <li class="nav-item <?php if ($segment == 'course2') : echo 'active';
+                                        endif; ?>"><a class="nav-link" href="<?php echo base_url('course2') ?>">Course</a></li>
                     </li>
                     <li class="nav-item <?php if ($segment == 'teachers') : echo 'active';
                                         endif; ?>"><a class="nav-link" href="<?php echo base_url('teachers'); ?>">Teachers</a></li>

@@ -79,7 +79,7 @@
             </div>
         </div><!-- end title -->
         <div class="carousel-wrap">
-            <div class="owl-carousel owl-loaded owl-drag">
+            <div class="owl-carousel owl-lded owl-drag">
                 <?php foreach ($course_get_list as $course_get_list_item) { ?>
                     <div class="item">
                         <div class="card text-center  col-sm-12">
