@@ -11,7 +11,8 @@ class AdminController extends CI_Controller
 
     public function index()
     {
-        $this->load->view('admin/index');
+        $data['cn_contact_list'] = $this->AdminModel->admin();
+        $this->load->view('admin/index', $data);
     }
 
     public function login()
@@ -129,8 +130,6 @@ class AdminController extends CI_Controller
         $data['slider_get_list_rw'] = $this->AdminModel->slider_get_list_rw($s_id);
         $this->load->view('admin/page/slider/e_slider', $data);
     }
-
-
 
     public function e_slider_act($s_id)
     {
@@ -736,14 +735,6 @@ class AdminController extends CI_Controller
         $this->load->library('upload', $config);
 
         if (!empty($drectoria_name) && !empty($drectoria_surname) && !empty($drectoria_desc)) {
-
-
-            // $checkDrectoria =  $this->db->where("d_id", $directoria)->get('directoria')->row_array();
-
-            // if (!$checkDrectoria) {
-            //     $this->session->set_flashdata("err", "Boşluq buraxmayın!");
-            //     redirect($_SERVER['HTTP_REFERER']);
-            // }
 
             if ($this->upload->do_upload('drectoria_img')) {
                 $upload_drectoria_img = $this->upload->data();

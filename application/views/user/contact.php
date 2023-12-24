@@ -1,6 +1,14 @@
 <?php $this->load->view('user/includes/headerStyle'); ?>
 <?php $this->load->view('user/includes/header') ?>
 
+
+<?php if ($this->session->flashdata("err")) { ?>
+    <div class="alert alert-danger alert-dismissible">
+        <?php echo $this->session->flashdata("err"); ?>
+    </div>
+<?php } ?>
+
+
 <div class="all-title-box">
     <div class="container text-center">
         <h1>Contact<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
@@ -18,25 +26,25 @@
             <div class="col-xl-6 col-md-12 col-sm-12">
                 <div class="contact_form">
                     <div id="message"></div>
-                    <form id="contactform" class="" action="contact.php" name="contactform" method="post">
+                    <form action="<?php echo base_url('c_contact_act') ?>" enctype="application/x-www-form-urlencoded" method="post">
                         <div class="row row-fluid">
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
+                                <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Name">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Last Name">
+                                <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Surname">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
-                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Your Phone">
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+                                <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details..(800)"></textarea>
                             </div>
                             <div class="text-center pd">
-                                <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Get a Quote</button>
+                                <button type="submit" value="SEND" id="submit" class="btn btn-light btn-radius btn-brd grd1 btn-block">Send</button>
                             </div>
                         </div>
                     </form>

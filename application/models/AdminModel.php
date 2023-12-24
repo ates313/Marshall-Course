@@ -154,76 +154,96 @@ class AdminModel extends CI_Model
     }
 
 
-     // About
-     public function about_insert($data)
-     {
-         $this->db->insert('about', $data);
-     }
- 
-     public function about_get_list()
-     {
-         return $this->db->order_by('a_id', "DESC")->get('about')->result_array();
-     }
- 
-     public function about_get_list_rw($a_id)
-     {
-         return $this->db->where('a_id', $a_id)->get('about')->row_array();
-     }
- 
-     public function delete_about($a_id)
-     {
-         $this->db->where('a_id', $a_id)->delete('about');
-         redirect(base_url('l_about'));
-     }
- 
-     public function update_about($a_id, $data)
-     {
-         $this->db->where('a_id', $a_id)->update('about', $data);
-     }
+    // About
+    public function about_insert($data)
+    {
+        $this->db->insert('about', $data);
+    }
+
+    public function about_get_list()
+    {
+        return $this->db->order_by('a_id', "DESC")->get('about')->result_array();
+    }
+
+    public function about_get_list_rw($a_id)
+    {
+        return $this->db->where('a_id', $a_id)->get('about')->row_array();
+    }
+
+    public function delete_about($a_id)
+    {
+        $this->db->where('a_id', $a_id)->delete('about');
+        redirect(base_url('l_about'));
+    }
+
+    public function update_about($a_id, $data)
+    {
+        $this->db->where('a_id', $a_id)->update('about', $data);
+    }
 
 
     //  Drectoria
-     public function drectoria_insert($data){
+    public function drectoria_insert($data)
+    {
         $this->db->insert('directoria', $data);
-     }
+    }
 
-     public function drectoria_get_list(){
+    public function drectoria_get_list()
+    {
         return $this->db->order_by('d_id', "DESC")->get('directoria')->result_array();
-     }
+    }
 
-     public function drectoria_get_list_rw($d_id){
+    public function drectoria_get_list_rw($d_id)
+    {
         return $this->db->where('d_id', $d_id)->get('directoria')->row_array();
-     }
+    }
 
-     public function delete_drectoria($d_id){
+    public function delete_drectoria($d_id)
+    {
         $this->db->where('d_id', $d_id)->delete('directoria');
         redirect(base_url('l_drectoria'));
-     }
+    }
 
-     public function update_drectoria($d_id, $data){
+    public function update_drectoria($d_id, $data)
+    {
         $this->db->where('d_id', $d_id)->update('directoria', $data);
-     }
+    }
 
 
-     //  Teachers
-     public function teachers_insert($data){
+    //  Teachers
+    public function teachers_insert($data)
+    {
         $this->db->insert('teachers', $data);
-     }
+    }
 
-     public function teachers_get_list(){
+    public function teachers_get_list()
+    {
         return $this->db->order_by('t_id', "DESC")->get('teachers')->result_array();
-     }
+    }
 
-     public function teachers_get_list_rw($t_id){
+    public function teachers_get_list_rw($t_id)
+    {
         return $this->db->where('t_id', $t_id)->get('teachers')->row_array();
-     }
+    }
 
-     public function delete_teachers($t_id){
+    public function delete_teachers($t_id)
+    {
         $this->db->where('t_id', $t_id)->delete('teachers');
         redirect(base_url('l_teachers'));
-     }
+    }
 
-     public function update_teachers($t_id, $data){
+    public function update_teachers($t_id, $data)
+    {
         $this->db->where('t_id', $t_id)->update('teachers', $data);
-     }
+    }
+
+
+    
+    // CONTACT MESSAGE
+    public function admin()
+    {
+        return
+            $this->db
+            ->get('contact_message')->result_array();
+    }
 }

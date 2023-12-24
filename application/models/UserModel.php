@@ -71,4 +71,22 @@ class UserModel extends CI_Model
             ->where('t_status', 'Active')
             ->get('teachers')->result_array();
     }
+    // CONTACT MESSAGE()
+    public function cn_contact_insert($data)
+    {
+        $this->db->insert('contact_message', $data);
+    }
+
+    public function cn_contact_list(){
+        return $this->db->order_by('cn_id', "DESC")->get('contact_message')->result_array();
+    }
+
+    // public function cn_contcat_list_rw($cn_id){
+    //     return $this->db->where('cn_id', $cn_id)->get('contact_message')->row_array();
+    // }
+
+    public function delete_message($cn_id){
+        $this->db->where('cn_id', $cn_id)->delete('contact_message');
+        redirect(base_url('admin'));
+    }
 }

@@ -23,42 +23,79 @@
     <div class="flex justify-between items-center border-b border-gray-300">
         <!-- <h1 class="text-2xl font-semibold pt-2 pb-6"><?php echo $_SESSION['admin_id'] ?></h1> -->
     </div>
-
-
-    <!-- TABLE -->
-
-
-
-    <style>
-
-    </style>
-
-
-
     <div class=" w-11/12 flex p-4 wrap gap-2 justify-center">
-
         <!--  widget    -->
         <div class="flex flex-col h-full p-4 gap-2 justify-center">
             <div class="time glass p-2 text-3xl text-center">
-            <i class="fa-solid fa-clock"></i>
+                <i class="fa-solid fa-clock"></i>
                 23:50
             </div>
             <div class="day glass p-2 text-2xl text-center">Fri</div>
         </div>
-
         <div class="glass flex flex-col p-4 gap-2 justify-center">
             <!-- links -->
             <div class="flex flex-wrap items glass p-4  gap-2 justify-center">
             </div>
         </div>
     </div>
-
-
-
-
 </section>
+<div class="form-group container-fluid">
+    <div class="bg-white shadow rounded-sm my-2.5">
+        <table class=" w-full table-auto">
+            <thead>
+                <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                    <th class="py-3 px-6 text-center">ID</th>
+                    <th class="py-3 px-6 text-center">Name / Surname</th>
+                    <th class="py-3 px-6 text-center">description</th>
+                    <th class="py-3 px-6 text-center">Email</th>
+                    <th class="py-3 px-6 text-center">Phone</th>
+                    <th class="py-3 px-6 text-center">Date Of Creat</th>
+                    <th class="py-3 px-6 text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-600 text-sm">
+
+                <?php $say = 0;
+                foreach ($cn_contact_list as $cn_contact_list_item) {
+
+                    $say++;?>
+
+                    <tr class="border-b border-gray-200 hover:bg-gray-100">
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $say; ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $cn_contact_list_item['cn_name'] ?> /  <?php echo $cn_contact_list_item['cn_surname'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                           <?php echo $cn_contact_list_item['cn_desc'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $cn_contact_list_item['cn_email'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $cn_contact_list_item['cn_phone'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                            <?php echo $cn_contact_list_item['cn_date'] ?>
+                        </td>
+                        <td class="py-3 px-6 text-center">
+                        <a href="<?php echo base_url('d_cn_contact/') . $cn_contact_list_item["cn_id"]; ?>">
+                                <button>
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </button>
+                            </a>
+                        </td>
+                    </tr>
+                <?php }; ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 <!-- END OF PAGE CONTENT -->
 </main>
+
+
 </div>
 </body>
 

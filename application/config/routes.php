@@ -83,3 +83,7 @@ $route['c_teachers_act'] = 'AdminController/c_teachers_act';
 $route['e_teachers/(.*)'] = 'AdminController/e_teachers/$1';
 $route['d_teachers/(.*)'] = 'AdminController/d_teachers/$1';
 $route['e_teachers_act/(.*)'] = 'AdminController/e_teachers_act/$1';
+
+// CONTACT 2.0
+$route['c_contact_act'] = 'UserController/c_contact_act';
+$route['d_cn_contact/(.*)'] = 'UserController/d_cn_contact/$1';
