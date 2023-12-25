@@ -1,6 +1,12 @@
 <?php $this->load->view('admin/includes/headerStyle'); ?>
 <?php $this->load->view('admin/includes/header'); ?>
 
+<?php if ($this->session->flashdata("err")) { ?>
+    <div class="alert alert-danger alert-dismissible">
+        <?php echo $this->session->flashdata("err"); ?>
+    </div>
+<?php } ?>
+
 <form action="<?php echo base_url('c_news_act'); ?>" method="POST" enctype="multipart/form-data">
 
     <p class="text-center bg-gradient-dark text-dark py-2 rounded" style="font-size: 25px;">Welcome News Creat Page!</p>

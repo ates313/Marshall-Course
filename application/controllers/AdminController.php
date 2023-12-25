@@ -80,7 +80,7 @@ class AdminController extends CI_Controller
         // die();
         // $slider_desc = $this->input->post('',);
 
-        if (!empty($slider_title && !empty($slider_link) && !empty($slider_desc) && !empty($upload_about_img))) {
+        if (!empty($slider_title) && !empty($slider_link) && !empty($slider_desc)) {
 
 
             $config['upload_path']          = './upload';
@@ -121,7 +121,8 @@ class AdminController extends CI_Controller
                 redirect(base_url('l_slider'));
             }
         } else {
-            redirect(base_url('c_slider'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -212,7 +213,7 @@ class AdminController extends CI_Controller
         $course_price = $_POST['course_price'];
         $course_desc = $_POST['course_desc'];
 
-        if (!empty($course_title) && !empty($course_month) && !empty($course_desc) && !empty($course_desc) && !empty($course_price) && !empty($course_title) && !empty($upload_course_img)) {
+        if (!empty($course_title) && !empty($course_month) && !empty($course_desc) && !empty($course_price)) {
 
             $config['upload_path']          = './upload';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -250,7 +251,8 @@ class AdminController extends CI_Controller
                 redirect(base_url('l_course'));
             }
         } else {
-            redirect(base_url('c_course'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -332,7 +334,7 @@ class AdminController extends CI_Controller
         $news_desc = $_POST['news_desc'];
         $news_status = $_POST['news_status'];
 
-        if (!empty($news_desc) && !empty($upload_news_img)) {
+        if (!empty($news_desc)) {
 
             $config['upload_path']          = './upload';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -356,14 +358,15 @@ class AdminController extends CI_Controller
                 $data = [
                     'n_desc' => $news_desc,
                     'n_status' => $news_status,
-                    'n_date' => date("Y--d H:i:s")
+                    'n_date' => date("Y-m-d H:i:s")
                 ];
                 $data = $this->security->xss_clean($data);
                 $this->AdminModel->news_insert($data);
                 redirect(base_url('l_news'));
             }
         } else {
-            redirect(base_url('c_news'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -448,7 +451,8 @@ class AdminController extends CI_Controller
             $this->AdminModel->footer_insert($data);
             redirect(base_url('l_footer'));
         } else {
-            redirect(base_url('c_footer'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -505,7 +509,7 @@ class AdminController extends CI_Controller
         $partners_link = $_POST['partners_link'];
         $partners_status = $_POST['partners_status'];
 
-        if (!empty($partners_title) && !empty($partners_link) && !empty($upload_partners_img)) {
+        if (!empty($partners_title) && !empty($partners_link)) {
 
             $config['upload_path']          = './upload';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -538,7 +542,8 @@ class AdminController extends CI_Controller
                 redirect(base_url('l_partners'));
             }
         } else {
-            redirect(base_url('c_partners'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -611,7 +616,7 @@ class AdminController extends CI_Controller
         $about_desc = $_POST['about_desc'];
         $about_status = $_POST['about_status'];
 
-        if (!empty($about_title) && !empty($about_desc) && !empty($upload_about_img)) {
+        if (!empty($about_title) && !empty($about_desc)) {
 
             $config['upload_path']          = './upload';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -644,7 +649,8 @@ class AdminController extends CI_Controller
                 redirect(base_url('l_about'));
             }
         } else {
-            redirect(base_url('c_about'));
+            $this->session->set_flashdata("err", "Don't leave a gap!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
@@ -905,7 +911,8 @@ class AdminController extends CI_Controller
                 redirect(base_url('l_teachers'));
             }
         } else {
-            redirect(base_url('c_teachers'));
+            $this->session->set_flashdata("err", "Boşluq buraxmayın!");
+            redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
