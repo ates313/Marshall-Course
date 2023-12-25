@@ -37,7 +37,7 @@
                             <?php if ($drectoria_get_list_item['d_img']) { ?>
                                 <img width="60" src="<?php echo base_url('upload/' . $drectoria_get_list_item['d_img']) ?>" alt="">
                             <?php } else { ?>
-                                <img width="60px" src="https://t4.ftcdn.net/jpg/04/99/93/31/360_F_499933117_ZAUBfv3P1HEOsZDrnkbNCt4jc3AodArl.jpg" alt="No Image">
+                                <img width="60px" src="https://cdn.onlinewebfonts.com/svg/img_415638.png" alt="No Image">
                             <?php } ?>
                         </td>
 
@@ -63,7 +63,7 @@
                         </td>
 
                         <td class="py-3 px-6 text-center">
-                            <a target="_blank" href="#">
+                            <a target="_blank" href="<?php echo base_url('detail_drectoria/') . $drectoria_get_list_item['d_id'] ?>">
                                 <button>
                                     <i class="fa-regular fa-eye"></i>
                                 </button>

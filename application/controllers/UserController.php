@@ -61,35 +61,50 @@ class UserController extends CI_Controller
         $this->load->view('user/directoria', $data);
     }
 
-   // CONTACT MESSAGE
-    public function c_contact_act(){
+    public function drectoria_single($id)
+    {
+        $id = $this->security->xss_clean($id);
+        $data['drectoria_single'] = $this->UserModel->get_single_drectoria($id);
+        $this->load->view('user/drectoria_single', $data);
+
+        if(!$data['drectoria_single']){
+            redirect(base_url('directoria'));
+        }
+    }
+
+    // CONTACT MESSAGE
+    public function c_contact_act()
+    {
         $first_name = $_POST['first_name'];
         $last_name = $_POST['last_name'];
         $phone = $_POST['phone'];
         $email = $_POST['email'];
         $comments = $_POST['comments'];
 
-        if(!empty($first_name) && !empty($last_name) && !empty($phone) && !empty($email) && !empty($comments)){
-          
+        if (!empty($first_name) && !empty($last_name) && !empty($phone) && !empty($email) && !empty($comments)) {
+
             $data = [
-            'cn_name' => $first_name,
-            'cn_surname' => $last_name,
-            'cn_phone' => $phone,
-            'cn_email' => $email,
-            'cn_desc' => $comments,
-            'cn_date' => date('Y-m-d H:i:s')
-           ];
-           $data = $this->security->xss_clean($data);
-           $this->UserModel->cn_contact_insert($data);
-           redirect(base_url('contact'));
-        }else{
+                'cn_name' => $first_name,
+                'cn_surname' => $last_name,
+                'cn_phone' => $phone,
+                'cn_email' => $email,
+                'cn_desc' => $comments,
+                'cn_date' => date('Y-m-d H:i:s')
+            ];
+            $data = $this->security->xss_clean($data);
+            $this->UserModel->cn_contact_insert($data);
+            redirect(base_url('contact'));
+        } else {
             $this->session->set_flashdata("err", "Don't leave a gap!");
             redirect($_SERVER['HTTP_REFERER']);
         }
     }
 
-    public function d_cn_contact($cn_id){
+    public function d_cn_contact($cn_id)
+    {
         $this->UserModel->delete_message($cn_id);
         redirect(base_url('admin'));
     }
+
+    // ================
 }

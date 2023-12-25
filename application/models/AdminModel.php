@@ -209,6 +209,10 @@ class AdminModel extends CI_Model
         $this->db->where('d_id', $d_id)->update('directoria', $data);
     }
 
+    public function get_data_drectoria($d_id){
+        return $this->db->where('d_id',$d_id)->get('directoria')->row_array();
+    }
+
 
     //  Teachers
     public function teachers_insert($data)

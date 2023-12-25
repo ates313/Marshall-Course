@@ -711,7 +711,6 @@ class AdminController extends CI_Controller
     {
         $this->load->view('admin/page/drectoria/c_drectoria');
     }
-    // $data['about_get_list'] = $this->AdminModel->about_get_list();
 
     public function l_drectoria()
     {
@@ -857,6 +856,10 @@ class AdminController extends CI_Controller
         redirect(base_url('l_drectoria'));
     }
 
+    public function detail_drectoria($id){
+        $data["single_data_drectoria"] = $this->AdminModel->get_data_drectoria($id);
+        $this->load->view("admin/page/drectoria/detail_drectoria", $data);
+    }
 
     // Teachers Start
     public function c_teachers()

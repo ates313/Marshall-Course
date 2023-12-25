@@ -17,7 +17,7 @@
 
 					<div class="team-img">
 						<?php if ($drectoria_get_list_item['d_img']) { ?>
-							<img src="<?php echo base_url('upload/' . $drectoria_get_list_item['d_img']) ?>" alt="">
+							<img style="object-fit: cover;" src="<?php echo base_url('upload/' . $drectoria_get_list_item['d_img']) ?>" alt="">
 						<?php } else { ?>
 							<img src="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" alt="No Image">
 						<?php } ?>
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div class="team-content">
-						<a href="#">
+						<a href="<?php echo base_url('drectoria_single/'.$drectoria_get_list_item['d_id']); ?>">
 							<h3 class="title"> <?php echo $drectoria_get_list_item['d_name'] ?> <?php echo $drectoria_get_list_item['d_surname'] ?></h3>
 						</a>
 						<span class="post"><?php echo $drectoria_get_list_item['d_position'] ?></span>

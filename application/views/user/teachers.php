@@ -16,7 +16,7 @@
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="our-team">
 						<div class="team-img">
-							<img src="<?php echo base_url('upload/' . $teachers_get_list_item['t_img']) ?>">
+							<img style="object-fit: cover;" src="<?php echo base_url('upload/' . $teachers_get_list_item['t_img']) ?>">
 						</div>
 						<div class="team-content">
 							<h3 class="title"><?php echo $teachers_get_list_item['t_name'] ?> <?php echo $teachers_get_list_item['t_surname'] ?></h3>

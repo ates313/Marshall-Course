@@ -64,6 +64,14 @@ class UserModel extends CI_Model
             ->get('directoria')->result_array();
     }
 
+    public function get_single_drectoria($id)
+    {
+        return $this->db
+        ->where('d_id', $id)
+            ->where('d_status', "Active")
+            ->get('directoria')->row_array();
+    }
+
     public function get_teachers()
     {
         return
@@ -77,7 +85,8 @@ class UserModel extends CI_Model
         $this->db->insert('contact_message', $data);
     }
 
-    public function cn_contact_list(){
+    public function cn_contact_list()
+    {
         return $this->db->order_by('cn_id', "DESC")->get('contact_message')->result_array();
     }
 
@@ -85,7 +94,8 @@ class UserModel extends CI_Model
     //     return $this->db->where('cn_id', $cn_id)->get('contact_message')->row_array();
     // }
 
-    public function delete_message($cn_id){
+    public function delete_message($cn_id)
+    {
         $this->db->where('cn_id', $cn_id)->delete('contact_message');
         redirect(base_url('admin'));
     }
