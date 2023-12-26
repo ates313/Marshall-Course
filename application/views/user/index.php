@@ -1,11 +1,11 @@
 <?php $this->load->view('user/includes/headerStyle'); ?>
 <?php $this->load->view('user/includes/header') ?>
-
+ 
 <!------ Include the above in your  tag ---------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-
-
+ 
+ 
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -34,7 +34,7 @@
                 </div>
             </div><!-- end section -->
         </div>
-
+ 
         <?php foreach ($slider_get_list as $slider_get_list_item) { ?>
             <div class="carousel-item">
                 <div id="home" class="first-section" style="background-image:url('<?php echo base_url('upload/' . $slider_get_list_item['s_img']) ?>');">
@@ -54,13 +54,13 @@
                 </div><!-- end section -->
             </div>
         <?php } ?>
-
+ 
         <!-- Left Control -->
         <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="fa fa-angle-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-
+ 
         <!-- Right Control -->
         <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="fa fa-angle-right" aria-hidden="true"></span>
@@ -68,8 +68,8 @@
         </a>
     </div>
 </div>
-
-
+ 
+ 
 <!-- Course start -->
 <div id="overviews" class="section wb">
     <div class="container">
@@ -79,7 +79,7 @@
             </div>
         </div><!-- end title -->
         <div class="carousel-wrap">
-            <div class="owl-carousel owl-lded owl-drag">
+            <div class="owl-carousel owl-lded owl-drag" id="owl-carousel-course">
                 <?php foreach ($course_get_list as $course_get_list_item) { ?>
                     <div class="item">
                         <div class="card text-center  col-sm-12">
@@ -101,24 +101,24 @@
                             </div>
                         </div>
                     </div>
-
+ 
                 <?php  } ?>
             </div>
         </div>
-
+ 
         <a href="<?php echo base_url('course2'); ?>">
             <button style="cursor: pointer;" class="form-control bg-primary">Read More</button>
         </a>
-
-
+ 
+ 
     </div><!-- end container -->
-
+ 
 </div><!-- end section -->
-
-
+ 
+ 
 <!-- end -->
-
-
+ 
+ 
 <section class="section lb page-section">
     <div class="container">
         <div class="section-title row text-center">
@@ -128,7 +128,7 @@
         </div><!-- end title -->
         <!-- Slider start -->
         <div class="carousel-wrap">
-            <div class="owl-carousel owl-loaded owl-drag">
+            <div class="owl-carousel owl-loaded owl-drag" id="owl-carousel-events">
                 <?php foreach ($news_get_list as $news_get_list_item) { ?>
                     <div class="item">
                         <div class="card col-12" style="height: 270px;">
@@ -157,7 +157,7 @@
     </div><!-- end title -->
     <!-- Slider start -->
     <div class="carousel-wrap">
-        <div class="owl-carousel owl-loaded owl-drag">
+        <div class="owl-carousel owl-loaded owl-drag" id="owl-carousel-partners">
             <!-- ITEMDEN BASLA (FOREACH)A -->
             <?php foreach ($partners_get_list as $partners_get_list_item) { ?>
                 <div class="item">
@@ -177,6 +177,6 @@
     </div>
     <!-- Slider end -->
 </div>
-
+ 
 <?php $this->load->view('user/includes/footer') ?>
 <?php $this->load->view('user/includes/footerStyle') ?>
