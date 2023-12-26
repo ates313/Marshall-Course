@@ -25,7 +25,7 @@
 -------------------------------------------------------------------*/
 
 body.host_version .icon_wrap i,
-body.host_version .customwidget li i{
+body.host_version .customwidget li i {
     color: #2d3032 !important;
 }
 
@@ -48,8 +48,7 @@ GRADIENTS
 **************************************/
 
 body.host_version .icon_wrap:hover,
-body.host_version .icon-wrapper:hover i,
-body.host_version .grd1 {
+body.host_version .icon-wrapper:hover i {
     color: #ffffff !important;
     background: #2d3032;
 }
@@ -62,12 +61,21 @@ body.host_version .features-left li:hover i,
 body.host_version .divider-bar,
 body.host_version .owl-next:hover i,
 body.host_version .owl-prev:hover i,
-body.host_version .icon-wrapper:hover i:hover,
-body.host_version .grd1:hover,
-body.host_version .grd1:focus {
+body.host_version .icon-wrapper:hover i:hover {
     background-position: 100px;
     color: #ffffff !important;
     background: #05B1F7;
+}
+
+.grd1 {
+    background-color: #05B1F7!important;
+    color: white!important;
+    transition: 0.7s!important;
+}
+
+.grd1:hover {
+    background-color: #03709b!important;
+    color: white!important;
 }
 
 body.host_version .checkdomain {
@@ -82,17 +90,17 @@ body.host_version .checkdomain {
     position: relative;
 }
 
-body.host_version .nav-pills > li:hover > a,
-body.host_version .nav-pills > li:focus > a{
-	background: #333333;
-	color: #ffffff;
+body.host_version .nav-pills>li:hover>a,
+body.host_version .nav-pills>li:focus>a {
+    background: #333333;
+    color: #ffffff;
 }
 
-body.host_version .nav-pills > li > a.active,
-body.host_version .nav-pills > li > a.active:focus,
-body.host_version .nav-pills > li > a.active:hover{
-	background: #4babb1;
-	color: #ffffff;
+body.host_version .nav-pills>li>a.active,
+body.host_version .nav-pills>li>a.active:focus,
+body.host_version .nav-pills>li>a.active:hover {
+    background: #4babb1;
+    color: #ffffff;
 }
 
 
@@ -121,7 +129,7 @@ body.host_version .checkdomain-wrapper .form-control {
 body.host_version .checkdomain-wrapper .btn {
     height: 50px;
     width: 15%;
-	border: none;
+    border: none;
 }
 
 body.host_version .icon-wrapper {
@@ -133,19 +141,19 @@ body.host_version .checkdomain-wrapper .checkbox {
     margin-right: 15px;
     padding-left: 5px;
     text-align: left;
-	width: 10%;
-	float: left;
-	position: relative;
-	background: #9dc15b;
+    width: 10%;
+    float: left;
+    position: relative;
+    background: #9dc15b;
 }
 
-.checkbox-warning label{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	left: 0px;
-	text-align: center;
-	margin: 0 auto;
+.checkbox-warning label {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 body.host_version .dev-list .widget p {
@@ -169,24 +177,25 @@ body.host_version .footer-social .btn {
     text-align: center;
     width: 40px;
 }
+
 body.host_version .footer-social .btn:hover {
-	background: #9dc15b;
-	color: #ffffff;
-	border: 1px solid #ffffff;
+    background: #9dc15b;
+    color: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 body.host_version .dev-list .widget {
     padding: 30px 0px;
     border: 1px solid #ededed;
-	box-shadow: 0 0 8px 0 rgba(0,0,0,.08);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
 }
 
 body.host_version .dev-list .widget h3 {
     font-size: 24px;
-	font-weight: 500;
+    font-weight: 500;
     padding: 0 0 5px;
     margin: 0;
-	color: #ffffff;
+    color: #ffffff;
     line-height: 1 !important;
 }
 
@@ -227,7 +236,7 @@ body.host_version .stat-wrap .effect-1:after {
     box-shadow: 0 0 0 2px #fff;
 }
 
-body.host_version .header_style_01 .navbar-default .navbar-nav > li > a {
+body.host_version .header_style_01 .navbar-default .navbar-nav>li>a {
     color: #1f1f1f;
 }
 
@@ -253,10 +262,10 @@ body.host_version .icon_wrap {
 }
 
 body.host_version .first-section {
-    overflow: visible ;
+    overflow: visible;
     position: relative;
-	background-position: center;
-	background-size: cover;
+    background-position: center;
+    background-size: cover;
 }
 
 body.host_version .first-section h2 {
@@ -271,4 +280,3 @@ body.host_version .first-section .lead {
 body.host_version .stat-wrap .alignleft {
     margin-right: 30px;
 }
-

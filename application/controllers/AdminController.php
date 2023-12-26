@@ -509,7 +509,7 @@ class AdminController extends CI_Controller
         $partners_link = $_POST['partners_link'];
         $partners_status = $_POST['partners_status'];
 
-        if (!empty($partners_title) && !empty($partners_link)) {
+        if (!empty($partners_link)) {
 
             $config['upload_path']          = './upload';
             $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';

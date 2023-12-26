@@ -1,6 +1,6 @@
 <footer class="footer">
     <div class="container">
-        <div class="row ">
+        <div class="row" style="justify-content: space-between;">
             <div class="col-lg-4 col-md-4 col-xs-12">
                 <div class="widget clearfix">
                     <div class="widget-title">

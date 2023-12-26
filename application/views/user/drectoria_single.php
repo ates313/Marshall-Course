@@ -22,13 +22,13 @@
             <div class="footer-right">
                 <ul class="footer-links-soi">
                     <?php if ($drectoria_single['d_instagram']) { ?>
-                        <li><a href="<?php echo $drectoria_single['d_instagram'] ?>"><i class="fa fa-instagram"></i></a></li>
+                        <li><a target="_blank" href="<?php echo $drectoria_single['d_instagram'] ?>"><i class="fa fa-instagram"></i></a></li>
                     <?php } ?>
                     <?php if ($drectoria_single['d_facebook']) { ?>
-                        <li><a href="<?php echo $drectoria_single['d_facebook'] ?>"><i class="fa fa-facebook"></i></a></li>
+                        <li><a target="_blank" href="<?php echo $drectoria_single['d_facebook'] ?>"><i class="fa fa-facebook"></i></a></li>
                     <?php } ?>
                     <?php if ($drectoria_single['d_twitter']) { ?>
-                        <li><a href="<?php echo $drectoria_single['d_twitter'] ?>"><i class="fa fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="<?php echo $drectoria_single['d_twitter'] ?>"><i class="fa fa-twitter"></i></a></li>
                     <?php } ?>
                 </ul>
             </div>

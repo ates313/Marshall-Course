@@ -8,12 +8,7 @@
 	</div>
 </div>
 
-<div class="container mt-4">
-    <div class="section-title row text-center">
-        <div class="col-md-8 offset-md-2">
-            <h3>Partners</h3>
-        </div>
-    </div>
+<div class="container pt-5">
     <div class="row">
         <?php foreach ($partners_get_list as $partners_get_list_item) { ?>
             <div class="card col-md-3 col-12" style="height: 270px;">
