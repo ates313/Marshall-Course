@@ -36,7 +36,7 @@
 	Loader -->
 	=============================================== */
 	
-	$(window).load(function() {
+	$(window).ready(function() {
         $("#preloader").on(500).fadeOut();
         $(".preloader").on(600).fadeOut("slow");
 		$('.loader-container').addClass('done');
