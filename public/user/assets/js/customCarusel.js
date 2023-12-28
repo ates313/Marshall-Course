@@ -53,7 +53,7 @@ $('#owl-carousel-partners').owlCarousel({
       items: 1
     },
     600: {
-      items: 4
+      items: 5
     }
   }
 })

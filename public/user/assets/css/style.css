@@ -4158,12 +4158,12 @@ a.link-style3 {
 }
 
 .a_imgSize {
-    height: 150px;
-    width: 100%;
+    object-fit: cover;
 }
 
 .a_imgSize2{
     height: 220px;
+    object-fit: initial;
     width: 100%;
 }
 

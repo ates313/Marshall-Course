@@ -3,7 +3,7 @@
 
 <div style="background-image: url(public/user/assets/images/banner.jpg);" class="all-title-box">
     <div class="container text-center">
-        <h1 style="color: lightcyan;">About Us</h1>
+        <h1 style="color: #ffffff;">About Us</h1>
     </div>
 </div>
 

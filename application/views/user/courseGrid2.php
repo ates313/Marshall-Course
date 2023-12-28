@@ -3,7 +3,7 @@
 
 <div class="all-title-box">
 	<div class="container text-center text text-danger">
-		<h1 style="color: #0088fd;">All Courses</h1>
+		<h1 style="color: #ffffff;">All Courses</h1>
 	</div>
 </div>
 

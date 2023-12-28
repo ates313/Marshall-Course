@@ -107,7 +107,7 @@
         </div>
  
         <a href="<?php echo base_url('course2'); ?>">
-            <button style="cursor: pointer;" class="form-control bg-primary">Read More</button>
+            <button style="cursor: pointer;" class="form-control bg-primary mt-3">Read More</button>
         </a>
  
  
@@ -152,7 +152,7 @@
 <div class="container">
     <div class="section-title row text-center">
         <div class="col-md-8 offset-md-2">
-            <h3>Partners</h3>
+            <h3 class="pt-3">Partners</h3>
         </div>
     </div><!-- end title -->
     <!-- Slider start -->
