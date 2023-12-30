@@ -4158,7 +4158,8 @@ a.link-style3 {
 }
 
 .a_imgSize {
-    object-fit: cover;
+    height: 150px;
+    width: 100%;
 }
 
 .a_imgSize2{
@@ -4226,3 +4227,8 @@ a.link-style3 {
 }
 
 /* Staff End */
+
+
+.partnerSpanDesing{
+    color: #05B1F7;
+}

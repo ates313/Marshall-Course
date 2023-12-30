@@ -3,9 +3,9 @@
 
 
 <div class="all-title-box" style="background-image: url('public/user/assets/images/banner.jpg');">
-	<div class="container text-center">
-		<h1 style="color: #ffffff;">Partners Page</h1>
-	</div>
+    <div class="container text-center">
+        <h1 style="color: #ffffff;">Partners Page</h1>
+    </div>
 </div>
 
 <div class="container pt-5">
@@ -14,16 +14,17 @@
             <div class="card col-md-3 col-12" style="height: 270px;">
                 <a target="_blank" href="<?php echo $partners_get_list_item['p_link'] ?>">
                     <img style="border-radius:10px;" class="a_imgSize2" src="<?php echo base_url('upload/' . $partners_get_list_item['p_img']) ?>" alt="">
+                    <p class="partnerSpanDesing">
+                    <?php echo $partners_get_list_item['p_title'] ?>
+                </p>
                 </a>
-                <div class="card-body">
-                    <span class="card-title">
-                        <?php echo $partners_get_list_item['p_title'] ?>
-                    </span>
-                </div>
+                
             </div>
         <?php } ?>
     </div>
 </div>
+
+<!-- <?php echo $partners_get_list_item['p_title'] ?> -->
 
 
 

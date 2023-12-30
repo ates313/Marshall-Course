@@ -1,11 +1,11 @@
 <?php $this->load->view('user/includes/headerStyle'); ?>
 <?php $this->load->view('user/includes/header') ?>
- 
+
 <!------ Include the above in your  tag ---------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
- 
- 
+
+
 <div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -34,7 +34,7 @@
                 </div>
             </div><!-- end section -->
         </div>
- 
+
         <?php foreach ($slider_get_list as $slider_get_list_item) { ?>
             <div class="carousel-item">
                 <div id="home" class="first-section" style="background-image:url('<?php echo base_url('upload/' . $slider_get_list_item['s_img']) ?>');">
@@ -54,13 +54,13 @@
                 </div><!-- end section -->
             </div>
         <?php } ?>
- 
+
         <!-- Left Control -->
         <a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
             <span class="fa fa-angle-left" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
- 
+
         <!-- Right Control -->
         <a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
             <span class="fa fa-angle-right" aria-hidden="true"></span>
@@ -68,8 +68,8 @@
         </a>
     </div>
 </div>
- 
- 
+
+
 <!-- Course start -->
 <div id="overviews" class="section wb">
     <div class="container">
@@ -101,24 +101,24 @@
                             </div>
                         </div>
                     </div>
- 
+
                 <?php  } ?>
             </div>
         </div>
- 
+
         <a href="<?php echo base_url('course2'); ?>">
-            <button style="cursor: pointer;" class="form-control bg-primary mt-3">Read More</button>
+            <button style="color: white;" class="form-control bg-primary mt-3">Read More</button>
         </a>
- 
- 
+
+
     </div><!-- end container -->
- 
+
 </div><!-- end section -->
- 
- 
+
+
 <!-- end -->
- 
- 
+
+
 <section class="section lb page-section">
     <div class="container">
         <div class="section-title row text-center">
@@ -165,18 +165,16 @@
                         <a target="_blank" href="<?php echo $partners_get_list_item['p_link'] ?>">
                             <img class="a_imgSize2" src="<?php echo base_url('upload/' . $partners_get_list_item['p_img']) ?>" alt="">
                         </a>
-                        <div class="card-body">
-                            <span class="card-title">
-                                <?php echo $partners_get_list_item['p_title'] ?>
-                            </span>
-                        </div>
                     </div>
                 </div>
             <?php } ?>
         </div>
     </div>
     <!-- Slider end -->
+    <a href="<?php echo base_url('partners'); ?>">
+        <button style="color: white;" class="form-control bg-primary mt-3 mb-3">Read More</button>
+    </a>
 </div>
- 
+
 <?php $this->load->view('user/includes/footer') ?>
 <?php $this->load->view('user/includes/footerStyle') ?>
