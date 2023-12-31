@@ -856,7 +856,8 @@ class AdminController extends CI_Controller
         redirect(base_url('l_drectoria'));
     }
 
-    public function detail_drectoria($id){
+    public function detail_drectoria($id)
+    {
         $data["single_data_drectoria"] = $this->AdminModel->get_data_drectoria($id);
         $this->load->view("admin/page/drectoria/detail_drectoria", $data);
     }

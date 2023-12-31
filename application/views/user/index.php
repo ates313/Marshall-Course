@@ -78,10 +78,11 @@
                 <p style="font-size: 35px; color: #000;" class="lead"><b style="color: #05B1F7;">Marshall Education </b>Course</p>
             </div>
         </div><!-- end title -->
-        <div class="carousel-wrap">
-            <div class="owl-carousel owl-lded owl-drag" id="owl-carousel-course">
+        <div class="container">
+            <div class="row">
                 <?php foreach ($course_get_list as $course_get_list_item) { ?>
-                    <div class="item">
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-2 mt-1">
                         <div class="card text-center  col-sm-12">
                             <div class="card-header">
                                 <img style="border-radius:10px;" src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" alt="" class="img-fluid">
@@ -100,10 +101,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div><!-- end col -->
                 <?php  } ?>
-            </div>
+            </div><!-- end row -->
         </div>
 
         <a href="<?php echo base_url('course2'); ?>">

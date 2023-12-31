@@ -9,7 +9,6 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('s_status', 'Active')
-            ->limit(4)
             ->get('slider')->result_array();
     }
 
@@ -27,7 +26,7 @@ class UserModel extends CI_Model
         return
             $this->db
             ->where('n_status', 'Active')
-            ->limit(6)
+            // ->limit(6)
             ->get('news')->result_array();
     }
 
