@@ -27,16 +27,16 @@
                     <div id="message"></div>
                     <form action="<?php echo base_url('c_contact_act') ?>" enctype="application/x-www-form-urlencoded" method="post">
                         <div class="row row-fluid">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <input type="text" name="first_name" id="first_name" class="form-control" placeholder="Name">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <input type="text" name="last_name" id="last_name" class="form-control" placeholder="Surname">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12">
@@ -55,7 +55,7 @@
             <div class="col-xl-6 col-md-12 col-sm-12">
                 <div class="map-box p-4">
                     <div id="custom-places" class="small-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.260785054388!2d49.839236075878!3d40.42522397143828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087de34c21de1%3A0x283095de8805d6b6!2sAzadl%C4%B1q%20metro%20stansiyas%C4%B1!5e0!3m2!1saz!2saz!4v1703622965357!5m2!1saz!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.260785054388!2d49.839236075878!3d40.42522397143828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087de34c21de1%3A0x283095de8805d6b6!2sAzadl%C4%B1q%20metro%20stansiyas%C4%B1!5e0!3m2!1saz!2saz!4v1703622965357!5m2!1saz!2saz" width="600" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>
