@@ -13,7 +13,7 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="<?php echo base_url('home') ?>">
                 <img style="width: 35px;" src="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" alt="">
-                <span class="a_logo">Marshall <span class="a_logo_yellow">Education</span></span>
+                <span class="a_logo">Marshall <i class="fa-solid fa-snowman"></i> <span class="a_logo_yellow">Education</span></span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-bar"></span>
