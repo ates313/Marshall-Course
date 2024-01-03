@@ -13,7 +13,7 @@ class UserController extends CI_Controller
     {
         // $data['contact_get_list'] = $this->UserModel->get_contact();
         $data['slider_get_list'] = $this->UserModel->get_slider();
-        $data['course_get_list'] = $this->UserModel->get_course();
+        $data['course_get_list'] = $this->UserModel->get_courseSix();
         $data['news_get_list'] = $this->UserModel->news_course();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $data['partners_get_list'] = $this->UserModel->get_partners();
@@ -49,7 +49,7 @@ class UserController extends CI_Controller
 
     public function courseGrid2()
     {
-        $data['course_get_list'] = $this->UserModel->get_course();
+        $data['course_get_list'] = $this->UserModel->get_courses();
         $data['footer_get_list'] = $this->UserModel->get_footer();
         $this->load->view('user/courseGrid2', $data);
     }
@@ -67,7 +67,7 @@ class UserController extends CI_Controller
         $data['drectoria_single'] = $this->UserModel->get_single_drectoria($id);
         $this->load->view('user/drectoria_single', $data);
 
-        if(!$data['drectoria_single']){
+        if (!$data['drectoria_single']) {
             redirect(base_url('directoria'));
         }
     }

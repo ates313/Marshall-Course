@@ -12,12 +12,21 @@ class UserModel extends CI_Model
             ->get('slider')->result_array();
     }
 
-    public function get_course()
+    public function get_courseSix()
     {
         return
             $this->db
             ->where('c_status', 'Active')
             ->limit(6)
+            ->get('course')->result_array();
+    }
+
+    public function get_courses()
+    {
+        return
+            $this->db
+            ->where('c_status', 'Active')
+            // ->limit(6)
             ->get('course')->result_array();
     }
 

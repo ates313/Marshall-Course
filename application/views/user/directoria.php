@@ -19,7 +19,7 @@
 						<?php if ($drectoria_get_list_item['d_img']) { ?>
 							<img style="object-fit: cover;" src="<?php echo base_url('upload/' . $drectoria_get_list_item['d_img']) ?>" alt="">
 						<?php } else { ?>
-							<img src="https://www.kindpng.com/picc/m/22-223910_circle-user-png-icon-transparent-png.png" alt="No Image">
+							<img src="<?php echo base_url('public/user/assets/images/UserPhoto123.jpeg'); ?>" alt="No Image">
 						<?php } ?>
 						<div class="social">
 							<ul>

@@ -8,7 +8,7 @@
                 <?php if ($drectoria_single['d_img']) { ?>
                     <img style="object-fit: cover;" height="420" src="<?php echo base_url('upload/' . $drectoria_single['d_img']); ?>" alt="">
                 <?php } else { ?>
-                    <img style="object-fit: cover;" height="420" src="https://www.kindpng.com/picc/m/22-223910_circle-user-png-icon-transparent-png.png" alt="User">
+                    <img style="object-fit: cover;" height="420" src="<?php echo base_url('public/user/assets/images/UserPhoto123.jpeg') ?>" alt="User">
                 <?php } ?>
             </div><!-- end media -->
         </div><!-- end col -->

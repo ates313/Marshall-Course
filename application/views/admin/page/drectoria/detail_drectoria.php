@@ -57,7 +57,7 @@
                     <?php if($single_data_drectoria['d_img']){ ?>
                         <td><img width="400" src="<?php echo base_url('upload/'.$single_data_drectoria['d_img']) ?>" alt=""></td>
                    <?php }else{?>
-                        <td><img width="400" src="https://cdn.onlinewebfonts.com/svg/img_415638.png" alt=""></td>
+                        <td><img width="400" src="<?php echo base_url('public/user/assets/images/UserPhoto123.jpeg') ?>" alt=""></td>
                   <?php } ?>
                 </tr>
             </table>
