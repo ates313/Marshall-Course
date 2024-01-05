@@ -6,12 +6,12 @@
 		<h1 style="color: #ffffff;">Diroctorate Page</h1>
 	</div>
 </div>
-<div class="container">
+<div class="container mt-5">
 
 	<div class="row">
 		<?php foreach ($drectoria_get_list as $drectoria_get_list_item) { ?>
 
-			<div class="col-md-4 col-12 pt-5">
+			<div class="col-md-4 col-12">
 
 				<div class="our-team">
 

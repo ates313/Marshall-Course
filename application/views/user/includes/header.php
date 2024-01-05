@@ -30,9 +30,9 @@
                                                     endif; ?>">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">About Us</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown-b">
-                            <a class="dropdown-item" href="<?php echo base_url('about') ?>">About Us</a>
-                            <a class="dropdown-item" href="<?php echo base_url('partners') ?>">Partners</a>
-                            <a class="dropdown-item" href="<?php echo base_url('directoria') ?>">Directorate</a>
+                            <a class="dropdown-item <?php if ($segment == 'about') : echo 'active'; endif; ?> " href="<?php echo base_url('about') ?>">About Us</a>
+                            <a class="dropdown-item <?php if ($segment == 'partners') : echo 'active'; endif; ?> " href="<?php echo base_url('partners') ?>">Partners</a>
+                            <a class="dropdown-item <?php if ($segment == 'directoria') : echo 'active'; endif; ?> " href="<?php echo base_url('directoria') ?>">Directorate</a>
                         </div>
                     </li>
                     <li class="nav-item <?php if ($segment == 'course2') : echo 'active';
@@ -43,9 +43,6 @@
                     <li class="nav-item <?php if ($segment == 'contact') : echo 'active';
                                         endif; ?>"><a class="nav-link" href="<?php echo base_url('contact'); ?>">Contact</a></li>
                 </ul>
-                <!-- <ul class="nav navbar-nav navbar-right">
-                    <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>
-                </ul> -->
             </div>
         </div>
     </nav>

@@ -8,7 +8,7 @@
 </div>
 
 <div id="teachers" class="">
-	<div class="container">
+	<div class="container mt-5">
 		<div class="row">
 
 			<?php foreach ($teachers_get_list as $teachers_get_list_item) { ?>
