@@ -75,7 +75,7 @@
     <div class="container">
         <div class="section-title row text-center">
             <div class="col-md-8 offset-md-2">
-                <p style="font-size: 35px; color: #000;" class="lead"><b style="color: #05B1F7;">Marshall Education </b>Course</p>
+                <p style="font-size: 35px; color: #000;" class="lead">Courses</p>
             </div>
         </div><!-- end title -->
         <div class="container">

@@ -2520,9 +2520,10 @@ select.mobile-device {
 .contact_form {
     border: none;
     box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
-    background-color: #008b8b75;
+    background-color: #05B1F7;
     padding: 40px 30px;
     margin-right: -15px;
+    border-radius: 10px;
 }
 
 .contact_form .form-control {
@@ -4141,8 +4142,8 @@ a.link-style3 {
     float: left;
     border-radius: 4px;
     position: absolute;
-    top: 0px;
-    left: 15px;
+    top: 4px;
+    left: 21px;
     font-size: 10px;
     color: white;
     height: 17px;
@@ -4230,5 +4231,8 @@ a.link-style3 {
 
 
 .partnerSpanDesing{
-    color: #05B1F7;
+    color: #000;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
