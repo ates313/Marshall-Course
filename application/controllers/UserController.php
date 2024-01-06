@@ -63,13 +63,23 @@ class UserController extends CI_Controller
 
     public function drectoria_single($id)
     {
-        $id = $this->security->xss_clean($id);
         $data['drectoria_single'] = $this->UserModel->get_single_drectoria($id);
-        $this->load->view('user/drectoria_single', $data);
-
-        if (!$data['drectoria_single']) {
+        if (empty($data['drectoria_single'])) {
             redirect(base_url('directoria'));
         }
+        $this->load->view('user/drectoria_single', $data);
+
+        
+    }
+
+    public function courseSingle($id){
+        $data['course_single'] = $this->UserModel->get_single_course($id);
+        $data['footer_get_list'] = $this->UserModel->get_footer();
+        if (empty($data['course_single'])) {
+            redirect(base_url('course'));
+        }
+        $this->load->view('user/courseSingle', $data);
+        
     }
 
     // CONTACT MESSAGE

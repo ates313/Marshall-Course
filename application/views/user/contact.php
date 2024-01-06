@@ -42,7 +42,7 @@
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details..(1500)"></textarea>
                             </div>
-                            <div class="col-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
                                 <button type="submit" class="btn btn-primary grd1 form-control">SEND</button>
                             </div>
                             <!-- <div class="text-center pd">
@@ -53,9 +53,9 @@
                 </div>
             </div><!-- end col -->
             <div class="col-xl-6 col-md-12 col-sm-12">
-                <div class="map-box p-4">
+                <div class="map-box m-4">
                     <div id="custom-places" class="small-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.260785054388!2d49.839236075878!3d40.42522397143828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087de34c21de1%3A0x283095de8805d6b6!2sAzadl%C4%B1q%20metro%20stansiyas%C4%B1!5e0!3m2!1saz!2saz!4v1703622965357!5m2!1saz!2saz" width="600" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.260785054388!2d49.839236075878!3d40.42522397143828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087de34c21de1%3A0x283095de8805d6b6!2sAzadl%C4%B1q%20metro%20stansiyas%C4%B1!5e0!3m2!1saz!2saz!4v1703622965357!5m2!1saz!2saz" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@
 		<h1 style="color: #ffffff;">Directoria</h1>
 	</div>
 </div>
-<div class="container mt-5">
+<div class="container my-5">
 
 	<div class="row">
 		<?php foreach ($drectoria_get_list as $drectoria_get_list_item) { ?>

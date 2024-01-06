@@ -36,7 +36,7 @@
                         </div>
                     </li>
                     <li class="nav-item <?php if ($segment == 'course2') : echo 'active';
-                                        endif; ?>"><a class="nav-link" href="<?php echo base_url('course2') ?>">Course</a></li>
+                                        endif; ?>"><a class="nav-link" href="<?php echo base_url('course2') ?>">Courses</a></li>
                     </li>
                     <li class="nav-item <?php if ($segment == 'teachers') : echo 'active';
                                         endif; ?>"><a class="nav-link" href="<?php echo base_url('teachers'); ?>">Teachers</a></li>

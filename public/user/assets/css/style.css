@@ -4099,12 +4099,6 @@ a.link-style3 {
     padding: 15px;
 }
 
-.course-meta-bot {
-    /* border: 1px solid #4babb1; */
-    border-top: 0px;
-    padding: 15px;
-}
-
 .course-meta-bot ul {
     padding: 0px;
     margin: 0px;
@@ -4163,7 +4157,7 @@ a.link-style3 {
     width: 100%;
 }
 
-.a_imgSize2{
+.a_imgSize2 {
     height: 220px;
     object-fit: initial;
     width: 100%;
@@ -4230,9 +4224,92 @@ a.link-style3 {
 /* Staff End */
 
 
-.partnerSpanDesing{
+.partnerSpanDesing {
     color: #000;
     font-size: 20px;
     display: flex;
     justify-content: center;
+}
+
+
+
+/* Couses Card Desing */
+
+.course-card {
+    background: #ffffff;
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin: 10px;
+    transition: 0.25s ease-in-out;
+}
+
+.course-card-img {
+    width: 100%;
+    height: 225px;
+    border-radius: 25px 25px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-card-img .main {
+    height: 100%;
+    width: 100%;
+    border-radius: 25px 25px 0px 0px;
+    /* object-fit: cover; */
+    z-index: 1;
+    transition: 0.25s ease-in-out;
+}
+
+.course-card-img .layered {
+    height: 120px;
+    width: 130px;
+    position: absolute;
+    filter: blur(19px);
+    transition: 0.25s ease-in-out;
+}
+
+.course-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.course-card-content h1 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.74);
+}
+
+.course-card-content h6 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1c0fd7;
+}
+
+.course-card:hover {
+    transform: scale(1.02);
+}
+
+.course-card:hover .course-card-img .main {
+    transform: scale(1.02);
 }

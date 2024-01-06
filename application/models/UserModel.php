@@ -30,6 +30,14 @@ class UserModel extends CI_Model
             ->get('course')->result_array();
     }
 
+    public function get_single_course($id)
+    {
+        return $this->db
+            ->where('c_id', $id)
+            ->where('c_status', "Active")
+            ->get('course')->row_array();
+    }
+
     public function news_course()
     {
         return
@@ -75,7 +83,7 @@ class UserModel extends CI_Model
     public function get_single_drectoria($id)
     {
         return $this->db
-        ->where('d_id', $id)
+            ->where('d_id', $id)
             ->where('d_status', "Active")
             ->get('directoria')->row_array();
     }

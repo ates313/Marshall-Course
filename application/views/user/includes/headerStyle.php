@@ -31,6 +31,14 @@
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/customCarusel.css">
 <!-- Main CSS -->
 <link rel="stylesheet" href="<?php echo base_url('public/user/assets/') ?>css/style.css">
+
+<style>
+
+html, body{
+    cursor: url('<?php echo base_url('upload/'); ?>'), default;
+}
+
+</style>    
 </head>
 
 <body class="host_version">
