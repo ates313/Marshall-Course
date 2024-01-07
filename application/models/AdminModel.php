@@ -209,8 +209,9 @@ class AdminModel extends CI_Model
         $this->db->where('d_id', $d_id)->update('directoria', $data);
     }
 
-    public function get_data_drectoria($d_id){
-        return $this->db->where('d_id',$d_id)->get('directoria')->row_array();
+    public function get_data_drectoria($d_id)
+    {
+        return $this->db->where('d_id', $d_id)->get('directoria')->row_array();
     }
 
 
@@ -241,8 +242,13 @@ class AdminModel extends CI_Model
         $this->db->where('t_id', $t_id)->update('teachers', $data);
     }
 
+    public function get_data_teachers($t_id)
+    {
+        return $this->db->where('t_id', $t_id)->get('teachers')->row_array();
+    }
 
-    
+
+
     // CONTACT MESSAGE
     public function admin()
     {

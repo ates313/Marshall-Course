@@ -14,7 +14,6 @@
                     <th class="py-3 px-6 text-center">ID</th>
                     <th class="py-3 px-6 text-center">Images</th>
                     <th class="py-3 px-6 text-center">name</th>
-                    <!-- <th class="py-3 px-6 text-center">Surname</th> -->
                     <th class="py-3 px-6 text-center">Status</th>
                     <th class="py-3 px-6 text-center">Work</th>
                     <th class="py-3 px-6 text-center">Actions</th>
@@ -41,7 +40,7 @@
                             <?php echo $teachers_get_list_item['t_name'] ?> / <?php echo $teachers_get_list_item['t_surname'] ?>
                         </td>
                         <td class="py-3 px-6 text-center">
-                        <?php if ($teachers_get_list_item['t_status'] == "Active") { ?>
+                            <?php if ($teachers_get_list_item['t_status'] == "Active") { ?>
                                 <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $teachers_get_list_item['t_status'] ?></span>
                             <?php } ?>
                             <?php if ($teachers_get_list_item['t_status'] == "Deactive") { ?>
@@ -52,6 +51,11 @@
                             <?php echo $teachers_get_list_item['t_work'] ?>
                         </td>
                         <td class="py-3 px-6 text-center">
+                            <a target="_blank" href="<?php echo base_url('detail_teachers/') . $teachers_get_list_item['t_id'] ?>">
+                                <button>
+                                    <i class="fa-regular fa-eye"></i>
+                                </button>
+                            </a>
                             <a href="<?php echo base_url('e_teachers/') . $teachers_get_list_item['t_id']
                                         ?>">
                                 <button>

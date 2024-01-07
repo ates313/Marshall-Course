@@ -30,6 +30,14 @@ class UserModel extends CI_Model
             ->get('course')->result_array();
     }
 
+    public function get_single_teachers($id)
+    {
+        return $this->db
+            ->where('t_id', $id)
+            ->where('t_status', "Active")
+            ->get("teachers")->row_array();
+    }
+
     public function get_single_course($id)
     {
         return $this->db

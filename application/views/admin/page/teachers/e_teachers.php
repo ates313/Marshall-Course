@@ -17,6 +17,31 @@
             <label for="teachers_work">Edit Work</label>
             <input value="<?php echo $teachers_get_list_rw['t_work'] ?>" type="text" name="teachers_work" class="form-control" id="teachers_work" placeholder="Partners Images">
         </div>
+        <div class="col-sm-6 mb-6 mb-sm-0">
+            <label for="teachers_img">Select Images</label>
+            <input type="file" name="teachers_img" class="form-control" id="teachers_img">
+        </div>
+        <div class="col-sm-12 mb-6 mb-sm-0">
+            <br>
+            <label for="teachers_desc">Creat description</label>
+            <textarea name="teachers_desc" id="teachers_desc" cols="30" rows="5" class="form-control"><?php echo $teachers_get_list_rw['t_desc'] ?></textarea>
+        </div>
+        <div class="col-sm-6 mb-6 mb-sm-0">
+            <label for="teachers_instagram">Instagram</label>
+            <input value="<?php echo $teachers_get_list_rw['t_inst'] ?>" type="text" name="teachers_instagram" class="form-control" id="teachers_instagram" placeholder="Instagram Link">
+        </div>
+        <div class="col-sm-6 mb-6 mb-sm-0">
+            <label for="teachers_facebook">Facebook</label>
+            <input value="<?php echo $teachers_get_list_rw['t_facbk'] ?>" type="text" name="teachers_facebook" class="form-control" id="teachers_facebook" placeholder="Facebook Link">
+        </div>
+        <div class="col-sm-6 mb-6 mb-sm-0">
+            <label for="teachers_phoneNumber">Phone Number</label>
+            <input value="<?php echo $teachers_get_list_rw['t_phonNumb'] ?>" type="text" name="teachers_phoneNumber" class="form-control" id="teachers_phoneNumber" placeholder="Phone Number">
+        </div>
+        <div class="col-sm-6 mb-6 mb-sm-0">
+            <label for="teachers_gmail">Gmail</label>
+            <input value="<?php echo $teachers_get_list_rw['t_phonNumb'] ?>" type="text" name="teachers_gmail" class="form-control" id="teachers_gmail" placeholder="Gmail">
+        </div>
         <div class="col-sm-2 mb-6 mb-sm-0">
             <label for="teachers_status">Status:</label>
             <select class="form-control" name="teachers_status" id="teachers_status">

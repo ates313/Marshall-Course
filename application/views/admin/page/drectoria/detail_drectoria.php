@@ -26,7 +26,14 @@
                 </tr>
                 <tr>
                     <th>Status</th>
-                    <td><?php echo $single_data_drectoria['d_status'] ?></td>
+                    <td>
+                        <?php if ($single_data_drectoria['d_status'] == "Active") { ?>
+                            <span class="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs"><?php echo $single_data_drectoria['d_status'] ?></span>
+                        <?php } ?>
+                        <?php if ($single_data_drectoria['d_status'] == "Deactive") { ?>
+                            <span class="bg-red-200 text-red-600 py-1 px-3 rounded-full text-xs"><?php echo $single_data_drectoria['d_status'] ?></span>
+                        <?php } ?>
+                    </td>
                 </tr>
                 <tr>
                     <th>Description</th>
@@ -54,11 +61,11 @@
                 </tr>
                 <tr>
                     <th>Profile</th>
-                    <?php if($single_data_drectoria['d_img']){ ?>
-                        <td><img width="400" src="<?php echo base_url('upload/'.$single_data_drectoria['d_img']) ?>" alt=""></td>
-                   <?php }else{?>
+                    <?php if ($single_data_drectoria['d_img']) { ?>
+                        <td><img width="400" src="<?php echo base_url('upload/' . $single_data_drectoria['d_img']) ?>" alt=""></td>
+                    <?php } else { ?>
                         <td><img width="400" src="<?php echo base_url('public/user/assets/images/UserPhoto123.jpeg') ?>" alt=""></td>
-                  <?php } ?>
+                    <?php } ?>
                 </tr>
             </table>
         </div>

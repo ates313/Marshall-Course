@@ -33,7 +33,7 @@ $route['l_course']            = 'AdminController/l_course';
 $route['c_course_act']        = 'AdminController/c_course_act';
 $route['e_course/(.*)']       = 'AdminController/e_course/$1';
 $route['d_course/(.*)']       = 'AdminController/d_course/$1';
-$route['courseSingle/(.*)']    ='UserController/courseSingle/$1';
+$route['courseSingle/(.*)']    = 'UserController/courseSingle/$1';
 $route['e_course_act/(.*)']   = 'AdminController/e_course_act/$1';
 
 //  news
@@ -84,6 +84,8 @@ $route['l_teachers']         = 'AdminController/l_teachers';
 $route['c_teachers_act']     = 'AdminController/c_teachers_act';
 $route['e_teachers/(.*)']    = 'AdminController/e_teachers/$1';
 $route['d_teachers/(.*)']    = 'AdminController/d_teachers/$1';
+$route['detail_teachers/(.*)']    = 'AdminController/detail_teachers/$1';
+$route['teachers_single/(.*)']    = 'UserController/teachers_single/$1';
 $route['e_teachers_act/(.*)'] = 'AdminController/e_teachers_act/$1';
 
 // CONTACT 2.0

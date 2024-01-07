@@ -881,6 +881,11 @@ class AdminController extends CI_Controller
         $teachers_surname = $_POST['teachers_surname'];
         $teachers_work = $_POST['teachers_work'];
         $teachers_status = $_POST['teachers_status'];
+        $teachers_desc = $_POST['teachers_desc'];
+        $teachers_instagram = $_POST['teachers_instagram'];
+        $teachers_facebook = $_POST['teachers_facebook'];
+        $teachers_phoneNumber = $_POST['teachers_phoneNumber'];
+        $teachers_gmail = $_POST['teachers_gmail'];
 
         if (!empty($teachers_name) && !empty($teachers_surname) && !empty($teachers_work)) {
 
@@ -898,8 +903,16 @@ class AdminController extends CI_Controller
                     't_surname' => $teachers_surname,
                     't_work' => $teachers_work,
                     't_status' => $teachers_status,
+                    't_desc' => $teachers_desc,
+                    't_inst' => $teachers_instagram,
+                    't_facbk' => $teachers_facebook,
+                    't_phonNumb' => $teachers_phoneNumber,
+                    't_gmail' => $teachers_gmail,
                     't_img' => $upload_teachers_img['file_name'],
                 ];
+                // print_r($data);
+                // print_r('<pre>');
+                // die();
                 $data = $this->security->xss_clean($data);
                 $this->db->insert('teachers', $data);
                 redirect(base_url('l_teachers'));
@@ -909,6 +922,11 @@ class AdminController extends CI_Controller
                     't_surname' => $teachers_surname,
                     't_work' => $teachers_work,
                     't_status' => $teachers_status,
+                    't_desc' => $teachers_desc,
+                    't_inst' => $teachers_instagram,
+                    't_facbk' => $teachers_facebook,
+                    't_phonNumb' => $teachers_phoneNumber,
+                    't_gmail' => $teachers_gmail,
                 ];
                 $data = $this->security->xss_clean($data);
                 $this->AdminModel->teachers_insert($data);
@@ -926,12 +944,18 @@ class AdminController extends CI_Controller
         $this->load->view('admin/page/teachers/e_teachers', $data);
     }
 
-    public function e_teachers_act($id)
+    public function e_teachers_act($t_id)
     {
         $teachers_name = $_POST['teachers_name'];
         $teachers_surname = $_POST['teachers_surname'];
         $teachers_work = $_POST['teachers_work'];
         $teachers_status = $_POST['teachers_status'];
+        $teachers_desc = $_POST['teachers_desc'];
+        $teachers_instagram = $_POST['teachers_instagram'];
+        $teachers_facebook = $_POST['teachers_facebook'];
+        $teachers_phoneNumber = $_POST['teachers_phoneNumber'];
+        $teachers_gmail = $_POST['teachers_gmail'];
+
 
         $config['upload_path']          = './upload';
         $config['allowed_types']        = 'gif|jpg|png|jpeg|JPG|JPEG|PDF|mp3|mp4';
@@ -947,10 +971,15 @@ class AdminController extends CI_Controller
                 't_surname' => $teachers_surname,
                 't_work' => $teachers_work,
                 't_status' => $teachers_status,
+                't_desc' => $teachers_desc,
+                't_inst' => $teachers_instagram,
+                't_facbk' => $teachers_facebook,
+                't_phonNumb' => $teachers_phoneNumber,
+                't_gmail' => $teachers_gmail,
                 't_img' => $upload_teachers_img['file_name'],
             ];
             $data = $this->security->xss_clean($data);
-            $this->db->update_teachers($id, $data);
+            $this->AdminModel->update_teachers($t_id, $data);
             redirect(base_url('l_teachers'));
         } else {
             $data = [
@@ -958,9 +987,14 @@ class AdminController extends CI_Controller
                 't_surname' => $teachers_surname,
                 't_work' => $teachers_work,
                 't_status' => $teachers_status,
+                't_desc' => $teachers_desc,
+                't_inst' => $teachers_instagram,
+                't_facbk' => $teachers_facebook,
+                't_phonNumb' => $teachers_phoneNumber,
+                't_gmail' => $teachers_gmail,
             ];
             $data = $this->security->xss_clean($data);
-            $this->AdminModel->update_teachers($id, $data);
+            $this->AdminModel->update_teachers($t_id, $data);
             redirect(base_url('l_teachers'));
         }
     }
@@ -969,5 +1003,11 @@ class AdminController extends CI_Controller
     {
         $this->AdminModel->delete_teachers($t_id);
         redirect(base_url('l_teachers'));
+    }
+
+    public function detail_teachers($id)
+    {
+        $data["get_data_teachers"] = $this->AdminModel->get_data_teachers($id);
+        $this->load->view("admin/page/teachers/detail_teachers", $data);
     }
 }

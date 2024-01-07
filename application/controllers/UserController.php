@@ -40,6 +40,16 @@ class UserController extends CI_Controller
         $this->load->view('user/teachers', $data);
     }
 
+    public function teachers_single($id)
+    {
+        $data['footer_get_list'] = $this->UserModel->get_footer();
+        $data['teachers_single'] = $this->UserModel->get_single_teachers($id);
+        if (empty($data['teachers_single'])) {
+            redirect(base_url('teachers'));
+        }
+        $this->load->view('user/teachers_single', $data);
+    }
+
     public function partners()
     {
         $data['partners_get_list'] = $this->UserModel->get_partners();
@@ -63,23 +73,22 @@ class UserController extends CI_Controller
 
     public function drectoria_single($id)
     {
+        $data['footer_get_list'] = $this->UserModel->get_footer();
         $data['drectoria_single'] = $this->UserModel->get_single_drectoria($id);
         if (empty($data['drectoria_single'])) {
             redirect(base_url('directoria'));
         }
         $this->load->view('user/drectoria_single', $data);
-
-        
     }
 
-    public function courseSingle($id){
+    public function courseSingle($id)
+    {
         $data['course_single'] = $this->UserModel->get_single_course($id);
         $data['footer_get_list'] = $this->UserModel->get_footer();
         if (empty($data['course_single'])) {
             redirect(base_url('course'));
         }
         $this->load->view('user/courseSingle', $data);
-        
     }
 
     // CONTACT MESSAGE

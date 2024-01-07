@@ -19,7 +19,9 @@
 							<img style="object-fit: cover;" src="<?php echo base_url('upload/' . $teachers_get_list_item['t_img']) ?>">
 						</div>
 						<div class="team-content">
-							<h3 class="title"><?php echo $teachers_get_list_item['t_name'] ?> <?php echo $teachers_get_list_item['t_surname'] ?></h3>
+							<a href="<?php echo base_url('teachers_single/' . $teachers_get_list_item['t_id']); ?>">
+								<h3 class="title"><?php echo $teachers_get_list_item['t_name'] ?> <?php echo $teachers_get_list_item['t_surname'] ?></h3>
+							</a>
 							<span class="post"><?php echo $teachers_get_list_item['t_work'] ?></span>
 						</div>
 					</div>

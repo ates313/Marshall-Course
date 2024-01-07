@@ -4,7 +4,7 @@
     <div class="flex flex-col justify-between h-full">
       <div class="p-4">
         <!-- LOGO -->
-        <a class="flex items-center text-white space-x-4" href="">
+        <a class="flex items-center text-white space-x-4" href="<?php echo base_url('admin') ?>">
           <img style="width: 50px;" class="img" src="<?php echo base_url('public/user/assets/') ?>images/favicon.ico" alt="">
           <span class="text-2xl font-bold">Marshall Education</span>
         </a>
