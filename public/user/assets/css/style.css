@@ -4111,7 +4111,7 @@ a.link-style3 {
     list-style: none;
     padding: 0px 5px;
     color: #212121;
-    font-size: 11px;
+    font-size: 13px;
 }
 
 .course-meta-bot ul li:hover {
@@ -4284,7 +4284,7 @@ a.link-style3 {
     font-family: Ubuntu;
     font-style: normal;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 25px;
     line-height: 16px;
     /* identical to box height */
     display: flex;

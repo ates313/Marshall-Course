@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="container pt-5">
+<div class="container my-5">
     <div class="row">
         <?php foreach ($partners_get_list as $partners_get_list_item) { ?>
             <div class="card col-md-3 col-12" style="height: 270px;">

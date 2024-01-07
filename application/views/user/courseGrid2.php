@@ -18,15 +18,16 @@
                             <img src="<?php echo base_url('upload/' . $course_get_list_item['c_img']) ?>" class="main" alt="">
                         </div>
                         <div class="course-card-content">
-                            <a href="<?php echo base_url('courseSingle/'  .$course_get_list_item['c_id']); ?>">
+                            <a href="<?php echo base_url('courseSingle/'  . $course_get_list_item['c_id']); ?>">
                                 <h1><?php echo $course_get_list_item['c_title'] ?></h1>
                             </a>
                             <div class="text-muted">
                                 <div class="course-meta-bot">
                                     <ul>
-                                        <li><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $course_get_list_item['c_date'] ?></li>
                                         <li><i class="fa fa-clock" aria-hidden="true"></i> <?php echo $course_get_list_item['c_month'] ?> Month</li>
                                         <li><i class="fa fa-money" aria-hidden="true"></i> <?php echo $course_get_list_item['c_price'] ?> AZN</li>
+                                        <br>
+                                        <li><button class="btn btn-primary mt-3"><a href="<?php echo base_url('courseSingle/'  . $course_get_list_item['c_id']); ?>" class=" text-light">Read More</button></li>
                                     </ul>
                                 </div>
                             </div>
