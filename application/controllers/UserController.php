@@ -86,7 +86,7 @@ class UserController extends CI_Controller
         $data['course_single'] = $this->UserModel->get_single_course($id);
         $data['footer_get_list'] = $this->UserModel->get_footer();
         if (empty($data['course_single'])) {
-            redirect(base_url('course'));
+            redirect(base_url('course2'));
         }
         $this->load->view('user/courseSingle', $data);
     }
