@@ -129,6 +129,9 @@ class AdminController extends CI_Controller
     public function e_slider($s_id)
     {
         $data['slider_get_list_rw'] = $this->AdminModel->slider_get_list_rw($s_id);
+        if(empty($data['slider_get_list_rw'])){
+            redirect(base_url('l_slider'));
+        }
         $this->load->view('admin/page/slider/e_slider', $data);
     }
 
@@ -259,6 +262,9 @@ class AdminController extends CI_Controller
     public function e_course($c_id)
     {
         $data['course_get_list_rw'] = $this->AdminModel->course_get_list_rw($c_id);
+        if(empty($data['course_get_list_rw'])){
+            redirect(base_url('l_course'));
+        }
         $this->load->view('admin/page/course/e_course', $data);
     }
 
@@ -373,6 +379,9 @@ class AdminController extends CI_Controller
     public function e_news($n_id)
     {
         $data['news_get_list_rw'] = $this->AdminModel->news_get_list_rw($n_id);
+        if(empty($data['news_get_list_rw'])){
+            redirect(base_url('l_news'));
+        }
         $this->load->view('admin/page/news/e_news', $data);
     }
 
@@ -459,6 +468,9 @@ class AdminController extends CI_Controller
     public function e_footer($f_id)
     {
         $data['footer_get_list_rw'] = $this->AdminModel->footer_get_list_rw($f_id);
+        if(empty($data['footer_get_list_rw'])){
+            redirect(base_url('l_footer'));
+        }
         $this->load->view('admin/page/footerAbout/e_footer', $data);
     }
 
@@ -550,6 +562,9 @@ class AdminController extends CI_Controller
     public function e_partners($p_id)
     {
         $data['partners_get_list_rw'] = $this->AdminModel->partners_get_list_rw($p_id);
+        if(empty($data['partners_get_list_rw'])){
+            redirect(base_url('l_partners'));
+        }
         $this->load->view('admin/page/partners/e_partners', $data);
     }
 
@@ -657,6 +672,9 @@ class AdminController extends CI_Controller
     public function e_about($a_id)
     {
         $data['about_get_list_rw'] = $this->AdminModel->about_get_list_rw($a_id);
+        if(empty($data['about_get_list_rw'])){
+            redirect(base_url('l_about'));
+        }
         $this->load->view('admin/page/about/e_about', $data);
     }
 
@@ -787,6 +805,9 @@ class AdminController extends CI_Controller
     public function e_drectoria($d_id)
     {
         $data['drectoria_get_list_rw'] = $this->AdminModel->drectoria_get_list_rw($d_id);
+        if(empty($data['drectoria_get_list_rw'])){
+            redirect(base_url('l_drectoria'));
+        }
         $this->load->view('admin/page/drectoria/e_drectoria', $data);
     }
 
@@ -941,6 +962,9 @@ class AdminController extends CI_Controller
     public function e_teachers($t_id)
     {
         $data['teachers_get_list_rw'] = $this->AdminModel->teachers_get_list_rw($t_id);
+        if(empty($data['teachers_get_list_rw'])){
+            redirect(base_url('l_teachers'));
+        }
         $this->load->view('admin/page/teachers/e_teachers', $data);
     }
 
